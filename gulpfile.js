@@ -5,6 +5,7 @@ autoprefixer = require('autoprefixer'),
 cssvars = require('postcss-simple-vars'),
 nested = require('postcss-nested'),
 cssImport = require('postcss-import'),
+mixins = require('postcss-mixins'),
 browserSync = require('browser-sync'),
 webpack = require('webpack');
 
@@ -34,7 +35,7 @@ gulp.task('watch', function(){
 // CSS Automation
 gulp.task('styles', function(){
   gulp.src('./app/assets/styles/styles.css')
-  .pipe(postcss([cssImport, nested, cssvars, autoprefixer]))
+  .pipe(postcss([cssImport, mixins, nested, cssvars, autoprefixer]))
   //Stop BrowserSync from Ending
   .on('error', function(errorInfo){
     console.log(errorInfo.toString());

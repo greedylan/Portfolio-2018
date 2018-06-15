@@ -5,23 +5,38 @@
 @import "modules/_global";
 @import "modules/_mixins";
 
+html{
+  height: 100%;
+}
+
 body{
-  overflow: hidden;
+  height: 100%;
   background: grey;
 }
 
 .main{
   height: 100%;
+
 }
 
 .home{
-
+  height: 100%;
+  overflow: hidden;
+  position: relative;
   @mixin desktop-up{
 
   }
 }
 
+.carousel-wrapper{
+  width: 100%;
+  height: auto;
+  position: absolute;
+  top: 50%;
+}
+
 .carousel{
+  display: flex;
 
   @mixin desktop-up{
     display: block;
@@ -36,8 +51,11 @@ body{
 }
 
 .carousel__cell{
-
+  flex: 0 0 33.33%;
+  margin: 0;
+  padding: 0;
   @mixin desktop-up{
+  flex: none;
   position: relative;
   width: 100%;
   display: flex;

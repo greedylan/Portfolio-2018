@@ -290,15 +290,33 @@ img{
 .justify-content--flex-end{
   justify-content: flex-end;
 }
+html{
+  height: 100%;
+}
 body{
-  overflow: hidden;
+  height: 100%;
   background: grey;
 }
 .main{
   height: 100%;
+
+}
+.home{
+  height: 100%;
+  overflow: hidden;
+  position: relative;
 }
 @media(min-width: 1024px){
   }
+.carousel-wrapper{
+  width: 100%;
+  height: auto;
+  position: absolute;
+  top: 50%;
+}
+.carousel{
+  display: flex;
+}
 @media(min-width: 1024px){
 .carousel{
     display: block;
@@ -311,8 +329,14 @@ body{
     margin-top: -100%
 }
   }
+.carousel__cell{
+  flex: 0 0 33.33%;
+  margin: 0;
+  padding: 0;
+}
 @media(min-width: 1024px){
 .carousel__cell{
+  flex: none;
   position: relative;
   width: 100%;
   display: flex;

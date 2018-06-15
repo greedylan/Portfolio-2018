@@ -10,7 +10,7 @@ cell = $('.carousel__cell');
 
 
 // contructor function for moving cell up and down
-var duration = "300", //million seconds
+var duration = "500", //million seconds
 timing = ".25, 1, .25, 1"; //cubic-bezier
 function CellUpDown(cellHeight){
   this.cellUp = function(){
@@ -27,9 +27,8 @@ function CellUpDown(cellHeight){
 
      setTimeout(function(){
        carousel.removeAttr('style');
-     }, 301);
+     }, 501);
   };
-
   this.cellDown = function(){
     $('.carousel').css({
         'transform' : 'translateY(' + (cellHeight) + 'px)',
@@ -43,34 +42,51 @@ function CellUpDown(cellHeight){
       }, duration);
       setTimeout(function(){
         carousel.removeAttr('style');
-      }, 301);
+      }, 501);
   };
 }
 
-
-function swipeReady(){
+function scroll(){
   var cellHeight = $('.carousel__cell').height();
+
   var swipe = new CellUpDown(cellHeight);
   var indicator = new WheelIndicator({
     elem: document.querySelector('.carousel'),
     callback: function(e){
       console.log(e.direction);
       // down or up
-      if(e.direction === "down"){
+      var winWidth = $(window).width();
+      if(e.direction === "down" && winWidth >= '1024'){
         swipe.cellUp();
       }
-
-      else if(e.direction === "up"){
+      else if(e.direction === "up" && winWidth >= '1024'){
         swipe.cellDown();
       }
-
+      else{
+        return;
+      }
     }
   });
+}
+function centerMobileCarousel(){
+  var winWidth = $(window).width();
+  var x = (Math.floor(cell.length/2) - 1) * cell.width();
+  if(winWidth <= '1023'){
 
+    $('.carousel-wrapper').css({
+      'transform' : 'translateX(' + -(x) + 'px)'
+    });
+  }
+  else if(winWidth > '1023'){
+    $('.carousel-wrapper').removeAttr('style');
+  }
 }
 
-swipeReady();
+
+scroll();
+centerMobileCarousel();
 
 $(window).resize(function(){
-  swipeReady();
+  scroll();
+  centerMobileCarousel();
 });

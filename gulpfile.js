@@ -12,6 +12,7 @@ webpack = require('webpack');
 
 gulp.task('watch', function(){
   browserSync.init({
+    open: false,
     notify: false,
     server: {
       baseDir: "app"

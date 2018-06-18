@@ -148,3 +148,82 @@ $(window).resize(function(){
   swipe();
   centerMobileCarousel();
 });
+
+
+
+$('.carousel__content').click(function(){
+  transitionCircle($(this));
+});
+
+
+function transitionCircle(ele){
+  // cache variables
+  var circle1 = ele.children('.expand-1st'),
+  circle2 = ele.children('.expand-2nd'),
+  image = ele.children('.image-wrapper');
+
+  // move two circles and project image in place
+  ele.css({'z-index' : '1000'});
+  circle1.css({
+    'transform' : 'translateX(-50%)',
+  });
+  circle2.css({
+    'transform' : 'translateX(-50%) scale(.5)',
+  });
+  image.css({
+    'transform' : 'translateX(-50%)',
+  });
+
+  //expand circles and project image
+  setTimeout(function(){
+    circle1.css({
+      'transform' : 'translateX(-50%) scale(5)',
+      'transition' : '800ms cubic-bezier(.25, 1, .25, 1)',
+    });
+
+    circle2.css({
+      'transform' : 'translateX(-50%) scale(5)',
+      'transition' : '1500ms cubic-bezier(.25, 1, .25, 1)',
+      'opacity' : '1'
+    });
+
+    image.css({
+      'transform' : 'translateX(-50%) scale(.95)',
+      'transition' : '100ms cubic-bezier(.25, 1, .25, 1)',
+    });
+  }, 600);
+  setTimeout(function(){
+    circle2.children('circle').css({
+      'fill' : '#00999E',
+      'transition' : 'fill 1000ms ease',
+    });
+
+    image.css({
+      'transform' : 'translateX(-50%) scale(1)',
+      'transition' : '100ms cubic-bezier(.25, 1, .25, 1)',
+    });
+  }, 700);
+  setTimeout(function(){
+    image.css({
+      'opacity' : '0',
+      'transition' : '400ms cubic-bezier(.25, 1, .25, 1)'
+    });
+  }, 701);
+  // setTimeout(function(){
+  //   $('.carousel').css({
+  //     'opacity' : '0'
+  //   });
+  // }, 2000)
+}
+
+
+
+function unclickable(){
+  var index = Math.floor(cell.length / 2);
+  var cellNotFocused= cell.not(':eq(' + index + ')');
+  cellNotFocused.css({
+    'pointer-events' : 'none',
+  });
+}
+
+unclickable();

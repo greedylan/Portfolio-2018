@@ -295,7 +295,7 @@ html{
 }
 body{
   height: 100%;
-  background: grey;
+  background: #D5D5D5;
 }
 .main{
   height: 100%;
@@ -330,6 +330,7 @@ body{
 }
   }
 .carousel__cell{
+  /* overflow: hidden; */
   flex: 0 0 33.33%;
   margin: 0;
   padding: 0;
@@ -343,8 +344,36 @@ body{
   flex-direction: row-reverse
 }
   }
+.carousel__content{
+  position: relative;
+}
 @media(min-width: 1024px){
 .carousel__content{
     width: 50%
 }
+  }
+.carousel__content svg.expand-1st{
+    position: absolute;
+    top: 0;
+    left: 0;
+    transition: 400ms cubic-bezier(.25, 1, .25, 1);
+  }
+.carousel__content svg.expand-2nd{
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    -webkit-transform: scale(.5);
+            transform: scale(.5);
+    transition: 600ms cubic-bezier(.25, 1, .25, 1);
+    opacity: 0;
+  }
+.carousel__content svg.expand-2nd.defaulColor circle{
+    fill: #00999e;
+    transition: 600ms cubic-bezier(.25, 1, .25, 1);
+  }
+.carousel__content .image-wrapper{
+    position: relative;
+    z-index: 100;
+    transition: 600ms cubic-bezier(.25, 1, .25, 1);
   }

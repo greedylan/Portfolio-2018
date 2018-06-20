@@ -369,8 +369,9 @@ body{
     opacity: 0;
   }
 .carousel__content svg.expand-2nd.defaulColor circle{
-    fill: #00999e;
-    transition: 600ms cubic-bezier(.25, 1, .25, 1);
+    /* fill: #00999e;
+    transition: 600ms cubic-bezier(.25, 1, .25, 1); */
+
   }
 .carousel__content .image-wrapper{
     position: relative;

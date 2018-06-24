@@ -290,23 +290,37 @@ img{
 .justify-content--flex-end{
   justify-content: flex-end;
 }
-html{
-  height: 100%;
-}
-body{
-  height: 100%;
-  background: #D5D5D5;
-}
-.main{
-  height: 100%;
+.titles-wrapper{
+  width: 100%;
+  height: 50vh;
 
-}
-.home{
-  height: 100%;
-  overflow: hidden;
-  position: relative;
+  position: fixed;
+  top: 0;
+  left: 0;
+
+  text-align: center;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 @media(min-width: 1024px){
+.titles-wrapper{
+    width: 50%;
+    height: auto;
+
+    top: 50%;
+    -webkit-transform: translateY(-50%);
+            transform: translateY(-50%);
+
+    text-align: right;
+
+    padding-right: 2rem
+}
+  }
+.titles-wrapper .titles{
+    flex: 0 1 100%;
+
   }
 .carousel-wrapper{
   width: 100%;
@@ -330,16 +344,16 @@ body{
 }
   }
 .carousel__cell{
-  /* overflow: hidden; */
   flex: 0 0 33.33%;
   margin: 0;
   padding: 0;
+  position: relative;
 }
 @media(min-width: 1024px){
 .carousel__cell{
   flex: none;
-  position: relative;
-  width: 100%;
+
+  flex: 0 0 50%;
   display: flex;
   flex-direction: row-reverse
 }
@@ -368,13 +382,92 @@ body{
     transition: 600ms cubic-bezier(.25, 1, .25, 1);
     opacity: 0;
   }
-.carousel__content svg.expand-2nd.defaulColor circle{
-    /* fill: #00999e;
-    transition: 600ms cubic-bezier(.25, 1, .25, 1); */
-
-  }
 .carousel__content .image-wrapper{
     position: relative;
     z-index: 100;
     transition: 600ms cubic-bezier(.25, 1, .25, 1);
   }
+.logo{
+  cursor: pointer;
+  position: relative;
+}
+.sandwich{
+  display: flex;
+  position: absolute;
+  top: 30px;
+  left: 30px;
+}
+div[class^="bread"]{
+  width: 15px;
+  height: 60px;
+  background: white;
+  position: relative;
+}
+div[class^="bread"]:before{
+    content: '';
+    display: block;
+    position: absolute;
+    top: 0px;
+    left: 0;
+    width: 15px;
+    height: 60px;
+    background: white;
+    transition: 500ms cubic-bezier(.25, 1, .25, 1);
+  }
+div[class^="bread"]:last-child{
+  width: 30px;
+  border-top-right-radius: 30px;
+  border-bottom-right-radius: 30px;
+}
+div[class^="bread"]:last-child:before{
+    opacity: 0;
+  }
+.bread-1.grow:before{
+    top: -60px;
+  }
+.bread-2.grow:before{
+    top: -60px;
+  }
+.bread-3.grow:before{
+    top: -60px;
+    opacity: 1 !important;
+  }
+.spear{
+  width: 100vw;
+  height: 100vh;
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  z-index : -100;
+}
+.spear svg{
+    width: 100%;
+    height: 100%;
+  }
+.spear svg line{
+    stroke: #FFFFFF;
+    stroke-width: 15px;
+  }
+html{
+  height: 100%;
+}
+body{
+  height: 100%;
+  background: #D5D5D5;
+}
+.main{
+  height: 100%;
+}
+.home{
+  height: 100%;
+  overflow: hidden;
+  position: relative;
+}
+@media(min-width: 1024px){
+  }
+.toFront{
+  z-index: 100;
+}
+.toBack{
+  z-index: -100;
+}

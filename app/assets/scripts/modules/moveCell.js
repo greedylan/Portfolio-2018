@@ -1,9 +1,8 @@
-
 var $ = require('jquery');
 var WheelIndicator = require('wheel-indicator');
 require('jquery-touchswipe');
-import {loadAll, loadLastProject, loadNextProject} from './loadCell.js';
-
+import {loadAll, loadPreviousProject, loadNextProject} from './loadCell.js';
+import {loadNextTitle, loadPreviousTitle} from './title.js';
 
 var carousel = $('.carousel');
 var duration = 300, //million seconds
@@ -11,8 +10,9 @@ durationStop = duration + 1,
 timing = ".25, 1, .25, 1"; //cubic-bezier
 var scrollPosition = 0;
 
+
 // contructor function for moving cell up and down
-export default function MoveCell(cellHeight, cellWidth){
+function MoveCell(cellHeight, cellWidth){
   this.cellUp = function(){
     carousel.css({
        'transform' : 'translateY(' + -(cellHeight) + 'px)',
@@ -78,6 +78,7 @@ export default function MoveCell(cellHeight, cellWidth){
   };
 }
 
+
 export function scrollMoveCell(){
   var cellHeight = $('.carousel__cell').height();
   var scroll = new MoveCell(cellHeight, '');
@@ -90,13 +91,16 @@ export function scrollMoveCell(){
       var winWidth = $(window).width();
       if(e.direction === "down" && winWidth >= '1024'){
         scroll.cellUp();
+        loadNextTitle();
       }
       else if(e.direction === "up" && winWidth >= '1024'){
         scroll.cellDown();
+        loadPreviousTitle();
       }
     }
   });
 }
+
 export function scrollLoadCell(){
   var indicator2 = new WheelIndicator({
     elem: document.querySelector('.carousel'),
@@ -109,12 +113,13 @@ export function scrollLoadCell(){
       }
       else if(e.direction === "up" && winWidth >= '1024'){
         setTimeout(function(){
-          loadLastProject();
+          loadPreviousProject();
         }, duration);
       }
     }
   });
 }
+
 export function swipeMoveCell(){
   var winWidth = $(window).width();
   var cellWidth = $('.carousel__cell').width();
@@ -127,6 +132,7 @@ export function swipeMoveCell(){
 
       if( direction == 'left' && winWidth < '1024'){
         swipe.cellLeft();
+        loadNextTitle();
         console.log('swiping left');
         setTimeout(function(){
           loadNextProject();
@@ -134,9 +140,10 @@ export function swipeMoveCell(){
       }
       else if( direction == 'right' && winWidth < '1024'){
         swipe.cellRight();
+        loadPreviousTitle();
         console.log('swiping right');
         setTimeout(function(){
-          loadLastProject();
+          loadPreviousProject();
         }, 300);
       }
     }

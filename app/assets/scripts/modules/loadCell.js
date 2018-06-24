@@ -32,11 +32,8 @@ export function loadAll(element){
   });
 }
 
-
 export function loadNextProject(){
-  if(scrollPosition === projects.length){
-    scrollPosition = 0;
-  }
+  if(scrollPosition === projects.length){scrollPosition = 0;}
   scrollPosition = scrollPosition + 1;
 
   loadAll(imageSource);
@@ -44,13 +41,11 @@ export function loadNextProject(){
   loadAll(circle1);
   loadAll(circle2);
 
-  console.log(scrollPosition)
+  // console.log(scrollPosition)
 }
 
-export function loadLastProject(){
-  if(scrollPosition === 0){
-    scrollPosition = projects.length;
-  }
+export function loadPreviousProject(){
+  if(scrollPosition === 0){scrollPosition = projects.length;}
   scrollPosition = scrollPosition - 1;
 
 
@@ -59,7 +54,7 @@ export function loadLastProject(){
   loadAll(circle1);
   loadAll(circle2);
 
-  console.log(scrollPosition)
+  // console.log(scrollPosition)
 }
 
 

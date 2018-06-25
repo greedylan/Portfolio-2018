@@ -1,4 +1,5 @@
 var $ = require('jquery');
+import Project, {project1, project2, project3, project4, project5, project6, project7, projects} from './project.js';
 
 export default function Title(mainTitle, subTitle){
   this.mainTitle = mainTitle;
@@ -31,31 +32,42 @@ var scrollPosition = 0,
 centerPosition = Math.floor(titles.length/2);
 
 
+export function titleOut(){
+  titleMain.css({
+    'transform' : 'translateX(-100%)',
+    'transition' : '400ms cubic-bezier(.25, 1, .25, 1)'
+  });
+  titleSub.css({
+    'transform' : 'translateX(-100%)',
+    'transition' : '600ms cubic-bezier(.25, 1, .25, 1)'
+  });
+}
+export function titleIn(){
+  titleMain.css({
+    'transform' : 'translateX(0%)',
+    'transition' : '400ms cubic-bezier(.25, 1, .25, 1)'
+  });
+  titleSub.css({
+    'transform' : 'translateX(0%)',
+    'transition' : '600ms cubic-bezier(.25, 1, .25, 1)'
+  });
+}
+
 function animateTitle(index){
   setTimeout(function(){
-    titleMain.css({
-      'transform' : 'translateX(-100%)',
-      'transition' : '400ms cubic-bezier(.25, 1, .25, 1)'
-    });
-    titleSub.css({
-      'transform' : 'translateX(-100%)',
-      'transition' : '600ms cubic-bezier(.25, 1, .25, 1)'
-    });
+    titleOut();
   }, 100);
   setTimeout(function(){
     titleMain.html(titles[index].mainTitle);
     titleSub.html(titles[index].subTitle);
-
-    titleMain.css({
-      'transform' : 'translateX(0%)',
-      'transition' : '400ms cubic-bezier(.25, 1, .25, 1)'
-    });
-    titleSub.css({
-      'transform' : 'translateX(0%)',
-      'transition' : '600ms cubic-bezier(.25, 1, .25, 1)'
-    });
-  }, 801);
+    titleIn();
+  }, 800);
 }
+function loadGif(index){
+  var gif = projects[index].gif;
+  $('.gif').attr('src', gif);
+}
+
 
 export function loadNextTitle(){
   scrollPosition = scrollPosition + 1;
@@ -63,6 +75,7 @@ export function loadNextTitle(){
   var index = ( centerPosition + scrollPosition );
   // console.log(index, scrollPosition, centerPosition);
   animateTitle(index);
+  loadGif(index);
 }
 export function loadPreviousTitle(){
   scrollPosition = scrollPosition - 1;
@@ -70,4 +83,5 @@ export function loadPreviousTitle(){
   var index = ( centerPosition + scrollPosition );
   // console.log(index, scrollPosition, centerPosition)
   animateTitle(index);
+  loadGif(index);
 }

@@ -1,14 +1,21 @@
 var $ = require('jquery');
 
-export function transitionCircle(ele){
+
+export function expandCircles(){
   // cache variables
-  var circle1 = ele.children('.expand-1st'),
-  circle2 = ele.children('.expand-2nd'),
-  image = ele.children('.image-wrapper'),
+
+  var cell = $('.centered .carousel__content'),
+  circle1 = $('.centered .expand-1st'),
+  circle2 = $('.centered .expand-2nd'),
+  image = $('.centered .image-wrapper'),
   winWidth = $(window).width();
 
+  //hide overlay gif image layer
+  $('.gif').css({'opacity' : '0'})
+
   // move two circles and project image in place
-  ele.css({'z-index' : '1000'});
+  cell.css({'z-index' : '1000'});
+
   if(winWidth >= '1024'){
     circle1.css({
       'transform' : 'translateX(-50%)',
@@ -100,10 +107,69 @@ export function transitionCircle(ele){
     });
   }, 701);
 
+}
 
-  // setTimeout(function(){
-  //   $('.carousel').css({
-  //     'opacity' : '0'
-  //   });
-  // }, 2000)
+
+export function shrinkCircles(){
+  var cell = $('.centered .carousel__content'),
+  circle1 = $('.centered .expand-1st'),
+  circle2 = $('.centered .expand-2nd'),
+  image = $('.centered .image-wrapper'),
+  winWidth = $(window).width();
+
+  if(winWidth >= '1024'){
+    circle1.css({
+      'transform' : 'translateX(-50%) scale(1)',
+      'transition' : '400ms cubic-bezier(.25, 1, .25, 1)',
+    });
+
+    circle2.css({
+      'transform' : 'translateX(-50%) scale(.5)',
+      'transition' : '200ms cubic-bezier(.25, 1, .25, 1)',
+      'opacity' : '1'
+    });
+
+    image.css({
+      'transition' : '200ms cubic-bezier(.25, 1, .25, 1)',
+      'opacity' : '1',
+    });
+
+  }else{
+    circle1.css({
+      'transform' : 'translateY(-50%) scale(1)',
+      'transition' : '400ms cubic-bezier(.25, 1, .25, 1)',
+    });
+
+    circle2.css({
+      'transform' : 'translateY(-50%) scale(.5)',
+      'transition' : '200ms cubic-bezier(.25, 1, .25, 1)',
+      'opacity' : '1'
+    });
+  }
+
+
+  setTimeout(function(){
+    circle1.css({
+      'transform' : 'translateX(0%) scale(1)',
+      'transition' : '600ms cubic-bezier(.25, 1, .25, 1)',
+
+    });
+    circle2.css({
+      'transform' : 'translateX(0%) scale(.5)',
+      'transition' : '400ms cubic-bezier(.25, 1, .25, 1)',
+      'opacity' : '0'
+    });
+
+    image.css({
+      'transform' : 'translateX(0%)',
+      'transition' : '400ms cubic-bezier(.25, 1, .25, 1)',
+      'opacity' : '1'
+    });
+  }, 400);
+
+
+  //show gif overlay after animation finishes
+  setTimeout(function(){
+    $('.gif').css({'opacity' : '1'});
+  }, 800);
 }

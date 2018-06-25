@@ -2,7 +2,10 @@
 
 .logo{
   cursor: pointer;
-  position: relative;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 200;
 }
 
 .sandwich{
@@ -10,6 +13,7 @@
   position: absolute;
   top: 30px;
   left: 30px;
+
 }
 
 div[class^="bread"]{
@@ -59,7 +63,7 @@ div[class^="bread"]:last-child{
 .spear{
   width: 100vw;
   height: 100vh;
-  position: absolute;
+  position: fixed;
   top: 0px;
   left: 0px;
   z-index : -100;

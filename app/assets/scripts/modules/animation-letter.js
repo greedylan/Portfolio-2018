@@ -201,8 +201,3 @@ export function spearOut(){
     $('.spear').removeClass('toFront')
   }, 300)
 }
-
-
-// setTimeout(function(){
-//
-// }, 300)

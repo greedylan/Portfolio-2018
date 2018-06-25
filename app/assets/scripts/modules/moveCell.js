@@ -77,6 +77,12 @@ function MoveCell(cellHeight, cellWidth){
     }, durationStop);
   };
 }
+function gifFadeOutThenIn(){
+  $('.gif').css({'opacity' : '0'});
+  setTimeout(function(){
+    $('.gif').css({'opacity' : '1'});
+  }, durationStop);
+}
 
 
 export function scrollMoveCell(){
@@ -89,13 +95,15 @@ export function scrollMoveCell(){
       // console.log(e.direction);
       // down or up
       var winWidth = $(window).width();
-      if(e.direction === "down" && winWidth >= '1024'){
+      if(e.direction === "down" && winWidth >= '1024' && !$('.showroom').hasClass('loaded')){
         scroll.cellUp();
         loadNextTitle();
+        gifFadeOutThenIn();
       }
-      else if(e.direction === "up" && winWidth >= '1024'){
+      else if(e.direction === "up" && winWidth >= '1024' && !$('.showroom').hasClass('loaded')){
         scroll.cellDown();
         loadPreviousTitle();
+        gifFadeOutThenIn();
       }
     }
   });
@@ -106,15 +114,15 @@ export function scrollLoadCell(){
     elem: document.querySelector('.carousel'),
     callback: function(e){
       var winWidth = $(window).width();
-      if(e.direction === "down" && winWidth >= '1024'){
+      if(e.direction === "down" && winWidth >= '1024' && !$('.showroom').hasClass('loaded')){
         setTimeout(function(){
             loadNextProject();
-        }, duration);
+        }, durationStop);
       }
-      else if(e.direction === "up" && winWidth >= '1024'){
+      else if(e.direction === "up" && winWidth >= '1024' && !$('.showroom').hasClass('loaded')){
         setTimeout(function(){
           loadPreviousProject();
-        }, duration);
+        }, durationStop);
       }
     }
   });
@@ -130,18 +138,22 @@ export function swipeMoveCell(){
     swipe:function(event, direction, distance, duration, fingerCount, fingerData) {
       // console.log(direction, distance, fingerCount);
 
-      if( direction == 'left' && winWidth < '1024'){
+      if( direction == 'left' && winWidth < '1024' && !$('.showroom').hasClass('loaded')){
+        // console.log('swiping left');
         swipe.cellLeft();
         loadNextTitle();
-        console.log('swiping left');
+        gifFadeOutThenIn();
+
         setTimeout(function(){
           loadNextProject();
         }, 300);
       }
-      else if( direction == 'right' && winWidth < '1024'){
+      else if( direction == 'right' && winWidth < '1024' && !$('.showroom').hasClass('loaded')){
+        // console.log('swiping right');
         swipe.cellRight();
         loadPreviousTitle();
-        console.log('swiping right');
+        gifFadeOutThenIn();
+
         setTimeout(function(){
           loadPreviousProject();
         }, 300);

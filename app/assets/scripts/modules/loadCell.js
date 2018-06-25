@@ -16,12 +16,12 @@ export function loadAll(element){
     if(num >= projects.length){ num = i + scrollPosition - projects.length;}
     var x = projects[num];
 
-    var url = x.url,
+    var image = x.image,
     defaultColor = x.defaultColor,
     subColor= x.subColor;
 
     if(element == imageSource){
-      $(this).attr('srcset', url);
+      $(this).attr('srcset', image);
     }else if(element == content){
       $(this).css({'background' : '' + defaultColor + ''});
     }else if(element == circle1){

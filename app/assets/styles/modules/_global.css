@@ -1,5 +1,9 @@
 body{
   box-sizing: border-box;
+  height: 100%;
+  background: #D5D5D5;
+  font-family: 'Lato', san-serif;
+  font-size: .9rem;
 }
 
 *, *:before, *:after{
@@ -23,4 +27,19 @@ img{
 
 .inactive{
   pointer-events: none;
+}
+
+
+/* Heading */
+h1{
+  font-family: 'Arvo', serif;
+  font-size: 2.5rem;
+}
+
+h1.main-title{
+  margin: .5rem 0;
+}
+
+p.sub-title{
+
 }

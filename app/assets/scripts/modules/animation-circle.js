@@ -10,8 +10,8 @@ export function expandCircles(){
   image = $('.centered .image-wrapper'),
   winWidth = $(window).width();
 
-  //hide overlay gif image layer
-  $('.gif').css({'opacity' : '0'})
+  //hide overlay video image layer
+  $('.video').css({'opacity' : '0'})
 
   // move two circles and project image in place
   cell.css({'z-index' : '1000'});
@@ -168,8 +168,8 @@ export function shrinkCircles(){
   }, 400);
 
 
-  //show gif overlay after animation finishes
+  //show video overlay after animation finishes
   setTimeout(function(){
-    $('.gif').css({'opacity' : '1'});
+    $('.video').css({'opacity' : '1'});
   }, 800);
 }

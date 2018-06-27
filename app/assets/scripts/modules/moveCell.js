@@ -77,10 +77,11 @@ function MoveCell(cellHeight, cellWidth){
     }, durationStop);
   };
 }
-function gifFadeOutThenIn(){
-  $('.gif').css({'opacity' : '0'});
+
+function videoFadeOutThenIn(){
+  $('.video').css({'opacity' : '0'});
   setTimeout(function(){
-    $('.gif').css({'opacity' : '1'});
+    $('.video').css({'opacity' : '1'});
   }, durationStop);
 }
 
@@ -98,12 +99,12 @@ export function scrollMoveCell(){
       if(e.direction === "down" && winWidth >= '1024' && !$('.showroom').hasClass('loaded')){
         scroll.cellUp();
         loadNextTitle();
-        gifFadeOutThenIn();
+        videoFadeOutThenIn();
       }
       else if(e.direction === "up" && winWidth >= '1024' && !$('.showroom').hasClass('loaded')){
         scroll.cellDown();
         loadPreviousTitle();
-        gifFadeOutThenIn();
+        videoFadeOutThenIn();
       }
     }
   });
@@ -142,7 +143,7 @@ export function swipeMoveCell(){
         // console.log('swiping left');
         swipe.cellLeft();
         loadNextTitle();
-        gifFadeOutThenIn();
+        videoFadeOutThenIn();
 
         setTimeout(function(){
           loadNextProject();
@@ -152,7 +153,7 @@ export function swipeMoveCell(){
         // console.log('swiping right');
         swipe.cellRight();
         loadPreviousTitle();
-        gifFadeOutThenIn();
+        videoFadeOutThenIn();
 
         setTimeout(function(){
           loadPreviousProject();

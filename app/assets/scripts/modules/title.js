@@ -9,7 +9,7 @@ export default function Title(mainTitle, subTitle){
 var  title1 = new Title("Project-1 Main Title", "Project-1 Sub Title"),
 title2 = new Title("Project-2 Main Title", "Project-2 Sub Title"),
 title3 = new Title("Project-3 Main Title", "Project-3 Sub Title"),
-title4 = new Title("Project-4 Main Title", "Project-4 Sub Title"),
+title4 = new Title("NHOO.com", "Web app connects local businesses and new homeowners with exclusive deals"),
 title5 = new Title("Project-5 Main Title", "Project-5 Sub Title"),
 title6 = new Title("Project-6 Main Title", "Project-6 Sub Title"),
 title7 = new Title("Project-7 Main Title", "Project-7 Sub Title");

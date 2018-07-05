@@ -1,38 +1,13 @@
 /* Example of Writing CSS Variables */
 /* $white: #fff; */
 /* $grey: #cecece; */
+
+
 @import "normalize.css";
+@import "bootstrap-4-grid/css/grid.css";
+
 @import "modules/_global";
 @import "modules/_mixins";
 @import "modules/_carousel";
 @import "modules/_letter";
 @import "modules/_showroom";
-
-
-html{
-  height: 100%;
-}
-
-body{
-  height: 100%;
-  background: #D5D5D5;
-}
-
-.main{
-  height: 100%;
-}
-
-.home{
-  height: 100%;
-  overflow: hidden;
-  position: relative;
-  @mixin desktop-up{
-  }
-}
-
-.toFront{
-  z-index: 100;
-}
-.toBack{
-  z-index: -100;
-}

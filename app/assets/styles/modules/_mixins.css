@@ -1,5 +1,17 @@
 @define-mixin desktop-up {
-  @media(min-width: 1024px){
+  @media(min-width: 1200px){
+    @mixin-content;
+  }
+}
+
+@define-mixin laptop-up {
+  @media(min-width: 992px){
+    @mixin-content;
+  }
+}
+
+@define-mixin tablet-up {
+  @media(min-width: 768px){
     @mixin-content;
   }
 }

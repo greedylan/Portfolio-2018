@@ -29,7 +29,7 @@ export default function initialize(){
 
 
   // ARCHIVED BELOW: center caroucel_cell with javascript
-  // fixed with little hack on css: see .carousel-wrapper & carousel-cell
+  // fixed with little hack on css: see .carousel-wrapper{} & carousel-cell{}
 
   // var winWidth = $(window).width(),
   // x = (centeredIndex - 1) * cell.width(),

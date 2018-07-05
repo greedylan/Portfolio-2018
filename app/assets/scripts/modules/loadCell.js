@@ -2,7 +2,6 @@ var $ = require('jquery');
 import {projects} from './project.js';
 
 
-
 var imageSource = $('.image-wrapper picture source'),
 content = $('.carousel__content'),
 circle1 = $('.expand-1st circle'),

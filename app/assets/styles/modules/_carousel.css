@@ -1,5 +1,17 @@
 @import "./_mixins";
 
+.main{
+  height: 100%;
+  background: #D4D4D4;
+}
+
+.home{
+  height: 100%;
+  overflow: hidden;
+  position: relative;
+}
+
+
 .titles-wrapper{
   width: 100%;
   height: 50vh;
@@ -7,6 +19,7 @@
   position: fixed;
   top: 0;
   left: 0;
+  z-index: 310;
 
   text-align: center;
 
@@ -22,7 +35,6 @@
     transform: translateY(-50%);
 
     text-align: right;
-
     padding: 2rem 6rem;
   }
 
@@ -35,6 +47,7 @@
 .carousel-wrapper{
   width: 100%;
   height: auto;
+
   position: absolute;
   top: 50%;
   /* line below goes with .carousel__cell{ transform: translateX(-50%) to center cells in mobile}  */
@@ -46,6 +59,7 @@
 
 .carousel{
   display: flex;
+  background: #D4D4D4;
 
 
 
@@ -104,7 +118,7 @@
 
   .image-wrapper{
     position: relative;
-    z-index: 100;
+    z-index: 200;
     transition: 600ms cubic-bezier(.25, 1, .25, 1);
   }
 }
@@ -116,12 +130,5 @@
   right: 0;
   bottom: 0;
   left: 0;
-
-  /* opacity: 0; */
-  z-index: 200;
-
+  z-index: 210;
 }
-
-/* .video{
-  opacity: 0;
-} */

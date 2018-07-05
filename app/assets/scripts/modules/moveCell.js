@@ -77,13 +77,14 @@ function MoveCell(cellHeight, cellWidth){
     }, durationStop);
   };
 }
-
 function videoFadeOutThenIn(){
   $('.video').css({'opacity' : '0'});
   setTimeout(function(){
     $('.video').css({'opacity' : '1'});
   }, durationStop);
 }
+
+
 
 
 export function scrollMoveCell(){
@@ -93,7 +94,7 @@ export function scrollMoveCell(){
 
     elem: document.querySelector('.carousel'),
     callback: function(e){
-      // console.log(e.direction);
+      console.log(e.direction);
       // down or up
       var winWidth = $(window).width();
       if(e.direction === "down" && winWidth >= '1024' && !$('.showroom').hasClass('loaded')){
@@ -107,6 +108,7 @@ export function scrollMoveCell(){
         videoFadeOutThenIn();
       }
     }
+
   });
 }
 

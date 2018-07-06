@@ -6,58 +6,87 @@ var imageSource = $('.image-wrapper picture source'),
 content = $('.carousel__content'),
 circle1 = $('.expand-1st circle'),
 circle2 = $('.expand-2nd circle'),
+cell = $('.carousel__cell'),
 scrollPosition = 0;
 
-
-export function loadAll(element){
+export function loadPreview (element){
   element.each(function(i){
-    var num = i + scrollPosition;
-    if(num >= projects.length){ num = i + scrollPosition - projects.length;}
-    var x = projects[num];
+    var index = i + scrollPosition;
+    if(index >= projects.length){ index = i + scrollPosition - projects.length;}
 
-    var image = x.image,
-    defaultColor = x.defaultColor,
+    var x = projects[index];
+    var previewImage = x.previewImage,
+    primaryColor = x.primaryColor,
     subColor= x.subColor;
 
     if(element == imageSource){
-      $(this).attr('srcset', image);
+      $(this).attr('srcset', previewImage);
     }else if(element == content){
-      $(this).css({'background' : '' + defaultColor + ''});
+      $(this).css({'background' : '' + primaryColor + ''});
     }else if(element == circle1){
-      $(this).css({'fill' : '' + defaultColor + ''});
+      $(this).css({'fill' : '' + primaryColor + ''});
     }else if(element == circle2){
       $(this).css({'fill' : '' + subColor + ''});
+    }else if(element == cell){
     }
   });
 }
+export function loadDataIndex(cell, array){
+  cell.each(function(i){
+    $(this).attr('data-project-index', array[i]);
+  });
+  console.log(array);
+}
+
+
+
 
 export function loadNextProject(){
   if(scrollPosition === projects.length){scrollPosition = 0;}
   scrollPosition = scrollPosition + 1;
 
-  loadAll(imageSource);
-  loadAll(content);
-  loadAll(circle1);
-  loadAll(circle2);
+  // store index values in an array corresponding to scroll event
+  var array = [];
+  for(var i=0; i<projects.length; i++){
+    var index = i + scrollPosition;
+    if(index >= projects.length){index = index - projects.length;}
+    array.push(index);
+  }
 
+  loadPreview (imageSource);
+  loadPreview (content);
+  loadPreview (circle1);
+  loadPreview (circle2);
+  loadDataIndex(cell, array);
   // console.log(scrollPosition)
-}
 
+
+}
 export function loadPreviousProject(){
   if(scrollPosition === 0){scrollPosition = projects.length;}
   scrollPosition = scrollPosition - 1;
 
+  // store index values in an array corresponding to scroll event
+  var array = [];
+  for(var i=0; i<projects.length; i++){
+    var index = i + scrollPosition;
+    if(index >= projects.length){index = index - projects.length;}
+    if(index < 0 ){index = index + projets.length;}
+    array.push(index);
+  }
 
-  loadAll(imageSource);
-  loadAll(content);
-  loadAll(circle1);
-  loadAll(circle2);
+  loadPreview (imageSource);
+  loadPreview (content);
+  loadPreview (circle1);
+  loadPreview (circle2);
 
+  loadDataIndex(cell, array);
   // console.log(scrollPosition)
 }
 
 
-loadAll(imageSource);
-loadAll(content);
-loadAll(circle1);
-loadAll(circle2);
+loadPreview (imageSource);
+loadPreview (content);
+loadPreview (circle1);
+loadPreview (circle2);
+loadPreview (cell);

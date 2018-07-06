@@ -63,10 +63,11 @@ function animateTitle(index){
     titleIn();
   }, 800);
 }
-function loadGif(index){
-  var gif = projects[index].gif;
-  $('.gif').attr('src', gif);
-}
+
+// function loadGif(index){
+//   var gif = projects[index].gif;
+//   $('.gif').attr('src', gif);
+// }
 
 
 export function loadNextTitle(){
@@ -75,7 +76,7 @@ export function loadNextTitle(){
   var index = ( centerPosition + scrollPosition );
   // console.log(index, scrollPosition, centerPosition);
   animateTitle(index);
-  loadGif(index);
+  // loadGif(index);
 }
 export function loadPreviousTitle(){
   scrollPosition = scrollPosition - 1;
@@ -83,5 +84,5 @@ export function loadPreviousTitle(){
   var index = ( centerPosition + scrollPosition );
   // console.log(index, scrollPosition, centerPosition)
   animateTitle(index);
-  loadGif(index);
+  // loadGif(index);
 }

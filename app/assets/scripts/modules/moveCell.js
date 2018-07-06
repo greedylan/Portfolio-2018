@@ -113,7 +113,7 @@ export function scrollMoveCell(){
 }
 
 export function scrollLoadCell(){
-  var indicator2 = new WheelIndicator({
+  var indicator = new WheelIndicator({
     elem: document.querySelector('.carousel'),
     callback: function(e){
       var winWidth = $(window).width();

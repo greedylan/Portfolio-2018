@@ -1,11 +1,12 @@
 var $ = require('jquery');
+import {projects} from './project.js';
 
 
 
 
 export default function initialize(){
 
-  //cahce all variables
+  //cahce variables
   var cell = $('.carousel__cell'),
   centeredIndex = Math.floor(cell.length/2 ),
   cellNotFocused= cell.not(':eq(' + centeredIndex + ')');

@@ -27,7 +27,9 @@
   justify-content: center;
   align-items: center;
 
-  @mixin desktop-up{
+  padding: 1rem 2rem;
+
+  @mixin laptop-up{
     width: 50%;
     height: auto;
 
@@ -35,7 +37,7 @@
     transform: translateY(-50%);
 
     text-align: right;
-    padding: 2rem 6rem;
+    padding: 2rem 4rem;
   }
 
   & .titles{
@@ -52,7 +54,7 @@
   top: 50%;
   /* line below goes with .carousel__cell{ transform: translateX(-50%) to center cells in mobile}  */
   margin-left: -100%;
-  @mixin desktop-up{
+  @mixin laptop-up{
     margin-left: 0;
   }
 }
@@ -63,7 +65,7 @@
 
 
 
-  @mixin desktop-up{
+  @mixin laptop-up{
     display: block;
     width: 100%;
     position: fixed;
@@ -82,7 +84,7 @@
   position: relative;
   transform: translateX(-50%);
 
-  @mixin desktop-up{
+  @mixin laptop-up{
   display: flex;
   flex-direction: row-reverse;
   transform: none;
@@ -94,9 +96,11 @@
 
 .carousel__content{
   position: relative;
+  height: 50vh;
 
-  @mixin desktop-up{
+  @mixin laptop-up{
     width: 50%;
+    height: auto;
   }
 
   svg.expand-1st{
@@ -117,9 +121,16 @@
   }
 
   .image-wrapper{
-    position: relative;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
     z-index: 200;
     transition: 600ms cubic-bezier(.25, 1, .25, 1);
+    @mixin laptop-up{
+      position: relative;
+      top: 0;
+      transform: translateY(0%);
+    }
   }
 }
 
@@ -131,4 +142,17 @@
   bottom: 0;
   left: 0;
   z-index: 210;
+
+  .video-wrapper-inner{
+    position: relative;
+    width: 100%;
+    height: 100%;
+
+    video{
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+
+    }
+  }
 }

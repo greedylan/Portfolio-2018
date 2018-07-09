@@ -37,6 +37,10 @@ export function loadDataIndex(cell, array){
   });
   console.log(array);
 }
+export function videoWrapperBackground(){
+  var index = $('.centered').attr("data-project-index");
+  $('.centered .video-wrapper').css({'background-color' : `${projects[index].primaryColor}`});
+}
 
 
 
@@ -58,6 +62,8 @@ export function loadNextProject(){
   loadPreview (circle1);
   loadPreview (circle2);
   loadDataIndex(cell, array);
+  videoWrapperBackground();
+
   // console.log(scrollPosition)
 
 
@@ -79,8 +85,8 @@ export function loadPreviousProject(){
   loadPreview (content);
   loadPreview (circle1);
   loadPreview (circle2);
-
   loadDataIndex(cell, array);
+  videoWrapperBackground();
   // console.log(scrollPosition)
 }
 
@@ -90,3 +96,4 @@ loadPreview (content);
 loadPreview (circle1);
 loadPreview (circle2);
 loadPreview (cell);
+videoWrapperBackground();

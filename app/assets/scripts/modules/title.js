@@ -1,5 +1,5 @@
 var $ = require('jquery');
-import Project, {project1, project2, project3, project4, project5, project6, project7, projects} from './project.js';
+import Project, {projects} from './project.js';
 
 export default function Title(mainTitle, subTitle){
   this.mainTitle = mainTitle;
@@ -34,11 +34,11 @@ centerPosition = Math.floor(titles.length/2);
 
 export function titleOut(){
   titleMain.css({
-    'transform' : 'translateX(-100%)',
+    'transform' : 'translateX(-120%)',
     'transition' : '400ms cubic-bezier(.25, 1, .25, 1)'
   });
   titleSub.css({
-    'transform' : 'translateX(-100%)',
+    'transform' : 'translateX(-120%)',
     'transition' : '600ms cubic-bezier(.25, 1, .25, 1)'
   });
 }

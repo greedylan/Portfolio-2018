@@ -11,9 +11,10 @@ export function expandCircles(){
   winWidth = $(window).width();
 
   //hide overlay video image layer
-  $('.video').css({'opacity' : '0'})
+  $('.centered .image-wrapper').css({'z-index' : '400'});
+  $('.video-wrapper').css({'opacity' : '0'});
 
-  // move two circles and project image in place
+  // move two circles and project image in the center of the screen / vw
   cell.css({'z-index' : '400'});
 
   if(winWidth >= '1024'){
@@ -34,7 +35,8 @@ export function expandCircles(){
       'transform' : 'translateY(-50%) scale(.5)',
     });
     image.css({
-      'transform' : 'translateY(-20%) scale(.75)',
+      'transform' : 'translateY(-50%) scale(.75)',
+      'top' : '0px',
     });
   }
 
@@ -65,7 +67,8 @@ export function expandCircles(){
       'opacity' : '1'
     });
       image.css({
-      'transform' : 'translateY(-20%) scale(.7)',
+      'transform' : 'translateY(-50%) scale(.7)',
+      'top' : '0px',
       'transition' : '100ms cubic-bezier(.25, 1, .25, 1)',
     });
     }
@@ -92,7 +95,8 @@ export function expandCircles(){
       });
 
       image.css({
-        'transform' : 'translateY(-20%) scale(.75)',
+        'transform' : 'translateY(-50%) scale(.75)',
+        'top' : '0px',
         'transition' : '100ms cubic-bezier(.25, 1, .25, 1)',
       });
     }

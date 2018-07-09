@@ -30,23 +30,29 @@
 
                   <div class="col-sm-12 col-lg-9 flex flex-wrap align-items--center">
                     <div class="flex-cell list-app">
-                      <img src="./images/app-illustrator.png">
-                      <img src="./images/app-photoshop.png">
-                      <img src="./images/app-sketch.png">
-                      <img src="./images/app-principle.png">
-                      <img src="./images/app-atom.png">
+                      <!-- licon images are loaded dynamically through js
+                      according to data-project-index and project.js,
+                      trigger on $('.centered').click(); at ./modules/clickEvents.js -->
                     </div>
                     <div class="flex-cell list-frontend ">
                       <ul class="list--frontend">
-                        <li>HTML5</li>
-                        <li>CSS3/SASS</li>
-                        <li>Bootstrap Grid System</li>
+                        <!--front end bullets are loaded dynamically through js
+                        according to data-project-index and project.js,
+                        trigger on $('.centered').click(); at ./modules/clickEvents.js -->
                       </ul>
                     </div>
                   </div>
 
                   <div class="col-sm-12 col-lg-3 flex align-items--center">
-                    <button class="btn btn-cta btn-github btn--white float--right" type="button" name="button"><span>see project on Github</span></button>
+                    <a target="_blank">
+                      <button class="btn btn-cta btn--white float--right" type="button" name="button">
+                        <span>
+                          <!--CTA button is loaded dynamically through js
+                          according to data-project-index and project.js,
+                          trigger on $('.centered').click(); at ./modules/clickEvents.js -->
+                        </span>
+                      </button>
+                    </a>
                   </div>
 
                 </div>
@@ -59,26 +65,9 @@
           <div class="project-bulletpoints vertical-spacing">
             <div class="container">
               <div class="row">
-                <div class="col-sm-12 col-md-6 col-lg-4">
-                  <h4 class="project-info__heading">/ About</h4>
-                  <p>Apparently we had reached a great height in the atmosphere, for the sky was a dead black, and the stars had ceased to twinkle.</p>
-                </div>
-                <div class="col-sm-12 col-md-6 col-lg-4">
-                  <h4 class="project-info__heading">/ Goal</h4>
-                  <p>Apparently we had reached a great height in the atmosphere, for the sky was a dead black, and the stars had ceased to twinkle.</p>
-                </div>
-                <div class="col-sm-12 col-md-6 col-lg-4">
-                  <h4 class="project-info__heading">/ Team</h4>
-                  <p>CEO, Project Managers, Account Executives, Software Developer</p>
-                </div>
-                <div class="col-sm-12 col-md-6 col-lg-4">
-                  <h4 class="project-info__heading">/ Role</h4>
-                  <p>Apparently we had reached a great height in the atmosphere, for the sky was a dead black, and the stars had ceased to twinkle.</p>
-                </div>
-                <div class="col-sm-12 col-md-6 col-lg-4">
-                  <h4 class="project-info__heading">/ Role</h4>
-                  <p>Apparently we had reached a great height in the atmosphere, for the sky was a dead black, and the stars had ceased to twinkle.</p>
-                </div>
+                <!--Project Bullets are loaded dynamically through js
+                according to data-project-index and project.js,
+                trigger on $('.centered').click(); at ./modules/clickEvents.js -->
               </div>
             </div>
           </div>
@@ -87,29 +76,11 @@
 
           <div class="project-detail vertical-spacing">
 
-            <!-- Module--Full Span Image -->
-            <!-- <div class="detail-module--fullImage container">
-              <h2 class="text-center">Progress Title</h2>
-              <img src="./images/detail-image--1@3x.png" alt="">
-            </div> -->
+            <!--Project Details are loaded dynamically through js
+            according to data-project-index and project.js,
+            trigger on $('.centered').click(); at ./modules/clickEvents.js -->
 
-            <!-- Module--Split Images -->
-            <div class="detail-module--splitImage container">
-              <h2 class="text-center">Progress Title</h2>
-              <!-- <p class="text-center">
-                By the same illusion which lifts the horizon of the sea to the level of the spectator on a hillside, the sable cloud beneath was dished out, and the car seemed to float in the middle of an immense dark sphere, whose upper half was strewn with silver.
-              </p> -->
-              <div class="row">
-                <div class="col-sm-12 col-lg-6">
-                  <img src="./images/detail-splitImage--left@2x.png" alt="">
-                </div>
 
-                <div class="col-sm-12 col-lg-6">
-                  <img src="./images/detail-splitImage--right@2x.png" alt="">
-                </div>
-              </div>
-
-            </div>
           </div>
 
         </section>
@@ -134,7 +105,7 @@
               <div class="carousel__content">
                 <div class="image-wrapper">
                   <picture>
-                    <source srcset="images/preview--1.png" media="(min-width: 1024px)">
+                    <source srcset="images/previewImage-1.png" media="(min-width: 992px)">
                     <img src="images/preview--mobile.png"/ alt="">
                   </picture>
                 </div>
@@ -143,22 +114,6 @@
                 </svg>
                 <svg class="expand-2nd" height="100%" width="100%" viewBox="0 0 100 100">
                   <circle cx="50" cy="50" r="50"/>
-                </svg>
-              </div><!--/carousel__content-->
-            </div>
-            <div class="carousel__cell">
-              <div class="carousel__content" style="background: #EC7F7A;">
-                <div class="image-wrapper">
-                  <picture>
-                    <source srcset="images/preview--2.png" media="(min-width: 1024px)">
-                    <img src="images/preview--mobile.png"/ alt="">
-                  </picture>
-                </div>
-                <svg class="expand-1st" height="100%" width="100%" viewBox="0 0 100 100">
-                  <circle cx="50" cy="50" r="50" fill="#EC7F7A"/>
-                </svg>
-                <svg class="expand-2nd" height="100%" width="100%" viewBox="0 0 100 100">
-                  <circle cx="50" cy="50" r="50" fill="#FFB3AF"/>
                 </svg>
               </div><!--/carousel__content-->
             </div>
@@ -166,7 +121,23 @@
               <div class="carousel__content">
                 <div class="image-wrapper">
                   <picture>
-                    <source srcset="images/preview--3.png" media="(min-width: 1024px)">
+                    <source srcset="images/previewImage-2.png" media="(min-width: 992px)">
+                    <img src="images/preview--mobile.png"/ alt="">
+                  </picture>
+                </div>
+                <svg class="expand-1st" height="100%" width="100%" viewBox="0 0 100 100">
+                  <circle cx="50" cy="50" r="50"/>
+                </svg>
+                <svg class="expand-2nd" height="100%" width="100%" viewBox="0 0 100 100">
+                  <circle cx="50" cy="50" r="50"/>
+                </svg>
+              </div><!--/carousel__content-->
+            </div>
+            <div class="carousel__cell">
+              <div class="carousel__content">
+                <div class="image-wrapper">
+                  <picture>
+                    <source srcset="images/previewImage-3.png" media="(min-width: 992px)">
                     <img src="images/preview--mobile.png"/ alt="">
                   </picture>
                 </div>
@@ -180,15 +151,37 @@
             </div>
             <div class="carousel__cell centered" data-project-index="3">
               <div class="carousel__content">
-                <div class="video-wrapper">
-                  <video class="video" width="100%" autoplay loop>
-                    <source src="videos/project--40.mp4" type="video/mp4">
-                  </video>
-                </div>
+
 
                 <div class="image-wrapper">
                   <picture>
-                    <source srcset="images/preview--4.png" media="(min-width: 1024px)">
+                    <source srcset="images/previewImage-4.png" media="(min-width: 992px)">
+                    <img src="images/previewImageMobile-4.png"/ alt="">
+                  </picture>
+                </div>
+
+                <svg class="expand-1st" height="100%" width="100%" viewBox="0 0 100 100">
+                  <circle cx="50" cy="50" r="50"/>
+                </svg>
+                <svg class="expand-2nd" height="100%" width="100%" viewBox="0 0 100 100">
+                  <circle cx="50" cy="50" r="50"/>
+                </svg>
+
+                <div class="video-wrapper">
+                  <div class="video-wrapper-inner">
+                    <video class="video" width="100%" autoplay loop>
+                      <source src="videos/project--40.mp4" type="video/mp4">
+                    </video>
+                  </div>
+                </div>
+
+              </div><!--/carousel__content-->
+            </div>
+            <div class="carousel__cell">
+              <div class="carousel__content">
+                <div class="image-wrapper">
+                  <picture>
+                    <source srcset="images/previewImage-5.png" media="(min-width: 992px)">
                     <img src="images/preview--mobile.png"/ alt="">
                   </picture>
                 </div>
@@ -204,7 +197,7 @@
               <div class="carousel__content">
                 <div class="image-wrapper">
                   <picture>
-                    <source srcset="images/preview--5.png" media="(min-width: 1024px)">
+                    <source srcset="images/previewImage-6.png" media="(min-width: 992px)">
                     <img src="images/preview--mobile.png"/ alt="">
                   </picture>
                 </div>
@@ -220,23 +213,7 @@
               <div class="carousel__content">
                 <div class="image-wrapper">
                   <picture>
-                    <source srcset="images/preview--6.png" media="(min-width: 1024px)">
-                    <img src="images/preview--mobile.png"/ alt="">
-                  </picture>
-                </div>
-                <svg class="expand-1st" height="100%" width="100%" viewBox="0 0 100 100">
-                  <circle cx="50" cy="50" r="50"/>
-                </svg>
-                <svg class="expand-2nd" height="100%" width="100%" viewBox="0 0 100 100">
-                  <circle cx="50" cy="50" r="50"/>
-                </svg>
-              </div><!--/carousel__content-->
-            </div>
-            <div class="carousel__cell">
-              <div class="carousel__content">
-                <div class="image-wrapper">
-                  <picture>
-                    <source srcset="images/preview--7.png" media="(min-width: 1024px)">
+                    <source srcset="images/previewImage-7.png" media="(min-width: 992px)">
                     <img src="images/preview--mobile.png"/ alt="">
                   </picture>
                 </div>
@@ -279,16 +256,3 @@
   </body>
 
 </html>
-
-
-
-
-
-
-<!-- Archive  could not align video size with background-size: cover-->
-<!-- Archive -->
-<!-- <div class="video-hug">
-  <video class="hero__video" width="3200" height="2000" autoplay loop>
-    <source src="videos/scroll-presentation.mp4" type="video/mp4">
-  </video>
-</div> -->

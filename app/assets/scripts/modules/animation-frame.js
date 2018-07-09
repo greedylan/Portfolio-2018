@@ -32,27 +32,27 @@ export default function frameClipPath(){
 
   var style = document.createElement('style');
   style.type = 'text/css';
-  var keyFrames = `\
-  @keyframes clip-frame {\
-      0% {\
-        clip-path: polygon(0% 0%, 0% 100%, ${x1} 100%, ${x1} ${x1}, ${x2} ${x1}, ${x2} ${x1}, ${x1} ${y1}, ${x1} 100%, 100% 100%, 100% 0%);\
-      }\
-      35%{\
-        clip-path: polygon(0% 0%, 0% 100%, ${x1} 100%, ${x1} ${x1}, ${x2} ${x1}, ${x2} ${y1}, ${x2} ${y1}, ${x2} 100%, 100% 100%, 100% 0%);\
-      }\
-      50%{\
-        clip-path: polygon(0% 0%, 0% 100%, ${x1} 100%, ${x1} ${x1}, ${x2} ${x1}, ${x2} ${x1}, ${x2} ${x1}, ${x2} ${x1}, 100% ${x1}, 100% 0);\
-      }\
-      85%{\
-        clip-path: polygon(0% 0%, 0% 100%, ${x1} 100%, ${x1} ${x1}, ${x1} ${x1}, ${x1} ${x1}, ${x1} ${x1}, ${x1} ${x1}, ${x1} ${x1}, ${x1} 0);\
-      }\
-      100%{\
-        clip-path: polygon(0 100%, 0% 100%, ${x1} 100%, ${x1} 100%, ${x1} 100%, ${x1} 100%, ${x1} 100%, ${x1} 100%, ${x1} 100%, ${x1} 100%);\
-      }\
-  }\
+  var keyFrames = `
+  @keyframes clip-frame {
+    0% {
+      clip-path: polygon(0% 0%, 0% 100%, ${x1} 100%, ${x1} ${x1}, ${x2} ${x1}, ${x2} ${x1}, ${x1} ${y1}, ${x1} 100%, 100% 100%, 100% 0%);
+    }
+    35%{
+      clip-path: polygon(0% 0%, 0% 100%, ${x1} 100%, ${x1} ${x1}, ${x2} ${x1}, ${x2} ${y1}, ${x2} ${y1}, ${x2} 100%, 100% 100%, 100% 0%);
+    }
+    50%{
+      clip-path: polygon(0% 0%, 0% 100%, ${x1} 100%, ${x1} ${x1}, ${x2} ${x1}, ${x2} ${x1}, ${x2} ${x1}, ${x2} ${x1}, 100% ${x1}, 100% 0);
+    }
+    85%{
+      clip-path: polygon(0% 0%, 0% 100%, ${x1} 100%, ${x1} ${x1}, ${x1} ${x1}, ${x1} ${x1}, ${x1} ${x1}, ${x1} ${x1}, ${x1} ${x1}, ${x1} 0);
+    }
+    100%{
+      clip-path: polygon(0 100%, 0% 100%, ${x1} 100%, ${x1} 100%, ${x1} 100%, ${x1} 100%, ${x1} 100%, ${x1} 100%, ${x1} 100%, ${x1} 100%);
+    }
+  }
   `;
 
-  style.innerHTML = keyFrames.replace(/A_DYNAMIC_VALUE/g, "180deg");
+  style.innerHTML = keyFrames.replace();
   document.getElementsByTagName('head')[0].appendChild(style);
 }
 
@@ -71,10 +71,10 @@ export function frameReveal(){
 
 function animation(){
   $('.frame').addClass('frame__is-hiding');
-  $('.frame').css({'opacity':'0'});
+  // $('.frame').css({'opacity':'0'});
 
   setTimeout(function(){
-    $('.rect').addClass('absolute-center');
+    $('.frame').addClass('frame__no-padding');
   }, 800);
 
   setTimeout(function(){
@@ -90,8 +90,6 @@ export function frameHide(){
     elem: document.querySelector('html'),
     callback: function(e){
       // console.log(e.direction);
-      // console.log(scrollDownCount);
-
       if(e.direction == 'down' && scrollDownCount < '2'){
         animation();
       }else if(e.direction == 'down' && scrollDownCount == '2' ){

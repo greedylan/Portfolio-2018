@@ -19,7 +19,7 @@
 div[class^="bread"]{
   width: 15px;
   height: 60px;
-  background: white;
+  background: #FFFFFF;
   position: relative;
   &:before{
     content: '';
@@ -29,7 +29,7 @@ div[class^="bread"]{
     left: 0;
     width: 15px;
     height: 60px;
-    background: white;
+    background: #FFFFFF;
     transition: 500ms cubic-bezier(.25, 1, .25, 1);
   }
 }
@@ -57,6 +57,48 @@ div[class^="bread"]:last-child{
     opacity: 1 !important;
   }
 }
+
+.bread-3.slides{
+  position: relative;
+  overflow: hidden;
+
+  &:before{
+    content: '';
+    display: block;
+    width: 60px;
+    height: 60px;
+    background: rgba(0, 0, 0, .15);
+    position: absolute;
+    top: 0;
+    right: 0;
+
+    transition: 1200ms cubic-bezier(.25, 1, .25, 1)
+  }
+  &:after{
+    content: '';
+    display: block;
+    width: 60px;
+    height: 60px;
+    background: rgba(0, 0, 0, .15);
+    position: absolute;
+    bottom: 0;
+    right: 0;
+
+    transition: 1200ms cubic-bezier(.25, 1, .25, 1)
+  }
+}
+
+.bread-3.is__sliding{
+  &:before{
+    top: 30px;
+    opacity: 1 !important;
+  }
+  &:after{
+    bottom: 30px;
+    opacity: 1 !important;
+  }
+}
+
 
 
 

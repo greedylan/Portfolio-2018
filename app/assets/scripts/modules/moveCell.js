@@ -97,12 +97,12 @@ export function scrollMoveCell(){
       console.log(e.direction);
       // down or up
       var winWidth = $(window).width();
-      if(e.direction === "down" && winWidth >= '1024' && !$('.showroom').hasClass('loaded')){
+      if(e.direction === "down" && winWidth >= '992' && !$('.showroom').hasClass('loaded')){
         scroll.cellUp();
         loadNextTitle();
         videoFadeOutThenIn();
       }
-      else if(e.direction === "up" && winWidth >= '1024' && !$('.showroom').hasClass('loaded')){
+      else if(e.direction === "up" && winWidth >= '992' && !$('.showroom').hasClass('loaded')){
         scroll.cellDown();
         loadPreviousTitle();
         videoFadeOutThenIn();
@@ -117,12 +117,12 @@ export function scrollLoadCell(){
     elem: document.querySelector('.carousel'),
     callback: function(e){
       var winWidth = $(window).width();
-      if(e.direction === "down" && winWidth >= '1024' && !$('.showroom').hasClass('loaded')){
+      if(e.direction === "down" && winWidth >= '992' && !$('.showroom').hasClass('loaded')){
         setTimeout(function(){
             loadNextProject();
         }, durationStop);
       }
-      else if(e.direction === "up" && winWidth >= '1024' && !$('.showroom').hasClass('loaded')){
+      else if(e.direction === "up" && winWidth >= '992' && !$('.showroom').hasClass('loaded')){
         setTimeout(function(){
           loadPreviousProject();
         }, durationStop);
@@ -141,7 +141,7 @@ export function swipeMoveCell(){
     swipe:function(event, direction, distance, duration, fingerCount, fingerData) {
       // console.log(direction, distance, fingerCount);
 
-      if( direction == 'left' && winWidth < '1024' && !$('.showroom').hasClass('loaded')){
+      if( direction == 'left' && winWidth < '992' && !$('.showroom').hasClass('loaded')){
         // console.log('swiping left');
         swipe.cellLeft();
         loadNextTitle();
@@ -151,7 +151,7 @@ export function swipeMoveCell(){
           loadNextProject();
         }, 300);
       }
-      else if( direction == 'right' && winWidth < '1024' && !$('.showroom').hasClass('loaded')){
+      else if( direction == 'right' && winWidth < '992' && !$('.showroom').hasClass('loaded')){
         // console.log('swiping right');
         swipe.cellRight();
         loadPreviousTitle();

@@ -1,177 +1,126 @@
 var $ = require('jquery');
+import {projects} from './project.js'
 
+
+var cell = $('.centered .carousel__content'),
+circle1 = $('.centered .circle-outer'),
+circle2 = $('.centered .circle-inner'),
+image = $('.centered .image-wrapper'),
+winWidth = $(window).width();
 
 export function expandCircles(){
-  // cache variables
-
-  var cell = $('.centered .carousel__content'),
-  circle1 = $('.centered .expand-1st'),
-  circle2 = $('.centered .expand-2nd'),
-  image = $('.centered .image-wrapper'),
-  winWidth = $(window).width();
-
   //hide overlay video image layer
-  $('.centered .image-wrapper').css({'z-index' : '400'});
-  $('.video-wrapper').css({'opacity' : '0'});
+
+  $('.video-wrapper').addClass('is__hiding');
 
   // move two circles and project image in the center of the screen / vw
-  cell.css({'z-index' : '400'});
+  cell.addClass('z-index--1000');
+  if(winWidth >= '992'){
 
-  if(winWidth >= '1024'){
-    circle1.css({
-      'transform' : 'translateX(-50%)',
-    });
-    circle2.css({
-      'transform' : 'translateX(-50%) scale(.5)',
-    });
-    image.css({
-      'transform' : 'translateX(-50%) scale(.75)',
-    });
+    circle1.addClass('is__centering');
+    circle2.addClass('is__shrinkedCentering');
+    image.addClass('is__shrinkedCentering');
+
   }else{
-    circle1.css({
-      'transform' : 'translateY(-50%)',
-    });
-    circle2.css({
-      'transform' : 'translateY(-50%) scale(.5)',
-    });
-    image.css({
-      'transform' : 'translateY(-50%) scale(.75)',
-      'top' : '0px',
-    });
+    circle1.addClass('is__centering--toLeft');
+    circle2.addClass('is__shrinkedCentering--toLeft');
+    image.addClass('is__shrinkedCentering--toLeft');
+
   }
 
   //expand circles and move project image, project image click effect starts
   setTimeout(function(){
-    if(winWidth >= '1024'){
-      circle1.css({
-      'transform' : 'translateX(-50%) scale(5)',
-      'transition' : '800ms cubic-bezier(.25, 1, .25, 1)',
-    });
-      circle2.css({
-      'transform' : 'translateX(-50%) scale(5)',
-      'transition' : '1500ms cubic-bezier(.25, 1, .25, 1)',
-      'opacity' : '1'
-    });
-      image.css({
-      'transform' : 'translateX(-50%) scale(.7)',
-      'transition' : '100ms cubic-bezier(.25, 1, .25, 1)',
-    });
+    if(winWidth >= '992'){
+
+      circle1.addClass('is__expanding');
+      circle2.addClass('is__expanding');
+      image.addClass('is__clicking');
+
     }else{
-      circle1.css({
-      'transform' : 'translateY(-50%) scale(5)',
-      'transition' : '800ms cubic-bezier(.25, 1, .25, 1)',
-    });
-      circle2.css({
-      'transform' : 'translateY(-50%) scale(5)',
-      'transition' : '1500ms cubic-bezier(.25, 1, .25, 1)',
-      'opacity' : '1'
-    });
-      image.css({
-      'transform' : 'translateY(-50%) scale(.7)',
-      'top' : '0px',
-      'transition' : '100ms cubic-bezier(.25, 1, .25, 1)',
-    });
+
+      circle1.addClass('is__expanding--mobile');
+      circle2.addClass('is__expanding--mobile');
+      image.addClass('is__clicking--mobile');
+
     }
   }, 600);
 
   //transition circle2 color to circle1 color(default color), project image click effect ends
   setTimeout(function(){
-    var hex = $('.centered .carousel__content .expand-1st circle').css("fill");
+    var hex = $('.centered .carousel__content .circle-outer circle').css("fill");
 
-    if(winWidth >= '1024'){
+    if(winWidth >= '992'){
       circle2.children('circle').css({
         'fill' : '' + hex + '',
         'transition' : 'fill 1000ms ease',
       });
 
-      image.css({
-        'transform' : 'translateX(-50%) scale(.75)',
-        'transition' : '100ms cubic-bezier(.25, 1, .25, 1)',
-      });
+      image.removeClass('is__clicking');
+      image.addClass('is__hiding');
+
     }else{
       circle2.children('circle').css({
         'fill' : '' + hex + '',
         'transition' : 'fill 1000ms ease',
       });
 
-      image.css({
-        'transform' : 'translateY(-50%) scale(.75)',
-        'top' : '0px',
-        'transition' : '100ms cubic-bezier(.25, 1, .25, 1)',
-      });
+      image.removeClass('is__clicking--mobile');
+      image.addClass('is__hiding');
     }
   }, 700);
 
-  // hide project image
-  setTimeout(function(){
-    image.css({
-      'opacity' : '0',
-      'transition' : '400ms cubic-bezier(.25, 1, .25, 1)'
-    });
-  }, 701);
 }
 
 
+
+
+
+
+var dataIndex = $('.centered').attr("data-project-index");
+var subColor = projects[dataIndex].subColor;
+
+
+
 export function shrinkCircles(){
-  var cell = $('.centered .carousel__content'),
-  circle1 = $('.centered .expand-1st'),
-  circle2 = $('.centered .expand-2nd'),
-  image = $('.centered .image-wrapper'),
-  winWidth = $(window).width();
+  console.log(subColor);
+  circle2.children('circle').css({
+    'fill' : '' + subColor + '',
+  });
 
-  if(winWidth >= '1024'){
-    circle1.css({
-      'transform' : 'translateX(-50%) scale(1)',
-      'transition' : '400ms cubic-bezier(.25, 1, .25, 1)',
-    });
+  image.removeClass('is__hiding');
 
-    circle2.css({
-      'transform' : 'translateX(-50%) scale(.5)',
-      'transition' : '200ms cubic-bezier(.25, 1, .25, 1)',
-      'opacity' : '1'
-    });
-
-    image.css({
-      'transition' : '200ms cubic-bezier(.25, 1, .25, 1)',
-      'opacity' : '1',
-    });
-
+  if(winWidth >= '992'){
+    circle1.removeClass('is__expanding');
+    circle2.removeClass('is__expanding');
+    image.removeClass('is__clicking');
   }else{
-    circle1.css({
-      'transform' : 'translateY(-50%) scale(1)',
-      'transition' : '400ms cubic-bezier(.25, 1, .25, 1)',
-    });
-
-    circle2.css({
-      'transform' : 'translateY(-50%) scale(.5)',
-      'transition' : '200ms cubic-bezier(.25, 1, .25, 1)',
-      'opacity' : '1'
-    });
+    circle1.removeClass('is__expanding--mobile');
+    circle2.removeClass('is__expanding--mobile');
+    image.removeClass('is__clicking--mobile');
   }
 
-
   setTimeout(function(){
-    circle1.css({
-      'transform' : 'translateX(0%) scale(1)',
-      'transition' : '600ms cubic-bezier(.25, 1, .25, 1)',
+    circle1.addClass('is__speeding');
+    circle2.addClass('is__speeding');
+    image.addClass('is__speeding');
 
-    });
-    circle2.css({
-      'transform' : 'translateX(0%) scale(.5)',
-      'transition' : '400ms cubic-bezier(.25, 1, .25, 1)',
-      'opacity' : '0'
-    });
-
-    image.css({
-      'transform' : 'translateX(0%)',
-      'transition' : '400ms cubic-bezier(.25, 1, .25, 1)',
-      'opacity' : '1'
-    });
+    if(winWidth >= '992'){
+      circle1.removeClass('is__centering');
+      circle2.removeClass('is__shrinkedCentering');
+      image.removeClass('is__shrinkedCentering');
+    }else{
+      circle1.removeClass('is__centering--toLeft');
+      circle2.removeClass('is__shrinkedCentering--toLeft');
+      image.removeClass('is__shrinkedCentering--toLeft');
+    }
   }, 400);
 
-
-  //show video overlay after animation finishes
   setTimeout(function(){
-    $('.video').css({'opacity' : '1'});
-  }, 800);
+    circle1.removeClass('is__speeding');
+    circle2.removeClass('is__speeding');
+    image.removeClass('is__speeding');
+    $('.video-wrapper').removeClass('is__hiding');
+  }, 700);
+
+
 }

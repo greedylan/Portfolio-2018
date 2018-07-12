@@ -71,15 +71,14 @@ export function frameReveal(){
 
 function animation(){
   $('.frame').addClass('frame__is-hiding');
-  // $('.frame').css({'opacity':'0'});
 
   setTimeout(function(){
     $('.frame').addClass('frame__no-padding');
   }, 800);
 
-  setTimeout(function(){
-    $('.rect').addClass('rect--grow');
-  }, 1000);
+  // setTimeout(function(){
+  //   $('.rect').addClass('rect--grow');
+  // }, 1000);
 }
 
 
@@ -94,7 +93,10 @@ export function frameHide(){
         animation();
       }else if(e.direction == 'down' && scrollDownCount == '2' ){
         console.log('sup');
-        $('body').css({'overflow':'inherit'});
+
+        $('body').removeClass('no-scroll');
+        // $('.frame').removeClass('frame__is-hiding');
+
       }else if(scrollDownCount >= '3'){
         return;
       }

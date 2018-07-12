@@ -106,6 +106,10 @@ ul{
   z-index: -100;
 }
 
+.z-index--1000{
+  z-index: 1000 !important;
+}
+
 
 
 /* UI elements */
@@ -173,4 +177,10 @@ hr{
 /* spacing */
 .vertical-spacing{
   margin: 2rem 0;
+}
+
+
+/* scrolling */
+.no-scroll{
+  overflow: hidden;
 }

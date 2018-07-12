@@ -9,7 +9,7 @@ import {scrollMoveCell, scrollLoadCell, swipeMoveCell,} from './modules/moveCell
 
 import {loadCenteredTitle, titleOut, titleIn} from './modules/title.js';
 import frameClipPath, {frameReveal, frameHide}  from './modules/animation-frame.js';
-import {toShowroom, logoTransitions} from './modules/clickEvents.js';
+import {toShowroom, toCarousel} from './modules/clickEvents.js';
 
 
 import {resizeSpear} from './modules/animation-letter.js'
@@ -30,7 +30,7 @@ $(function(){
   swipeMoveCell();
   scrollLoadCell();
   toShowroom();
-  logoTransitions();
+  toCarousel();
 
 });
 

@@ -4,8 +4,8 @@ import {projects} from './project.js';
 
 var imageSource = $('.image-wrapper picture source'),
 content = $('.carousel__content'),
-circle1 = $('.expand-1st circle'),
-circle2 = $('.expand-2nd circle'),
+circle1 = $('.circle-outer').children('circle'),
+circle2 = $('.circle-inner'),
 cell = $('.carousel__cell'),
 scrollPosition = 0;
 

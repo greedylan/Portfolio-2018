@@ -8,36 +8,14 @@ bread3 = $('.bread-3'),
 timing = 'cubic-bezier(.25, 1, .25, 1)';
 
 export function letterDOut(){
-
   //last bread: shrink width and reduce border radius to 0
-  bread3.css({
-    'width' : '15px',
-    'border-top-right-radius' : '0px',
-    'border-bottom-right-radius' : '0px',
-    'transition' : '800ms ' + timing + ''
-  });
-
+  bread3.addClass('is__half-squared');
   // rotate three breads
   setTimeout(function(){
-    bread1.css({
-      'transform' : 'rotate(-45deg)',
-      'transform-origin' : '200% 50%',
-      'transition' : '300ms ' + timing + ''
-    });
-
-    bread2.css({
-      'transform' : 'rotate(-45deg)',
-      'transform-origin' : '100% 50%',
-      'transition' : '500ms ' + timing + ''
-    });
-
-    bread3.css({
-      'transform' : 'rotate(-45deg)',
-      'transform-origin' : '0% 50%',
-      'transition' : '700ms ' + timing + ''
-    });
+    bread1.addClass('is__rotating');
+    bread2.addClass('is__rotating');
+    bread3.addClass('is__rotating');
   }, 100);
-
   // move pseudo class:before out of the parent's frame
   setTimeout(function(){
     $('.bread-1').addClass('grow');
@@ -48,49 +26,34 @@ export function letterDOut(){
       $('.bread-3').addClass('grow');
     }, 200);
   }, 500);
-
   // move breads out of site
   setTimeout(function(){
-    bread1.css({
-      'transform' : 'translate(-100px, -100px) rotate(-45deg)'
-    });
+    bread1.addClass('is__outofsight');
 
     setTimeout(function(){
-      bread2.css({
-        'transform' : 'translate(-100px, -100px) rotate(-45deg)'
-      });
+      bread2.addClass('is__outofsight');
     }, 100);
 
     setTimeout(function(){
-      bread3.css({
-        'transform' : 'translate(-100px, -100px) rotate(-45deg)'
-      });
+      bread3.addClass('is__outofsight');
     }, 200);
 
   }, 1000);
-
 };
-export function letterDIn(){
-  bread3.css({
-    'transform' : 'translate(0px, 0px) rotate(-45deg)',
-    'transition' : '300ms cubic-bezier(.25, 1, .25, 1)'
-  });
 
+export function letterDIn(){
+
+  bread3.addClass('is__speeding');
+  bread3.removeClass('is__outofsight');
 
   setTimeout(function(){
-    bread2.css({
-      'transform' : 'translate(0px, 0px) rotate(-45deg)',
-      'transition' : '300ms cubic-bezier(.25, 1, .25, 1)'
-    });
-
+    bread2.addClass('is__speeding');
+    bread2.removeClass('is__outofsight');
   }, 100);
 
   setTimeout(function(){
-    bread1.css({
-      'transform' : 'translate(0px, 0px) rotate(-45deg)',
-      'transition' : '300ms cubic-bezier(.25, 1, .25, 1)'
-    });
-
+    bread1.addClass('is__speeding');
+    bread1.removeClass('is__outofsight');
   }, 200);
 
   setTimeout(function(){
@@ -106,113 +69,22 @@ export function letterDIn(){
   }, 700);
 
   setTimeout(function(){
-    bread3.css({
-      'transform' : 'translate(0px, 0px) rotate(0deg)',
-      'transition' : '300ms cubic-bezier(.25, 1, .25, 1)'
-    });
-
-    bread2.css({
-      'transform' : 'translate(0px, 0px) rotate(0deg)',
-      'transition' : '300ms cubic-bezier(.25, 1, .25, 1)'
-    });
-
-    bread1.css({
-      'transform' : 'translate(0px, 0px) rotate(0deg)',
-      'transition' : '300ms cubic-bezier(.25, 1, .25, 1)'
-    });
+    bread1.removeClass('is__rotating');
+    bread2.removeClass('is__rotating');
+    bread3.removeClass('is__rotating');
   }, 700);
 
   setTimeout(function(){
-
-    bread3.css({
-      'width' : '30px',
-      'border-top-right-radius' : '30px',
-      'border-bottom-right-radius' : '30px',
-    });
+    bread3.removeClass('is__half-squared')
   }, 800);
-}
-
-
-export function letterHIn(){
-  //
-  bread1.css({
-    'transform' : 'translate(0px, 0px) rotate(-45deg)'
-  });
-
-  bread2.css({
-    'transform' : 'translate(0px, 0px) rotate(-45deg)'
-  });
-
-  bread3.css({
-    'transform' : 'translate(0px, 0px) rotate(-45deg)'
-  });
 
   setTimeout(function(){
-    $('.bread-1').removeClass('grow');
-
-    setTimeout(function(){
-      $('.bread-2').removeClass('grow');
-    }, 100);
-
-    setTimeout(function(){
-      $('.bread-3').removeClass('grow');
-    }, 200);
-
-  }, 300);
-
-  setTimeout(function(){
-    bread1.css({
-
-      'transform' : 'rotate(0deg)',
-      'transform-origin' : '200% 50%',
-      'transition' : '300ms ' + timing + ''
-    });
-
-    bread2.css({
-      'transform' : 'rotate(0deg)',
-      'transform-origin' : '100% 50%',
-      'transition' : '300ms ' + timing + ''
-    });
-
-    bread3.css({
-      'transform' : 'rotate(0deg)',
-      'transform-origin' : '0% 50%',
-      'transition' : '300ms ' + timing + ''
-    });
-  }, 600);
-
-  setTimeout(function(){
-    bread1.css({
-      'width' : '30px',
-      // 'background-color' : '#234E77'
-    })
-    bread2.css({
-      'width' : '0px',
-
-    })
-    bread3.css({
-      'width' : '30px',
-      // 'background-color' : '#234E77'
-    })
-
-    bread3.addClass('slides');
-  }, 601)
-
-  setTimeout(function(){
-    bread3.addClass('is__sliding');
-  }, 1000)
+    bread1.removeClass('is__speeding');
+    bread2.removeClass('is__speeding');
+    bread3.removeClass('is__speeding');
+  }, 1100);
 
 }
-
-
-
-
-
-
-
-
-
-
 
 
 
@@ -277,3 +149,101 @@ export function spearOut(){
     $('.spear').removeClass('toFront')
   }, 300)
 }
+
+
+
+
+// Archived
+// export function letterHIn(){
+//
+//   bread1.css({
+//     'transform' : 'translate(0px, 0px) rotate(-45deg)'
+//   });
+//
+//   bread2.css({
+//     'transform' : 'translate(0px, 0px) rotate(-45deg)'
+//   });
+//
+//   bread3.css({
+//     'transform' : 'translate(0px, 0px) rotate(-45deg)'
+//   });
+//
+//   setTimeout(function(){
+//     $('.bread-1').removeClass('grow');
+//
+//     setTimeout(function(){
+//       $('.bread-2').removeClass('grow');
+//     }, 100);
+//
+//     setTimeout(function(){
+//       $('.bread-3').removeClass('grow');
+//     }, 200);
+//
+//   }, 300);
+//
+//   setTimeout(function(){
+//     bread1.addClass('idk');
+//
+//     bread2.css({
+//       'transform' : 'rotate(0deg)',
+//       'transform-origin' : '100% 50%',
+//       'transition' : '300ms ' + timing + ''
+//     });
+//
+//     bread3.css({
+//       'transform' : 'rotate(0deg)',
+//       'transform-origin' : '0% 50%',
+//       'transition' : '300ms ' + timing + ''
+//     });
+//   }, 600);
+//
+//   setTimeout(function(){
+//     bread1.css({
+//       'width' : '30px',
+//     });
+//
+//     bread2.css({
+//       'width' : '0px',
+//     });
+//
+//     bread3.css({
+//       'width' : '30px',
+//     });
+//
+//     bread3.addClass('slides');
+//
+//   }, 601);
+//
+//   setTimeout(function(){
+//     bread3.addClass('is__sliding');
+//   }, 1000);
+//
+// }
+//
+//
+// export function letterHOut(){
+//   bread3.removeClass('is__sliding');
+//
+//   setTimeout(function(){
+//     bread3.removeClass('slides');
+//   }, 400);
+//
+//   setTimeout(function(){
+//     bread1.css({
+//       'width' : '15px',
+//     });
+//
+//     bread2.css({
+//       'width' : '15px',
+//     });
+//
+//     bread3.css({
+//       'width' : '15px',
+//     });
+//
+//   }, 1000)
+//
+// }
+//
+//
+//

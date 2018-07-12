@@ -64,10 +64,6 @@ function animateTitle(index){
   }, 800);
 }
 
-// function loadGif(index){
-//   var gif = projects[index].gif;
-//   $('.gif').attr('src', gif);
-// }
 
 
 export function loadNextTitle(){

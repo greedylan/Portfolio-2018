@@ -3701,6 +3701,10 @@ ul li{
 .z-index--1000{
   z-index: 1000 !important;
 }
+.z-index--100{
+  z-index: 100;
+  position: relative;
+}
 /* UI elements */
 button{
   cursor: pointer;
@@ -3755,7 +3759,10 @@ hr{
 }
 /* spacing */
 .vertical-spacing{
-  margin: 2rem 0;
+  /* margin: 5rem auto; */
+  padding-top: 5rem;
+  padding-bottom: 5rem;
+
 }
 /* scrolling */
 .no-scroll{
@@ -3995,19 +4002,36 @@ svg.circle-inner{
 .video-wrapper.is__hiding{
     opacity: 0;
   }
+/* logo D would be positioned as fixed on screen when VW >= 1200px */
+/* logo D would follow the flow and scroll outside of viewport when VW < 1200px */
 .logo{
+  position: relative;
   cursor: pointer;
-  position: fixed;
-  top: 0;
-  left: 0;
   z-index: 300;
 }
+@media(min-width: 1200px){
+.logo{
+    position: fixed;
+    top: 0;
+    left: 0
+}
+  }
+/* the following in class in used in file clickEvents.js: toShowroom() */
+.logo.is__above-carousel{
+  -webkit-transform: translateY(-100vh);
+          transform: translateY(-100vh);
+}
+@media(min-width: 1200px){
+.logo.is__above-carousel{
+    -webkit-transform: translateY(0);
+            transform: translateY(0)
+}
+  }
 .sandwich{
   display: flex;
   position: absolute;
   top: 30px;
   left: 30px;
-
 }
 div[class^="bread"]{
   width: 15px;
@@ -4025,6 +4049,7 @@ div[class^="bread"]:before{
     height: 60px;
     background: #FFFFFF;
     transition: 500ms cubic-bezier(.25, 1, .25, 1);
+
   }
 div[class^="bread"]:last-child{
   width: 30px;
@@ -4034,8 +4059,8 @@ div[class^="bread"]:last-child{
 div[class^="bread"]:last-child:before{
     opacity: 0;
   }
-/* The following defines styles status in various animation transitions */
-/* being used at scripts/modules/animation-letter.js */
+/* The following defines styles for animation transition states */
+/* classes used in file: scripts/modules/animation-letter.js */
 .is__speeding{
   transition : 300ms cubic-bezier(.25, 1, .25, 1) !important;
 }
@@ -4088,6 +4113,13 @@ div[class^="bread"]:last-child:before{
     top: -60px;
     opacity: 1 !important;
   }
+/* D parallax effect */
+/* needs to hide pseudo classes to reveal divs' background  */
+/* the following class is used in file: clickEvents.js - parallaxEffect() */
+.is__hiding-seudo:before{
+  opacity: 0;
+  background: none;
+}
 .spear{
   width: 100vw;
   height: 100vh;
@@ -4241,17 +4273,22 @@ section.hero .frame:before{
     left: 0;
     box-shadow: inset 0 0 0 16px #FFFFFF;
   }
+section.hero .frame-title__is-showing{
+    opacity: 1;
+  }
+section.hero .frame__is-hiding:before{
+    opacity: 0;
+  }
 section.hero .frame__is-animating:before{
     animation: clip-frame 1500ms 1 reverse;
   }
-section.hero .frame__is-hiding:before{
+section.hero .frame__is-animatingReverse:before{
     -webkit-animation: clip-frame 750ms 1 normal;
             animation: clip-frame 750ms 1 normal;
     transition: 1500ms cubic-bezier(.25, 1, .25, 1);
-    opacity: 0;
   }
-section.hero .frame__no-padding{
-    padding: 3rem 0;
+section.hero .frame__white-background{
+    background-color: rgba(255, 255, 255, .2)
   }
 section.hero .hero__info-wrapper{}
 section.hero .project-tools{
@@ -4292,9 +4329,9 @@ section.hero .list-frontend ul{
 section.hero .list-frontend ul li{
         padding: 6px 12px;
         margin: 0 2px;
-        border: 1px solid #FFFFFF;
+        border: 1px solid #DFDFDF;
         border-radius: 12px;
-        color: #FFFFFF;
+        color: #DFDFDF;
         font-weight: 300;
       }
 section.hero .btn-cta{
@@ -4308,9 +4345,6 @@ section.hero .btn-cta{
 section.presentation{
   background: #EFEFEF;
 }
-section.presentation .project-bulletpoints{
-    margin: 2rem 0;
-  }
 section.presentation .project-bulletpoints h4{
       margin-bottom: .5rem;
       color: #20456D;
@@ -4322,3 +4356,6 @@ section.presentation .project-detail p {
       width: 50%;
       margin: 0 auto;
     }
+section.more-projects div[class^="more-projects__"]{
+    flex: 0 1 50%;
+  }

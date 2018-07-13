@@ -6,6 +6,7 @@ import {letterDIn, letterDOut, resizeSpear, spearIn, spearOut} from './animation
 import frameClipPath, {frameReveal, frameHide}  from './animation-frame.js';
 
 
+var ScrollReveal = require('scrollreveal');
 var centerClick = false;
 var logoClick = false;
 var contentLoaded = false;
@@ -21,6 +22,8 @@ export function toShowroom(){
     if($('.showroom').hasClass('loaded')){
       var projectIndex = $(this).attr('data-project-index');
       var projectClicked = projects[projectIndex];
+
+      $('.logo').removeClass('is__above-carousel');
 
       (function transitionToShowroom(){
         $('body').addClass('no-scroll');
@@ -64,6 +67,9 @@ export function toShowroom(){
         $('.project-tools').css({'background' : ''+ primaryColor +''});
         $('.hero').css({'background-image' : 'url('+ heroBackground +')'});
 
+        //// lift presentation div to cover parallax hero title
+        $('.presentation').addClass('z-index--100')
+
 
         //// cta button
         var ctaExist = projects[projectIndex].cta.cta;
@@ -92,7 +98,7 @@ export function toShowroom(){
           for(var k=0; k<keysLength; k++){
             let content = bulletsObj[keys[k]],
             div = `\
-              <div class="col-sm-12 col-md-6 col-lg-4">\
+              <div class="bullet col-sm-12 col-md-6 col-lg-4">\
                 <h4 class="project-info__heading"></h4>\
                 <p></p>\
               </div>\
@@ -104,103 +110,156 @@ export function toShowroom(){
           }
         })();
 
+        //// more projects
+        var previousProject = projects[parseInt(projectIndex) - 1],
+        nextProject = projects[parseInt(projectIndex) + 1];
 
-        ////The following content load only once regardless clicks
-        function loadApps(){
-          //// app-list
-          var projectAppArray = projectClicked.app.split(/[, ]+/);
-          var appArray = Object.keys(apps);
-            // console.log(projectAppArray);
-            // console.log(appArray);
-          if(!Array.isArray(projectAppArray) || !projectAppArray.length){
-            return;
-          }
-          else{
-            var newArr = projectAppArray.filter( value => appArray.indexOf(value) !==  -1);
-            // console.log(newArr);
-            for(var i=0; i<newArr.length; i++){
-              $('.list-app').append(`<img src="${apps[newArr[i]]}"/>`);
+        console.log(previousProject.previewImage);
+        console.log(typeof(previousProject.previewImage));
+
+        $('.more-projects__previous').css({'background' : `${previousProject.primaryColor}`});
+        $('.more-projects__previous img').attr("src", `${previousProject.previewImage}`);
+
+        $('.more-projects__next').css({'background' : `${nextProject.primaryColor}`});
+        $('.more-projects__next img').attr("src", `${nextProject.previewImage}`);
+
+        /////////////////////////////////////////////////////////////////////////
+        ////The following content load only once regardless numbers of clicks////
+        /////////////////////////////////////////////////////////////////////////
+        if(contentLoaded === false){
+          (function loadApps(){
+            //// app-list
+            var projectAppArray = projectClicked.app.split(/[, ]+/);
+            var appArray = Object.keys(apps);
+              // console.log(projectAppArray);
+              // console.log(appArray);
+            if(!Array.isArray(projectAppArray) || !projectAppArray.length){
+              return;
             }
-          }
-        }
-        function loadFrontend(){
-          //// frontend-list
-          var projectFrontEndArray = projectClicked.frontend.split(/[, ]+/);
-
-          if(!Array.isArray(projectFrontEndArray) || !projectFrontEndArray.length){
-            return;
-          }
-          else{
-            for(var j=0; j<projectFrontEndArray.length; j++){
-              $('.list--frontend').append(`<li>${projectFrontEndArray[j]}</li>`);
+            else{
+              var newArr = projectAppArray.filter( value => appArray.indexOf(value) !==  -1);
+              // console.log(newArr);
+              for(var i=0; i<newArr.length; i++){
+                $('.list-app').append(`<img src="${apps[newArr[i]]}"/>`);
+              }
             }
-          }
-        }
-        function loadDetails(){
-          var detailObj = projectClicked.details;
-          var blockCount = Object.keys(projectClicked.details).length;
+          })();
+          (function loadFrontend(){
+            //// frontend-list
+            var projectFrontEndArray = projectClicked.frontend.split(/[, ]+/);
 
-
-          for(var i=1; i<blockCount+1; i++){
-            let blockNumber = "block" + i,
-            block = detailObj[blockNumber];
-
-            var divStyle1 = `\
-              <!-- Module-- Image Full Span -->\
-              <div class="detail-module--fullImage container" id="${blockNumber}">\
-                <h2 class="text-center"></h2>\
-                <p class="text-center"></p>\
-                <img alt=""/>\
-              </div>\
-            `;
-            var divStyle2 = `\
-              <!-- Module-- Images Split Two Columns -->\
-              <div class="detail-module--fullImage container" id="${blockNumber}">\
-                <h2 class="text-center"></h2>\
-                <p class="text-center"></p>\
-                <div class="row">\
-                  <div class="col-sm-12 col-lg-6">\
-                    <img class="left" src="" alt="">\
-                  </div>\
-                  <div class="col-sm-12 col-lg-6">\
-                    <img class="right" src="" alt="">\
-                  </div>\
-                </div>\
-              </div>\
-            `;
-
-
-            if(block.style === "1-col"){
-              $('.project-detail').append(divStyle1);
-              $(`#${blockNumber} h2`).text(block.mainTitle);
-              $(`#${blockNumber} p`).text(block.subTitle);
-              $(`#${blockNumber} img`).attr("src", `${block.imageUrl}`);
+            if(!Array.isArray(projectFrontEndArray) || !projectFrontEndArray.length){
+              return;
             }
-            else if(block.style === "2-col"){
-              $('.project-detail').append(divStyle2);
-              $(`#${blockNumber} h2`).text(block.mainTitle);
-              $(`#${blockNumber} p`).text(block.subTitle);
-              $(`#${blockNumber} img.left`).attr("src", `${block.imageUrlLeft}`);
-              $(`#${blockNumber} img.right`).attr("src", `${block.imageUrlRight}`);
+            else{
+              for(var j=0; j<projectFrontEndArray.length; j++){
+                $('.list--frontend').append(`<li>${projectFrontEndArray[j]}</li>`);
+              }
             }
-          }
-        }if(contentLoaded === false){
+          })();
+          (function loadDetails(){
+                    var detailObj = projectClicked.details;
+                    var blockCount = Object.keys(projectClicked.details).length;
 
-          loadApps();
-          loadFrontend();
-          loadDetails();
 
+                    for(var i=1; i<blockCount+1; i++){
+                      let blockNumber = "block" + i,
+                      block = detailObj[blockNumber];
+
+                      var divStyle1 = `\
+                        <!-- Module-- Image Full Span -->\
+                        <div class="detail-module fullImage container vertical-spacing" id="${blockNumber}">\
+                          <h2 class="text-center"></h2>\
+                          <p class="text-center"></p>\
+                          <img alt=""/>\
+                        </div>\
+                      `;
+                      var divStyle2 = `\
+                        <!-- Module-- Images Split Two Columns -->\
+                        <div class="detail-module splitImages container vertical-spacing" id="${blockNumber}">\
+                          <h2 class="text-center"></h2>\
+                          <p class="text-center"></p>\
+                          <div class="row">\
+                            <div class="col-sm-12 col-lg-6">\
+                              <img class="left" src="" alt="">\
+                            </div>\
+                            <div class="col-sm-12 col-lg-6">\
+                              <img class="right" src="" alt="">\
+                            </div>\
+                          </div>\
+                        </div>\
+                      `;
+
+
+                      if(block.style === "1-col"){
+                        $('.project-detail').append(divStyle1);
+                        $(`#${blockNumber} h2`).text(block.mainTitle);
+                        $(`#${blockNumber} p`).text(block.subTitle);
+                        $(`#${blockNumber} img`).attr("src", `${block.imageUrl}`);
+                      }
+                      else if(block.style === "2-col"){
+                        $('.project-detail').append(divStyle2);
+                        $(`#${blockNumber} h2`).text(block.mainTitle);
+                        $(`#${blockNumber} p`).text(block.subTitle);
+                        $(`#${blockNumber} img.left`).attr("src", `${block.imageUrlLeft}`);
+                        $(`#${blockNumber} img.right`).attr("src", `${block.imageUrlRight}`);
+                      }
+                    }
+                  })();
+          (function scrollRevela(){
+            // console.log('sup');
+            window.sr = ScrollReveal({reset: true});
+            sr.reveal('.bullet', {duration: 1000}, 50);
+            sr.reveal('.detail-module', {duration: 800, delay: 300, scale: 1, easing: 'cubic-bezier(.25, 1, .25, 1)',});
+          })();
           contentLoaded = true;
-
         }
         else if(contentLoaded === true){
           return;
         }
-
-
-
       })();
 
+      (function parallaxEffect(){
+        $(window).scroll(function(){
+
+          var wscroll = $(this).scrollTop();
+          var subColor = projectClicked.subColor;
+          var primaryColor = projectClicked.primaryColor;
+          //// hero title
+          $('.hero__titles').css({
+            'transform' : `translateY( ${ wscroll / 2 }px)`,
+          });
+
+          //// shrink and color logo after scrolling beyond hero's height / window's VW
+          if(wscroll >= $(this).height()){
+            $('.logo').css({
+              'transform' : 'scale(.75)',
+              'transition' : '300ms cubic-bezier(.25, 1, .25, 1)'
+            });
+
+            $('.bread-1, .bread-2, .bread-3').css({
+              'background' : `${primaryColor}`,
+              'transition' : '300ms cubic-bezier(.25, 1, .25, 1)'
+            });
+
+            $('.bread-1, .bread-2, .bread-3').addClass('is__hiding-seudo');
+
+          }
+          else{
+            $('.logo').css({
+              'transform' : 'scale(1)',
+              'transition' : '300ms cubic-bezier(.25, 1, .25, 1)'
+            });
+            $('.bread-1, .bread-2, .bread-3').css({
+              'background' : '#ffffff',
+            });
+            $('.bread-1, .bread-2, .bread-3').removeClass('is__hiding-seudo');
+          }
+
+
+
+        });
+      })();
     }
 
   });
@@ -210,8 +269,21 @@ export function toShowroom(){
 export function toCarousel(){
 
   $('.logo').click(function(){
+
+    $('.logo').addClass('is__above-carousel');
+
+    $('.frame').removeClass('frame__is-animating');
+    $('.frame').removeClass('frame__is-animatingReverse');
+    $('.frame').removeClass('frame__is-hiding');
+    $('.frame').removeClass('frame__is-animatingReverse');
+    $('.frame').removeClass('frame__white-background');
+
+    window.scrollTo(0, 0);
+
     $('.showroom').removeClass('loaded');
     $('body').removeClass('no-scroll');
+    $('.presentation').removeClass('z-index--100')
+
     centerClick = false;
     logoClick = true;
 

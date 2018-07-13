@@ -1,35 +1,21 @@
 var $ = require('jquery');
-import Project, {projects} from './project.js';
+import {projects} from './project.js';
 
-export default function Title(mainTitle, subTitle){
-  this.mainTitle = mainTitle;
-  this.subTitle  = subTitle;
-}
-
-var  title1 = new Title("Project-1 Main Title", "Project-1 Sub Title"),
-title2 = new Title("Project-2 Main Title", "Project-2 Sub Title"),
-title3 = new Title("Project-3 Main Title", "Project-3 Sub Title"),
-title4 = new Title("NHOO.com", "Web app connects local businesses and new homeowners with exclusive deals"),
-title5 = new Title("Project-5 Main Title", "Project-5 Sub Title"),
-title6 = new Title("Project-6 Main Title", "Project-6 Sub Title"),
-title7 = new Title("Project-7 Main Title", "Project-7 Sub Title");
-
-var titles = [title1, title2, title3, title4, title5, title6, title7];
 
 var titleMain = $('.main-title'),
 titleSub = $('.sub-title');
 
 // onload, insert the middle set title texts in array "titles"
 export function loadCenteredTitle(){
-  var index = Math.floor(titles.length/2);
-  titleMain.html(titles[index].mainTitle);
-  titleSub.html(titles[index].subTitle);
+  var index = Math.floor(projects.length/2);
+  titleMain.html(projects[index].mainTitle);
+  titleSub.html(projects[index].subTitle);
 }
 
 
 // functions that execute title animation on scroll/swipe
 var scrollPosition = 0,
-centerPosition = Math.floor(titles.length/2);
+centerPosition = Math.floor(projects.length/2);
 
 
 export function titleOut(){
@@ -58,8 +44,8 @@ function animateTitle(index){
     titleOut();
   }, 100);
   setTimeout(function(){
-    titleMain.html(titles[index].mainTitle);
-    titleSub.html(titles[index].subTitle);
+    titleMain.html(projects[index].mainTitle);
+    titleSub.html(projects[index].subTitle);
     titleIn();
   }, 800);
 }

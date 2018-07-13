@@ -1,6 +1,5 @@
 // cache projects' resources (image, circe colors, video/png)
 function Project(
-  data,
   mainTitle,
   subTitle,
   previewImage,
@@ -14,7 +13,6 @@ function Project(
   bullets,
   details
 ){
-  this.data = data;
   this.mainTitle = mainTitle;
   this.subTitle = subTitle;
   this.previewImage = previewImage;
@@ -66,11 +64,11 @@ var bullets3 = {
   role     : 'role contnet #3'
 };
 var bullets4 = {
-  about    : 'I love you',
-  mission  : 'do you really',
-  strategy : 'yes I do',
-  team     : 'ok then',
-  role     : 'come give daddy a hug'
+  about    : 'I love you I love you I love you I love you I love you I love you I love you ',
+  mission  : 'do you really do you really do you really do you really do you really',
+  strategy : 'yes I do yes I do yes I doyes I doyes I doyes I doyes I do',
+  team     : 'ok then ok thenok thenok thenok thenok thenok thenok then',
+  role     : 'come give daddy a hug come give daddy a hugcome give daddy a hugcome give daddy a hug'
 };
 var bullets5 = {
   about    : 'about content #5',
@@ -145,7 +143,6 @@ var detail7 = {
 
 
 var project1 = new Project(
-  "1",
   "main title - 1",
   "sub title - 1",
   "images/previewImage-1.png",
@@ -164,7 +161,6 @@ var project1 = new Project(
   detail1
 );
 var project2 = new Project(
-  "2",
   "main title - 2",
   "sub title - 2",
   "images/previewImage-2.png",
@@ -183,7 +179,6 @@ var project2 = new Project(
   detail2
 );
 var project3 = new Project(
-  "3",
   "main title - 3",
   "sub title - 3",
   "images/previewImage-3.png",
@@ -202,7 +197,6 @@ var project3 = new Project(
   detail3
 );
 var project4 = new Project(
-  "4",
   "NHOO.com",
   "A freaking title that going be so awesome that you gonna go wow is this for real",
   "images/previewImage-4.png",
@@ -221,7 +215,6 @@ var project4 = new Project(
   detail4
 );
 var project5 = new Project(
-  "5",
   "main title - 5",
   "sub title - 5",
   "images/previewImage-5.png",
@@ -240,7 +233,6 @@ var project5 = new Project(
   detail5
 );
 var project6 = new Project(
-  "6",
   "main title - 6",
   "sub title - 6",
   "images/previewImage-6.png",
@@ -259,7 +251,6 @@ var project6 = new Project(
   detail6
 );
 var project7 = new Project(
-  "7",
   "main title - 7",
   "sub title - 7",
   "images/previewImage-7.png",

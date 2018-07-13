@@ -1,6 +1,8 @@
 
 //import Javascript resources and modules
 var $ = require('jquery');
+var ScrollReveal = require('scrollreveal');
+
 import initialize from './modules/initialize.js';
 import {projects, apps, detail} from './modules/project.js';
 import {expandCircles, shrinkCircles} from './modules/animation-circle.js';
@@ -9,10 +11,11 @@ import {scrollMoveCell, scrollLoadCell, swipeMoveCell,} from './modules/moveCell
 
 import {loadCenteredTitle, titleOut, titleIn} from './modules/title.js';
 import frameClipPath, {frameReveal, frameHide}  from './modules/animation-frame.js';
-import {toShowroom, toCarousel} from './modules/clickEvents.js';
+import {toShowroom, toCarousel, loadContent} from './modules/clickEvents.js';
 
 
 import {resizeSpear} from './modules/animation-letter.js'
+
 
 // cache global variables
 let projectCount = $('.carousel__cell').length;
@@ -32,30 +35,10 @@ $(function(){
   toShowroom();
   toCarousel();
 
+  window.scrollTo(0, 0);
+
 });
 
-
-// $('.logo').click(function(){
-//   $('.spear').addClass('toFront');
-//   letterDOut();
-//
-//   setTimeout(function(){
-//     spearIn();
-//   }, 1200);
-// });
-//
-// $('.temp').click(function(){
-//   spearOut();
-//   setTimeout(function(){
-//     letterDIn();
-//   }, 300);
-// });
-//
-// $('.temp2').click(function(){
-//   letterDOut();
-//   shrinkCircles();
-//   showroom.removeClass('loaded');
-// });
 
 
 // window resize events

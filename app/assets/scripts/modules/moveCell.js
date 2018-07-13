@@ -77,6 +77,7 @@ function MoveCell(cellHeight, cellWidth){
     }, durationStop);
   };
 }
+
 function videoFadeOutThenIn(){
   $('.video').css({'opacity' : '0'});
   setTimeout(function(){

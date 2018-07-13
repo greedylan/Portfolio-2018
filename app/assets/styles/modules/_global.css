@@ -110,6 +110,11 @@ ul{
   z-index: 1000 !important;
 }
 
+.z-index--100{
+  z-index: 100;
+  position: relative;
+}
+
 
 
 /* UI elements */
@@ -176,7 +181,10 @@ hr{
 
 /* spacing */
 .vertical-spacing{
-  margin: 2rem 0;
+  /* margin: 5rem auto; */
+  padding-top: 5rem;
+  padding-bottom: 5rem;
+
 }
 
 

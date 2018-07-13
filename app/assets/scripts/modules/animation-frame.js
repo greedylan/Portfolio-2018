@@ -60,7 +60,9 @@ export default function frameClipPath(){
 export function frameReveal(){
   setTimeout(function(){
     $('.frame').addClass('frame__is-animating');
-    $('.frame').css({'opacity':'1'});
+    $('.frame').addClass('frame-title__is-showing');
+
+
   }, 1500);
 
   setTimeout(function(){
@@ -69,11 +71,16 @@ export function frameReveal(){
 }
 
 
-function animation(){
+function restoreFrame(){
+  $('.frame').removeClass('frame__is-animating');
+  $('.frame').addClass('frame__is-animatingReverse');
   $('.frame').addClass('frame__is-hiding');
 
+
+
   setTimeout(function(){
-    $('.frame').addClass('frame__no-padding');
+    $('.frame').removeClass('frame__is-animatingReverse');
+    // $('.frame').addClass('frame__white-background');
   }, 800);
 
   // setTimeout(function(){
@@ -90,7 +97,7 @@ export function frameHide(){
     callback: function(e){
       // console.log(e.direction);
       if(e.direction == 'down' && scrollDownCount < '2'){
-        animation();
+        restoreFrame();
       }else if(e.direction == 'down' && scrollDownCount == '2' ){
         console.log('sup');
 

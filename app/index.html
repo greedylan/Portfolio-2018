@@ -14,7 +14,7 @@
 
         <section class="hero">
           <div class="hero__container center hero__title-wrapper">
-            <div class="titles">
+            <div class="hero__titles">
               <h3 class="rect heading--white"></h3>
               <h1 class="frame heading--white">
                 <div class="frame__inner">
@@ -64,26 +64,41 @@
 
           <div class="project-bulletpoints vertical-spacing">
             <div class="container">
-              <div class="row">
+              <div class="row" id="hello">
+
                 <!--Project Bullets are loaded dynamically through js
                 according to data-project-index and project.js,
                 trigger on $('.centered').click(); at ./modules/clickEvents.js -->
+
               </div>
             </div>
           </div>
 
           <hr>
 
-          <div class="project-detail vertical-spacing">
+          <div class="project-detail vertical-spacing" id="yolo">
 
             <!--Project Details are loaded dynamically through js
             according to data-project-index and project.js,
             trigger on $('.centered').click(); at ./modules/clickEvents.js -->
 
-
           </div>
 
         </section>
+
+
+        <section class="more-projects flex">
+
+          <div class="more-projects__previous">
+            <img src="">
+          </div>
+
+          <div class="more-projects__next">
+            <img src="">
+          </div>
+
+        </section>
+
 
       </div>
     </div>
@@ -169,7 +184,7 @@
 
                 <div class="video-wrapper">
                   <div class="video-wrapper-inner">
-                    <video class="video" width="100%" autoplay loop>
+                    <video class="video" width="100%" autoplay muted loop>
                       <source src="videos/project--40.mp4" type="video/mp4">
                     </video>
                   </div>
@@ -233,12 +248,11 @@
 
 
       </div>
-    
+
 
     </div>
 
-
-    <div class="logo">
+    <div class="logo is__above-carousel">
       <div class="sandwich">
         <div class="bread-1"></div>
         <div class="bread-2"></div>

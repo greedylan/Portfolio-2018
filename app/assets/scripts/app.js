@@ -11,7 +11,7 @@ import {scrollMoveCell, scrollLoadCell, swipeMoveCell,} from './modules/moveCell
 
 import {loadCenteredTitle, titleOut, titleIn} from './modules/title.js';
 import frameClipPath, {frameReveal, frameHide}  from './modules/animation-frame.js';
-import {toShowroom, toCarousel, loadContent} from './modules/clickEvents.js';
+import clickEvents from './modules/clickEvents.js';
 
 
 import {resizeSpear} from './modules/animation-letter.js'
@@ -32,9 +32,7 @@ $(function(){
   scrollMoveCell();
   swipeMoveCell();
   scrollLoadCell();
-  toShowroom();
-  toCarousel();
-
+  clickEvents();
   window.scrollTo(0, 0);
 
 });

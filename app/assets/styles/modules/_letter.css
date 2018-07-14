@@ -141,7 +141,15 @@ div[class^="bread"]:last-child{
 .spear{
   width: 100vw;
   height: 100vh;
-  display: none;
+
+  &.display-none{
+    display: none;
+  }
+
+  &.is__hiding{
+    opacity: 0;
+    transition: 500ms cubic-bezier(.25, 1, .25, 1)
+  }
 
   & svg{
     width: 100%;
@@ -153,45 +161,3 @@ div[class^="bread"]:last-child{
     stroke-width: 15px;
   }
 }
-
-
-/* Archived */
-/* .bread-3.slides{
-  position: relative;
-  overflow: hidden;
-
-  &:before{
-    content: '';
-    display: block;
-    width: 60px;
-    height: 60px;
-    background: rgba(0, 0, 0, .15);
-    position: absolute;
-    top: 0;
-    right: 0;
-
-    transition: 1200ms cubic-bezier(.25, 1, .25, 1)
-  }
-  &:after{
-    content: '';
-    display: block;
-    width: 60px;
-    height: 60px;
-    background: rgba(0, 0, 0, .15);
-    position: absolute;
-    bottom: 0;
-    right: 0;
-
-    transition: 1200ms cubic-bezier(.25, 1, .25, 1)
-  }
-} */
-/* .bread-3.is__sliding{
-  &:before{
-    top: 45px;
-    opacity: 1 !important;
-  }
-  &:after{
-    bottom: 45px;
-    opacity: 1 !important;
-  }
-} */

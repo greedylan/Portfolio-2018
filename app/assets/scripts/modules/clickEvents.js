@@ -7,6 +7,11 @@ import {expandCircles, shrinkCircles} from './animation-circle.js';
 import {letterDIn, letterDOut, resizeSpear, spearIn, spearOut} from './animation-letter.js';
 import frameClipPath, {frameReveal, frameHide}  from './animation-frame.js';
 
+
+import {loadAll, loadPreviousProject, loadNextProject} from './loadCell.js';
+import {loadNextTitle, loadPreviousTitle} from './title.js';
+
+
 var centerClick = false;
 var logoClick = false;
 var contentLoaded = false;
@@ -16,8 +21,9 @@ projectIndex;
 
 
 
-
-//// RESUABLE FUNCTIONS
+////////////////////////
+// REUSABLE FUNCTIONS //
+////////////////////////
 function loadHero(projectClicked){
 
   //// LOAD ---> title, subtitle, hero bakcground image, bottom info background color
@@ -75,7 +81,6 @@ function loadHero(projectClicked){
   })();
 
 }
-
 function loadPresentation(projectClicked, projectIndex){
 
   //// LOAD ---> project bullet points (about, goal, team, role...ect)
@@ -167,134 +172,146 @@ function loadPresentation(projectClicked, projectIndex){
   })();
 
 }
+function emptyDivs(){
+  $('.bulletpoints-wrapper, .list-app, .list-frontend ul, .project-detail').empty();
+}
 
 
+////////////////////////////////////////
+// TRANSITION: CUURENT TO DESTINATION //
+////////////////////////////////////////
+
+
+
+var currentIndex;
 
 
 function toShowroom(){
-  $('.centered').click(function(){
+  function foo(){
+      var projectIndex = $(this).attr('data-project-index');
+      var projectClicked = projects[projectIndex];
 
-    var projectIndex = $(this).attr('data-project-index');
-    var projectClicked = projects[projectIndex];
+      currentIndex = projectIndex;
+      // console.log(current);
 
-    centerClick = true;
-    logoClick = false;
+      centerClick = true;
+      logoClick = false;
 
-    if(centerClick){$('.showroom').addClass('loaded');}
-    if($('.showroom').hasClass('loaded')){
-
-
-      ///////////////////////
-      // SCREEN TRANSITION //
-      ///////////////////////
-      (function transitionToShowroom(){
-        $('body').addClass('no-scroll');
-        titleOut();
-        letterDOut();
-        frameReveal();
-
-        setTimeout(function(){
-          frameClipPath();
-          frameHide();
-          expandCircles();
-        }, 400);
-
-        setTimeout(function(){
-          $('.main').addClass('is__hiding');
-
-        }, 1200);
+      if(centerClick){$('.showroom').addClass('loaded');}
+      if($('.showroom').hasClass('loaded')){
 
 
-        setTimeout(function(){
-          letterDIn();
-        }, 2600);
+        ///////////////////////
+        // SCREEN TRANSITION //
+        ///////////////////////
+        (function transitionToShowroom(){
+          $('body').addClass('no-scroll');
+          titleOut();
+          letterDOut();
+          frameReveal();
 
-        setTimeout(function(){
-          $('.main').addClass('is__hidden');
+          setTimeout(function(){
+            frameClipPath();
+            frameHide();
+            expandCircles();
+          }, 400);
 
-        }, 3000);
-      })();
+          setTimeout(function(){
 
+            $('.main').addClass('is__hiding');
 
-      //////////////////////
-      // LOADING ELEMENTS //
-      //////////////////////
-      loadHero(projectClicked);
-      loadPresentation(projectClicked, projectIndex);
-
-
-      ////////////////////////////////////////////////
-      //  LAYOUT & PARALLAX EFFECTS & SCROLL REVEAL //
-      ///////////////////////////////////////////////
-      (function(){
-
-        //// for logo parallax effect
-        $('.logo').removeClass('is__above-carousel');
-        //// lift presentation div to cover parallax hero title
-        $('.presentation').addClass('z-index--100');
+          }, 1200);
 
 
-        //// parallax effects
-        $(window).scroll(function(){
+          setTimeout(function(){
+            letterDIn();
+          }, 2600);
 
-          var wscroll = $(this).scrollTop();
-          var subColor = projectClicked.subColor;
-          var primaryColor = projectClicked.primaryColor;
-          //// hero title
-          $('.hero__titles').css({
-            'transform' : `translateY( ${ wscroll / 2 }px)`,
+          setTimeout(function(){
+
+            $('.main').addClass('is__hidden');
+          }, 3000);
+        })();
+
+
+        //////////////////////
+        // LOADING ELEMENTS //
+        //////////////////////
+        loadHero(projectClicked);
+        loadPresentation(projectClicked, projectIndex);
+
+
+        ////////////////////////////////////////////////
+        //  LAYOUT & PARALLAX EFFECTS & SCROLL REVEAL //
+        ///////////////////////////////////////////////
+        (function(){
+
+          //// for logo parallax effect
+          // $('.logo').removeClass('is__above-carousel');
+          //// lift presentation div to cover parallax hero title
+          // $('.presentation').addClass('z-index--100');
+
+
+          //// parallax effects
+          $(window).scroll(function(){
+
+            var wscroll = $(this).scrollTop();
+            var subColor = projectClicked.subColor;
+            var primaryColor = projectClicked.primaryColor;
+            //// hero title
+            $('.hero__titles').css({
+              'transform' : `translateY( ${ wscroll / 2 }px)`,
+            });
+
+            //// shrink and color logo after scrolling beyond hero's height / window's VW
+            if(wscroll >= $(this).height()){
+
+              $('.logo').addClass('logo__is-scrolled-passed-hero');
+
+              $('.bread').css({
+                'background' : `${primaryColor}`,
+              });
+
+              $('.bread-1, .bread-2, .bread-3').addClass('is__hiding-seudo');
+
+            }
+
+
+            else{
+              $('.logo').removeClass('logo__is-scrolled-passed-hero');
+
+              $('.bread-1, .bread-2, .bread-3').css({
+                'background' : '#ffffff',
+              });
+              $('.bread-1, .bread-2, .bread-3').removeClass('is__hiding-seudo');
+            }
           });
 
-          //// shrink and color logo after scrolling beyond hero's height / window's VW
-          if(wscroll >= $(this).height()){
-            $('.sandwich').css({
-              'transform' : 'scale(.75)',
-              'transform-origin' : '0 0',
-              'transition' : '1000ms cubic-bezier(.25, 1, .25, 1)'
-            });
 
-            $('.bread-1, .bread-2, .bread-3').css({
-              'background' : `${primaryColor}`,
-              // 'transition' : '300ms cubic-bezier(.25, 1, .25, 1)'
-            });
+          //// scroll reveal
+          if(contentLoaded === false){
+            window.sr = ScrollReveal({reset: true});
+            sr.reveal('.bullet', {duration: 1000}, 50);
+            sr.reveal('.detail-module', {duration: 800, delay: 200, scale: 1,});
 
-            $('.bread-1, .bread-2, .bread-3').addClass('is__hiding-seudo');
-
+            contentLoaded = true;
           }
-          else{
-            $('.sandwich').css({
-              'transform' : 'scale(1)',
-            });
-            $('.bread-1, .bread-2, .bread-3').css({
-              'background' : '#ffffff',
-            });
-            $('.bread-1, .bread-2, .bread-3').removeClass('is__hiding-seudo');
+          else if(contentLoaded === true){
+            return;
           }
-        });
 
-
-        //// scroll reveal
-        if(contentLoaded === false){
-          window.sr = ScrollReveal({reset: true});
-          sr.reveal('.bullet', {duration: 1000}, 50);
-          sr.reveal('.detail-module', {duration: 800, delay: 200, scale: 1,});
-
-          contentLoaded = true;
-        }
-        else if(contentLoaded === true){
-          return;
-        }
-
-      })();
+        })();
 
     }
+  }
 
-  });
+  var debounce = _.debounce(foo, 3000, {leading: true, trailing: false});
+  $('.centered').on('click', debounce);
+
 }
-
 function toCarousel(){
 
-  $('.logo').click(function(){
+  $('.sandwich').click(function(){
 
     centerClick = false;
     logoClick = true;
@@ -318,7 +335,7 @@ function toCarousel(){
     ////////////////////////
     // UNLOADING ELEMENTS //
     ////////////////////////
-    $('.bullet, .list-app, .list-frontend ul, .project-detail').empty();
+    emptyDivs();
 
 
 
@@ -327,7 +344,11 @@ function toCarousel(){
     ///////////////////////////////////////////////
     window.scrollTo(0, 0);
     $('body').removeClass('no-scroll');
-    $('.logo').addClass('is__above-carousel');
+    // $('.logo').addClass('is__above-carousel');
+
+
+    $('.logo').addClass('logo__is-scrolled-passed-hero')
+
     $('.main').removeClass('is__hiding is__hidden');
     $('.showroom').removeClass('loaded');
     $('.presentation').removeClass('z-index--100');
@@ -335,35 +356,94 @@ function toCarousel(){
   });
 
 }
-
 function toAnotherProject(){
 
   $('.more-projects div').click(function(){
     // This section would be more clear in a timeline fashion so there is no blocky order like
     // toCarousel(){}; and to toShowroom(){};
 
+
+    var projectIndex = $(this).attr('data-project-index');
+    var projectClicked = projects[projectIndex];
+    var primaryColor = projectClicked.primaryColor;
+
+    console.log(currentIndex, projectIndex);
+
+    if(currentIndex > projectIndex){
+      loadPreviousProject();
+      loadPreviousTitle();
+    }
+    else if(currentIndex < projectIndex){
+      loadNextProject();
+      loadNextTitle();
+
+    }
+
+
+    $('.centered .circle-outer').children('circle').css({
+      'fill' : `${projectClicked.primaryColor}`,
+    });
+
+    $('.logo').removeClass('logo__is-scrolled-passed-hero');
+
     letterDOut();
+    frameHide();
     $('.spear').removeClass('display-none');
+    $('body').addClass('no-scroll');
+    $('.bread').css({
+      'background': '#FFFFFF',
+      'transition' : 'background 0ms'
+    });
+
+    // change logo D's color upon change of the projects
+    $(window).scroll(function(){
+
+      var wscroll = $(this).scrollTop();
+      //// shrink and color logo after scrolling beyond hero's height / window's VW
+      if(wscroll >= $(this).height()){
+        $('.bread').css({
+          'background' : `${primaryColor}`,
+        });
+      }
+      else{
+        $('.bread-1, .bread-2, .bread-3').css({
+          'background' : '#FFFFFF',
+        });
+      }
+    });
 
     setTimeout(function(){
       spearIn();
     }, 1600);
 
     setTimeout(function(){
-      $('.bullet, .list-app, .list-frontend ul, .project-detail').empty();
-      $('.spear').addClass('is__hiding');
+      emptyDivs();
+    }, 2000);
+
+    setTimeout(function(){
       window.scrollTo(0, 0);
+      loadHero(projectClicked);
+      loadPresentation(projectClicked, projectIndex);
+      frameReveal();
+    }, 2000);
+
+    setTimeout(function(){
+      spearOut();
+      letterDIn();
     }, 2400);
 
     setTimeout(function(){
-      letterDIn();
-      spearOut();
-    }, 3200);
+      $('.spear').addClass('is__hiding');
+      $('.frame').removeClass('frame__is-hiding');
+    }, 4000);
 
     setTimeout(function(){
       $('.spear').addClass('display-none');
       $('.spear').removeClass('is__hiding');
-    }, 4000);
+
+    }, 5000);
+
+
   });
 
 
@@ -372,7 +452,9 @@ function toAnotherProject(){
 
 
 
-
+/////////////////////////////
+// EXECUTE ALL WHEN ONLOAD //
+/////////////////////////////
 export default function clickEvents(){
   toShowroom();
   toCarousel();

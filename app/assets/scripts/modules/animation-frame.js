@@ -26,10 +26,6 @@ export default function frameClipPath(){
   y1 = strokeWidth + 'px',
   y2 = (frameHeight + 96 - strokeWidth) + 'px';
 
-
-  // console.log(frameWidth, frameHeight);
-  // console.log(x1, x2, y1, y2);
-
   var style = document.createElement('style');
   style.type = 'text/css';
   var keyFrames = `
@@ -91,24 +87,26 @@ function restoreFrame(){
 
 export function frameHide(){
 
-  var scrollDownCount = 1;
+  var scrollDownCount = 0;
   var indicator2 = new WheelIndicator({
     elem: document.querySelector('html'),
     callback: function(e){
       // console.log(e.direction);
-      if(e.direction == 'down' && scrollDownCount < '2'){
+      scrollDownCount = scrollDownCount + 1;
+      // console.log(scrollDownCount);
+
+      if(e.direction == 'down' && scrollDownCount == '1'){
         restoreFrame();
-      }else if(e.direction == 'down' && scrollDownCount == '2' ){
-        console.log('sup');
-
+      }
+      else if(scrollDownCount == '2'){
         $('body').removeClass('no-scroll');
-        // $('.frame').removeClass('frame__is-hiding');
-
-      }else if(scrollDownCount >= '3'){
+      }
+      else if(scrollDownCount >= '3'){
         return;
       }
-      scrollDownCount = scrollDownCount + 1;
+
     }
+
   });
   // see Instance method - https://github.com/Promo/wheel-indicator
   indicator2.setOptions({preventMouse: false});

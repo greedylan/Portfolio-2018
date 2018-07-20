@@ -3783,23 +3783,24 @@ hr{
   height: 100%;
   overflow: hidden;
   position: relative;
+  background: #DFDFDF;
 }
 .titles-wrapper{
   width: 100%;
   height: 50vh;
 
-  position: fixed;
+
+  position: absolute;
   top: 0;
   left: 0;
-  z-index: 310;
+  z-index: 350;
 
   text-align: center;
 
   display: flex;
-  justify-content: center;
   align-items: center;
 
-  padding: 1rem 2rem;
+  padding: 2rem;
 }
 @media(min-width: 992px){
 .titles-wrapper{
@@ -3811,12 +3812,11 @@ hr{
             transform: translateY(-50%);
 
     text-align: right;
-    padding: 2rem 4rem
+    padding: 0 4rem
 }
   }
 .titles-wrapper .titles{
     flex: 0 1 100%;
-
   }
 .carousel-wrapper{
   width: 100%;
@@ -3824,6 +3824,7 @@ hr{
 
   position: absolute;
   top: 50%;
+  z-index: 300;
   /* line below goes with .carousel__cell{ transform: translateX(-50%) to center cells in mobile}  */
   margin-left: -100%;
 }
@@ -3834,7 +3835,6 @@ hr{
   }
 .carousel{
   display: flex;
-  background: #D4D4D4;
 }
 @media(min-width: 992px){
 .carousel{
@@ -3855,7 +3855,6 @@ hr{
   position: relative;
   -webkit-transform: translateX(-50%);
           transform: translateX(-50%);
-
 }
 @media(min-width: 992px){
 .carousel__cell{
@@ -3863,9 +3862,15 @@ hr{
   flex-direction: row-reverse;
   -webkit-transform: none;
           transform: none
-
 }
   }
+/* the following style fixes the bug:
+in mobile layout, carousel__cell after centered
+stand out above all other DOM elements when transitioning from home to showroom */
+.centered{
+  position: relative;
+  z-index: 1000;
+}
 .carousel__content{
   position: relative;
   height: 50vh;
@@ -4004,42 +4009,97 @@ svg.circle-inner{
   }
 /* logo D would be positioned as fixed on screen when VW >= 1200px */
 /* logo D would follow the flow and scroll outside of viewport when VW < 1200px */
-.logo{
+/* .logo{
   position: relative;
   cursor: pointer;
   z-index: 300;
-}
-@media(min-width: 1200px){
-.logo{
+
+  @mixin desktop-up{
     position: fixed;
     top: 0;
-    left: 0
-}
+    left: 0;
   }
+} */
 /* the following in class in used in file clickEvents.js: toShowroom() */
-.logo.is__above-carousel{
-  -webkit-transform: translateY(-100vh);
-          transform: translateY(-100vh);
+/* .logo.is__above-carousel{
+  transform: translateY(-100vh);
+  @mixin desktop-up{
+    transform: translateY(0);
+  }
+} */
+.logo{
+  position: fixed;
+  top: 0;
+  left: 0;
+  cursor: pointer;
+  z-index: 400;
+
+
+  width: 100%;
+  height: 60px;
 }
-@media(min-width: 1200px){
-.logo.is__above-carousel{
-    -webkit-transform: translateY(0);
-            transform: translateY(0)
+@media(min-width: 768px){
+.logo{
+
+    width: auto;
+    height: auto
 }
   }
 .sandwich{
   display: flex;
   position: absolute;
-  top: 30px;
-  left: 30px;
+  -webkit-transform-origin: 0% 0%;
+          transform-origin: 0% 0%;
+  transition: -webkit-transform 500ms cubic-bezier(.25, 1, .25, 1);
+  transition: transform 500ms cubic-bezier(.25, 1, .25, 1);
+  transition: transform 500ms cubic-bezier(.25, 1, .25, 1), -webkit-transform 500ms cubic-bezier(.25, 1, .25, 1);
+
+  top: 15px;
+  left: 15px;
+  -webkit-transform: scale(.75);
+          transform: scale(.75);
 }
-div[class^="bread"]{
+@media(min-width: 768px){
+.sandwich{
+    top: 20px;
+    left: 20px;
+    -webkit-transform: scale(1);
+            transform: scale(1)
+}
+  }
+.logo__is-scrolled-passed-hero{
+  background: rgba(255, 255, 255, .95);
+}
+@media(min-width: 768px){
+.logo__is-scrolled-passed-hero{
+    background: none
+}
+  }
+.logo__is-scrolled-passed-hero .sandwich{
+    -webkit-transform: scale(.5);
+            transform: scale(.5);
+
+  }
+@media(min-width: 768px){
+.logo__is-scrolled-passed-hero .sandwich{
+      -webkit-transform: scale(.75);
+              transform: scale(.75)
+
+  }
+  }
+.bread{
   width: 15px;
   height: 60px;
   background: #FFFFFF;
   position: relative;
+  margin: 0;
+  padding: 0;
 }
-div[class^="bread"]:before{
+.bread.is__showing:before{
+    opacity: 1;
+    transition: opacity 0ms;
+  }
+.bread:before{
     content: '';
     display: block;
     position: absolute;
@@ -4048,17 +4108,21 @@ div[class^="bread"]:before{
     width: 15px;
     height: 60px;
     background: #FFFFFF;
-    transition: 500ms cubic-bezier(.25, 1, .25, 1);
 
+    opacity: 0;
+
+  }
+@media(min-width: 768px){
+.bread:before{
+      height: 60px
+
+  }
   }
 div[class^="bread"]:last-child{
   width: 30px;
   border-top-right-radius: 30px;
   border-bottom-right-radius: 30px;
 }
-div[class^="bread"]:last-child:before{
-    opacity: 0;
-  }
 /* The following defines styles for animation transition states */
 /* classes used in file: scripts/modules/animation-letter.js */
 .is__speeding{
@@ -4116,10 +4180,6 @@ div[class^="bread"]:last-child:before{
 /* D parallax effect */
 /* needs to hide pseudo classes to reveal divs' background  */
 /* the following class is used in file: clickEvents.js - parallaxEffect() */
-.is__hiding-seudo:before{
-  opacity: 0;
-  background: none;
-}
 .spear{
   width: 100vw;
   height: 100vh;

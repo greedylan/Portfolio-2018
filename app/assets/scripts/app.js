@@ -3,6 +3,9 @@
 var $ = require('jquery');
 var ScrollReveal = require('scrollreveal');
 
+// lodash debouncing
+import './modules/lodash.custom.min.js';
+
 import initialize from './modules/initialize.js';
 import {projects, apps, detail} from './modules/project.js';
 import {expandCircles, shrinkCircles} from './modules/animation-circle.js';
@@ -14,7 +17,7 @@ import frameClipPath, {frameReveal, frameHide}  from './modules/animation-frame.
 import clickEvents from './modules/clickEvents.js';
 
 
-import {resizeSpear} from './modules/animation-letter.js'
+import {resizeSpear, spearIn, spearOut} from './modules/animation-letter.js'
 
 
 // cache global variables
@@ -39,10 +42,27 @@ $(function(){
 
 
 
-// window resize events
-$(window).resize(function(){
+// The following codes re-inject data in a debouncing manner when window resizes
+// lodash ignites reIntroduceData() only once after 300ms pause of not having continuous resize event
+
+function reIntroduceData(){
   initialize();
-  resizeSpear();
+
   swipeMoveCell();
   scrollMoveCell();
-});
+
+  resizeSpear();
+  spearOut();
+  spearIn();
+
+  (function(){
+    $('.centered').click(function(){
+      expandCircles();
+    });
+  })();
+
+  // test
+  // console.log('sup');
+}
+var debouncedWindowResizing = _.debounce(reIntroduceData, 500, {leading: true, trailing: false});
+$(window).on('resize', debouncedWindowResizing);

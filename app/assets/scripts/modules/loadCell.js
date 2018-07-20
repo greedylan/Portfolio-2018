@@ -6,11 +6,15 @@ var imageSource = $('.image-wrapper picture source'),
 content = $('.carousel__content'),
 circle1 = $('.circle-outer').children('circle'),
 circle2 = $('.circle-inner'),
+video = $('.video'),
 cell = $('.carousel__cell'),
 scrollPosition = 0;
 
 export function loadPreview (element){
+
   element.each(function(i){
+
+
     var index = i + scrollPosition;
     if(index >= projects.length){ index = i + scrollPosition - projects.length;}
 
@@ -27,22 +31,29 @@ export function loadPreview (element){
       $(this).css({'fill' : '' + primaryColor + ''});
     }else if(element == circle2){
       $(this).css({'fill' : '' + subColor + ''});
-    }else if(element == cell){
     }
-  });
+
+
+  }); // end of .each()
 }
+
 export function loadDataIndex(cell, array){
   cell.each(function(i){
     $(this).attr('data-project-index', array[i]);
   });
-  console.log(array);
 }
+
 export function videoWrapperBackground(){
   var index = $('.centered').attr("data-project-index");
   $('.centered .video-wrapper').css({'background-color' : `${projects[index].primaryColor}`});
 }
 
 
+
+
+
+
+var projectIndex;
 
 
 export function loadNextProject(){
@@ -57,17 +68,25 @@ export function loadNextProject(){
     array.push(index);
   }
 
-  loadPreview (imageSource);
-  loadPreview (content);
-  loadPreview (circle1);
-  loadPreview (circle2);
+
+  projectIndex = parseInt($('.centered').attr('data-project-index')) + 1;
+  if(projectIndex >= 7){projectIndex = 0;}
+  var previewVideoURL = projects[projectIndex].previewVideo;
+  $('.video').children('source').attr('src', previewVideoURL);
+  $('.video')[0].load();
+  $('.video')[0].play();
+
+
+  loadPreview(imageSource);
+  loadPreview(content);
+  loadPreview(circle1);
+  loadPreview(circle2);
   loadDataIndex(cell, array);
   videoWrapperBackground();
 
-  // console.log(scrollPosition)
-
-
 }
+
+
 export function loadPreviousProject(){
   if(scrollPosition === 0){scrollPosition = projects.length;}
   scrollPosition = scrollPosition - 1;
@@ -80,6 +99,15 @@ export function loadPreviousProject(){
     if(index < 0 ){index = index + projets.length;}
     array.push(index);
   }
+
+
+  projectIndex = parseInt($('.centered').attr('data-project-index')) - 1;
+  if(projectIndex <= 0 ){projectIndex = 7;}
+  var previewVideoURL = projects[projectIndex].previewVideo;
+  $('.video').children('source').attr('src', previewVideoURL);
+  $('.video')[0].load();
+  $('.video')[0].play();
+
 
   loadPreview (imageSource);
   loadPreview (content);
@@ -95,5 +123,4 @@ loadPreview (imageSource);
 loadPreview (content);
 loadPreview (circle1);
 loadPreview (circle2);
-loadPreview (cell);
 videoWrapperBackground();

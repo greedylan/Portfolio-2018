@@ -18,6 +18,7 @@
   height: 100%;
   overflow: hidden;
   position: relative;
+  background: #DFDFDF;
 }
 
 
@@ -25,18 +26,18 @@
   width: 100%;
   height: 50vh;
 
-  position: fixed;
+
+  position: absolute;
   top: 0;
   left: 0;
-  z-index: 310;
+  z-index: 350;
 
   text-align: center;
 
   display: flex;
-  justify-content: center;
   align-items: center;
 
-  padding: 1rem 2rem;
+  padding: 2rem;
 
   @mixin laptop-up{
     width: 50%;
@@ -46,14 +47,14 @@
     transform: translateY(-50%);
 
     text-align: right;
-    padding: 2rem 4rem;
+    padding: 0 4rem;
   }
 
   & .titles{
     flex: 0 1 100%;
-
   }
 }
+
 
 .carousel-wrapper{
   width: 100%;
@@ -61,6 +62,7 @@
 
   position: absolute;
   top: 50%;
+  z-index: 300;
   /* line below goes with .carousel__cell{ transform: translateX(-50%) to center cells in mobile}  */
   margin-left: -100%;
   @mixin laptop-up{
@@ -70,10 +72,6 @@
 
 .carousel{
   display: flex;
-  background: #D4D4D4;
-
-
-
   @mixin laptop-up{
     display: block;
     width: 100%;
@@ -92,19 +90,24 @@
   padding: 0;
   position: relative;
   transform: translateX(-50%);
-
   @mixin laptop-up{
   display: flex;
   flex-direction: row-reverse;
   transform: none;
   }
+}
 
+/* the following style fixes the bug:
+in mobile layout, carousel__cell after centered
+stand out above all other DOM elements when transitioning from home to showroom */
+.centered{
+  position: relative;
+  z-index: 1000;
 }
 
 .carousel__content{
   position: relative;
   height: 50vh;
-
   @mixin laptop-up{
     width: 50%;
     height: auto;

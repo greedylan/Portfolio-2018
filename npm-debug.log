@@ -1,0 +1,2234 @@
+0 info it worked if it ends with ok
+1 verbose cli [ '/usr/local/bin/node',
+1 verbose cli   '/usr/local/bin/npm',
+1 verbose cli   'i',
+1 verbose cli   '-g',
+1 verbose cli   'lodash-cli' ]
+2 info using npm@3.10.10
+3 info using node@v6.11.0
+4 silly loadCurrentTree Starting
+5 silly install loadCurrentTree
+6 silly install readGlobalPackageData
+7 silly fetchPackageMetaData lodash-cli
+8 silly fetchNamedPackageData lodash-cli
+9 silly mapToRegistry name lodash-cli
+10 silly mapToRegistry using default registry
+11 silly mapToRegistry registry https://registry.npmjs.org/
+12 silly mapToRegistry data Result {
+12 silly mapToRegistry   raw: 'lodash-cli',
+12 silly mapToRegistry   scope: null,
+12 silly mapToRegistry   escapedName: 'lodash-cli',
+12 silly mapToRegistry   name: 'lodash-cli',
+12 silly mapToRegistry   rawSpec: '',
+12 silly mapToRegistry   spec: 'latest',
+12 silly mapToRegistry   type: 'tag' }
+13 silly mapToRegistry uri https://registry.npmjs.org/lodash-cli
+14 verbose request uri https://registry.npmjs.org/lodash-cli
+15 verbose request no auth needed
+16 info attempt registry request try #1 at 4:52:34 PM
+17 verbose request id 7c4065d3d5eb4e01
+18 http request GET https://registry.npmjs.org/lodash-cli
+19 http 200 https://registry.npmjs.org/lodash-cli
+20 verbose headers { date: 'Tue, 17 Jul 2018 23:52:32 GMT',
+20 verbose headers   'content-type': 'application/json; charset=UTF-8',
+20 verbose headers   'transfer-encoding': 'chunked',
+20 verbose headers   connection: 'keep-alive',
+20 verbose headers   'set-cookie': [ '__cfduid=d1c17b8ae3926571c33a36f9767271ed51531871552; expires=Wed, 17-Jul-19 23:52:32 GMT; path=/; domain=.registry.npmjs.org; HttpOnly' ],
+20 verbose headers   'cache-control': 'max-age=300',
+20 verbose headers   'cf-cache-status': 'HIT',
+20 verbose headers   'cf-ray': '43c09f72bbfd98ad-LAX',
+20 verbose headers   etag: 'W/"06467c580cf73ccdc50526a27a350e1c"',
+20 verbose headers   'expect-ct': 'max-age=604800, report-uri="https://report-uri.cloudflare.com/cdn-cgi/beacon/expect-ct"',
+20 verbose headers   'last-modified': 'Sun, 27 May 2018 06:57:44 GMT',
+20 verbose headers   vary: 'accept-encoding, accept',
+20 verbose headers   server: 'cloudflare',
+20 verbose headers   'content-encoding': 'gzip' }
+21 silly get cb [ 200,
+21 silly get   { date: 'Tue, 17 Jul 2018 23:52:32 GMT',
+21 silly get     'content-type': 'application/json; charset=UTF-8',
+21 silly get     'transfer-encoding': 'chunked',
+21 silly get     connection: 'keep-alive',
+21 silly get     'set-cookie': [ '__cfduid=d1c17b8ae3926571c33a36f9767271ed51531871552; expires=Wed, 17-Jul-19 23:52:32 GMT; path=/; domain=.registry.npmjs.org; HttpOnly' ],
+21 silly get     'cache-control': 'max-age=300',
+21 silly get     'cf-cache-status': 'HIT',
+21 silly get     'cf-ray': '43c09f72bbfd98ad-LAX',
+21 silly get     etag: 'W/"06467c580cf73ccdc50526a27a350e1c"',
+21 silly get     'expect-ct': 'max-age=604800, report-uri="https://report-uri.cloudflare.com/cdn-cgi/beacon/expect-ct"',
+21 silly get     'last-modified': 'Sun, 27 May 2018 06:57:44 GMT',
+21 silly get     vary: 'accept-encoding, accept',
+21 silly get     server: 'cloudflare',
+21 silly get     'content-encoding': 'gzip' } ]
+22 verbose get saving lodash-cli to /Users/dylanhsiao/.npm/registry.npmjs.org/lodash-cli/.cache.json
+23 verbose correctMkdir /Users/dylanhsiao/.npm correctMkdir not in flight; initializing
+24 silly install normalizeTree
+25 silly loadCurrentTree Finishing
+26 silly loadIdealTree Starting
+27 silly install loadIdealTree
+28 silly cloneCurrentTree Starting
+29 silly install cloneCurrentTreeToIdealTree
+30 silly cloneCurrentTree Finishing
+31 silly loadShrinkwrap Starting
+32 silly install loadShrinkwrap
+33 silly loadShrinkwrap Finishing
+34 silly loadAllDepsIntoIdealTree Starting
+35 silly install loadAllDepsIntoIdealTree
+36 silly resolveWithNewModule lodash-cli@4.17.5 checking installable status
+37 silly cache add args [ 'lodash-cli', null ]
+38 verbose cache add spec lodash-cli
+39 silly cache add parsed spec Result {
+39 silly cache add   raw: 'lodash-cli',
+39 silly cache add   scope: null,
+39 silly cache add   escapedName: 'lodash-cli',
+39 silly cache add   name: 'lodash-cli',
+39 silly cache add   rawSpec: '',
+39 silly cache add   spec: 'latest',
+39 silly cache add   type: 'tag' }
+40 silly addNamed lodash-cli@latest
+41 verbose addNamed "latest" is being treated as a dist-tag for lodash-cli
+42 info addNameTag [ 'lodash-cli', 'latest' ]
+43 silly mapToRegistry name lodash-cli
+44 silly mapToRegistry using default registry
+45 silly mapToRegistry registry https://registry.npmjs.org/
+46 silly mapToRegistry data Result {
+46 silly mapToRegistry   raw: 'lodash-cli',
+46 silly mapToRegistry   scope: null,
+46 silly mapToRegistry   escapedName: 'lodash-cli',
+46 silly mapToRegistry   name: 'lodash-cli',
+46 silly mapToRegistry   rawSpec: '',
+46 silly mapToRegistry   spec: 'latest',
+46 silly mapToRegistry   type: 'tag' }
+47 silly mapToRegistry uri https://registry.npmjs.org/lodash-cli
+48 verbose addNameTag registry:https://registry.npmjs.org/lodash-cli not in flight; fetching
+49 verbose get https://registry.npmjs.org/lodash-cli not expired, no request
+50 silly addNameTag next cb for lodash-cli with tag latest
+51 silly addNamed lodash-cli@4.17.5
+52 verbose addNamed "4.17.5" is a plain semver version for lodash-cli
+53 silly mapToRegistry name lodash-cli
+54 silly mapToRegistry using default registry
+55 silly mapToRegistry registry https://registry.npmjs.org/
+56 silly mapToRegistry data Result {
+56 silly mapToRegistry   raw: 'lodash-cli',
+56 silly mapToRegistry   scope: null,
+56 silly mapToRegistry   escapedName: 'lodash-cli',
+56 silly mapToRegistry   name: 'lodash-cli',
+56 silly mapToRegistry   rawSpec: '',
+56 silly mapToRegistry   spec: 'latest',
+56 silly mapToRegistry   type: 'tag' }
+57 silly mapToRegistry uri https://registry.npmjs.org/lodash-cli
+58 verbose addRemoteTarball https://registry.npmjs.org/lodash-cli/-/lodash-cli-4.17.5.tgz not in flight; adding
+59 verbose addRemoteTarball [ 'https://registry.npmjs.org/lodash-cli/-/lodash-cli-4.17.5.tgz',
+59 verbose addRemoteTarball   '1bab72c8c9980febf4fe7a1900b0971ce040dd0b' ]
+60 info retry fetch attempt 1 at 4:52:35 PM
+61 info attempt registry request try #1 at 4:52:35 PM
+62 http fetch GET https://registry.npmjs.org/lodash-cli/-/lodash-cli-4.17.5.tgz
+63 http fetch 200 https://registry.npmjs.org/lodash-cli/-/lodash-cli-4.17.5.tgz
+64 silly fetchAndShaCheck shasum 1bab72c8c9980febf4fe7a1900b0971ce040dd0b
+65 verbose addTmpTarball /var/folders/k2/9f3qd81x3f78064kmblystzm0000gn/T/npm-52061-06a01a16/registry.npmjs.org/lodash-cli/-/lodash-cli-4.17.5.tgz not in flight; adding
+66 verbose addTmpTarball already have metadata; skipping unpack for lodash-cli@4.17.5
+67 verbose correctMkdir /Users/dylanhsiao/.npm correctMkdir not in flight; initializing
+68 silly cache afterAdd lodash-cli@4.17.5
+69 verbose afterAdd /Users/dylanhsiao/.npm/lodash-cli/4.17.5/package/package.json not in flight; writing
+70 verbose correctMkdir /Users/dylanhsiao/.npm correctMkdir not in flight; initializing
+71 verbose afterAdd /Users/dylanhsiao/.npm/lodash-cli/4.17.5/package/package.json written
+72 silly addShrinkwrap Found shrinkwrap in lodash-cli package/npm-shrinkwrap.json
+73 silly addShrinkwrap Completed reading shrinkwrap in lodash-cli
+74 silly fetchNamedPackageData lodash
+75 silly mapToRegistry name lodash
+76 silly mapToRegistry using default registry
+77 silly mapToRegistry registry https://registry.npmjs.org/
+78 silly mapToRegistry data Result {
+78 silly mapToRegistry   raw: 'lodash',
+78 silly mapToRegistry   scope: null,
+78 silly mapToRegistry   escapedName: 'lodash',
+78 silly mapToRegistry   name: 'lodash',
+78 silly mapToRegistry   rawSpec: '',
+78 silly mapToRegistry   spec: 'latest',
+78 silly mapToRegistry   type: 'tag' }
+79 silly mapToRegistry uri https://registry.npmjs.org/lodash
+80 silly fetchOtherPackageData closure-compiler@https://registry.npmjs.org/closure-compiler/-/closure-compiler-0.2.12.tgz
+81 silly cache add args [ 'closure-compiler@https://registry.npmjs.org/closure-compiler/-/closure-compiler-0.2.12.tgz',
+81 silly cache add   null ]
+82 verbose cache add spec closure-compiler@https://registry.npmjs.org/closure-compiler/-/closure-compiler-0.2.12.tgz
+83 silly fetchOtherPackageData glob@https://registry.npmjs.org/glob/-/glob-7.1.1.tgz
+84 silly cache add args [ 'glob@https://registry.npmjs.org/glob/-/glob-7.1.1.tgz',
+84 silly cache add   null ]
+85 verbose cache add spec glob@https://registry.npmjs.org/glob/-/glob-7.1.1.tgz
+86 silly fetchOtherPackageData semver@https://registry.npmjs.org/semver/-/semver-5.3.0.tgz
+87 silly cache add args [ 'semver@https://registry.npmjs.org/semver/-/semver-5.3.0.tgz',
+87 silly cache add   null ]
+88 verbose cache add spec semver@https://registry.npmjs.org/semver/-/semver-5.3.0.tgz
+89 silly fetchOtherPackageData uglify-js@https://registry.npmjs.org/uglify-js/-/uglify-js-2.7.5.tgz
+90 silly cache add args [ 'uglify-js@https://registry.npmjs.org/uglify-js/-/uglify-js-2.7.5.tgz',
+90 silly cache add   null ]
+91 verbose cache add spec uglify-js@https://registry.npmjs.org/uglify-js/-/uglify-js-2.7.5.tgz
+92 silly cache add parsed spec Result {
+92 silly cache add   raw: 'closure-compiler@https://registry.npmjs.org/closure-compiler/-/closure-compiler-0.2.12.tgz',
+92 silly cache add   scope: null,
+92 silly cache add   escapedName: 'closure-compiler',
+92 silly cache add   name: 'closure-compiler',
+92 silly cache add   rawSpec: 'https://registry.npmjs.org/closure-compiler/-/closure-compiler-0.2.12.tgz',
+92 silly cache add   spec: 'https://registry.npmjs.org/closure-compiler/-/closure-compiler-0.2.12.tgz',
+92 silly cache add   type: 'remote' }
+93 silly mapToRegistry name closure-compiler@https://registry.npmjs.org/closure-compiler/-/closure-compiler-0.2.12.tgz
+94 silly mapToRegistry using default registry
+95 silly mapToRegistry registry https://registry.npmjs.org/
+96 silly mapToRegistry data Result {
+96 silly mapToRegistry   raw: 'closure-compiler@https://registry.npmjs.org/closure-compiler/-/closure-compiler-0.2.12.tgz',
+96 silly mapToRegistry   scope: null,
+96 silly mapToRegistry   escapedName: 'closure-compiler',
+96 silly mapToRegistry   name: 'closure-compiler',
+96 silly mapToRegistry   rawSpec: 'https://registry.npmjs.org/closure-compiler/-/closure-compiler-0.2.12.tgz',
+96 silly mapToRegistry   spec: 'https://registry.npmjs.org/closure-compiler/-/closure-compiler-0.2.12.tgz',
+96 silly mapToRegistry   type: 'remote' }
+97 silly mapToRegistry uri https://registry.npmjs.org/closure-compiler/-/closure-compiler-0.2.12.tgz
+98 verbose addRemoteTarball https://registry.npmjs.org/closure-compiler/-/closure-compiler-0.2.12.tgz not in flight; adding
+99 verbose addRemoteTarball [ 'https://registry.npmjs.org/closure-compiler/-/closure-compiler-0.2.12.tgz',
+99 verbose addRemoteTarball   null ]
+100 silly cache add parsed spec Result {
+100 silly cache add   raw: 'glob@https://registry.npmjs.org/glob/-/glob-7.1.1.tgz',
+100 silly cache add   scope: null,
+100 silly cache add   escapedName: 'glob',
+100 silly cache add   name: 'glob',
+100 silly cache add   rawSpec: 'https://registry.npmjs.org/glob/-/glob-7.1.1.tgz',
+100 silly cache add   spec: 'https://registry.npmjs.org/glob/-/glob-7.1.1.tgz',
+100 silly cache add   type: 'remote' }
+101 silly mapToRegistry name glob@https://registry.npmjs.org/glob/-/glob-7.1.1.tgz
+102 silly mapToRegistry using default registry
+103 silly mapToRegistry registry https://registry.npmjs.org/
+104 silly mapToRegistry data Result {
+104 silly mapToRegistry   raw: 'glob@https://registry.npmjs.org/glob/-/glob-7.1.1.tgz',
+104 silly mapToRegistry   scope: null,
+104 silly mapToRegistry   escapedName: 'glob',
+104 silly mapToRegistry   name: 'glob',
+104 silly mapToRegistry   rawSpec: 'https://registry.npmjs.org/glob/-/glob-7.1.1.tgz',
+104 silly mapToRegistry   spec: 'https://registry.npmjs.org/glob/-/glob-7.1.1.tgz',
+104 silly mapToRegistry   type: 'remote' }
+105 silly mapToRegistry uri https://registry.npmjs.org/glob/-/glob-7.1.1.tgz
+106 verbose addRemoteTarball https://registry.npmjs.org/glob/-/glob-7.1.1.tgz not in flight; adding
+107 verbose addRemoteTarball [ 'https://registry.npmjs.org/glob/-/glob-7.1.1.tgz', null ]
+108 silly cache add parsed spec Result {
+108 silly cache add   raw: 'semver@https://registry.npmjs.org/semver/-/semver-5.3.0.tgz',
+108 silly cache add   scope: null,
+108 silly cache add   escapedName: 'semver',
+108 silly cache add   name: 'semver',
+108 silly cache add   rawSpec: 'https://registry.npmjs.org/semver/-/semver-5.3.0.tgz',
+108 silly cache add   spec: 'https://registry.npmjs.org/semver/-/semver-5.3.0.tgz',
+108 silly cache add   type: 'remote' }
+109 silly mapToRegistry name semver@https://registry.npmjs.org/semver/-/semver-5.3.0.tgz
+110 silly mapToRegistry using default registry
+111 silly mapToRegistry registry https://registry.npmjs.org/
+112 silly mapToRegistry data Result {
+112 silly mapToRegistry   raw: 'semver@https://registry.npmjs.org/semver/-/semver-5.3.0.tgz',
+112 silly mapToRegistry   scope: null,
+112 silly mapToRegistry   escapedName: 'semver',
+112 silly mapToRegistry   name: 'semver',
+112 silly mapToRegistry   rawSpec: 'https://registry.npmjs.org/semver/-/semver-5.3.0.tgz',
+112 silly mapToRegistry   spec: 'https://registry.npmjs.org/semver/-/semver-5.3.0.tgz',
+112 silly mapToRegistry   type: 'remote' }
+113 silly mapToRegistry uri https://registry.npmjs.org/semver/-/semver-5.3.0.tgz
+114 verbose addRemoteTarball https://registry.npmjs.org/semver/-/semver-5.3.0.tgz not in flight; adding
+115 verbose addRemoteTarball [ 'https://registry.npmjs.org/semver/-/semver-5.3.0.tgz', null ]
+116 silly cache add parsed spec Result {
+116 silly cache add   raw: 'uglify-js@https://registry.npmjs.org/uglify-js/-/uglify-js-2.7.5.tgz',
+116 silly cache add   scope: null,
+116 silly cache add   escapedName: 'uglify-js',
+116 silly cache add   name: 'uglify-js',
+116 silly cache add   rawSpec: 'https://registry.npmjs.org/uglify-js/-/uglify-js-2.7.5.tgz',
+116 silly cache add   spec: 'https://registry.npmjs.org/uglify-js/-/uglify-js-2.7.5.tgz',
+116 silly cache add   type: 'remote' }
+117 silly mapToRegistry name uglify-js@https://registry.npmjs.org/uglify-js/-/uglify-js-2.7.5.tgz
+118 silly mapToRegistry using default registry
+119 silly mapToRegistry registry https://registry.npmjs.org/
+120 silly mapToRegistry data Result {
+120 silly mapToRegistry   raw: 'uglify-js@https://registry.npmjs.org/uglify-js/-/uglify-js-2.7.5.tgz',
+120 silly mapToRegistry   scope: null,
+120 silly mapToRegistry   escapedName: 'uglify-js',
+120 silly mapToRegistry   name: 'uglify-js',
+120 silly mapToRegistry   rawSpec: 'https://registry.npmjs.org/uglify-js/-/uglify-js-2.7.5.tgz',
+120 silly mapToRegistry   spec: 'https://registry.npmjs.org/uglify-js/-/uglify-js-2.7.5.tgz',
+120 silly mapToRegistry   type: 'remote' }
+121 silly mapToRegistry uri https://registry.npmjs.org/uglify-js/-/uglify-js-2.7.5.tgz
+122 verbose addRemoteTarball https://registry.npmjs.org/uglify-js/-/uglify-js-2.7.5.tgz not in flight; adding
+123 verbose addRemoteTarball [ 'https://registry.npmjs.org/uglify-js/-/uglify-js-2.7.5.tgz',
+123 verbose addRemoteTarball   null ]
+124 info retry fetch attempt 1 at 4:52:35 PM
+125 info attempt registry request try #1 at 4:52:35 PM
+126 http fetch GET https://registry.npmjs.org/closure-compiler/-/closure-compiler-0.2.12.tgz
+127 info retry fetch attempt 1 at 4:52:35 PM
+128 info attempt registry request try #1 at 4:52:35 PM
+129 http fetch GET https://registry.npmjs.org/glob/-/glob-7.1.1.tgz
+130 info retry fetch attempt 1 at 4:52:35 PM
+131 info attempt registry request try #1 at 4:52:35 PM
+132 http fetch GET https://registry.npmjs.org/uglify-js/-/uglify-js-2.7.5.tgz
+133 info retry fetch attempt 1 at 4:52:35 PM
+134 info attempt registry request try #1 at 4:52:35 PM
+135 http fetch GET https://registry.npmjs.org/semver/-/semver-5.3.0.tgz
+136 verbose request uri https://registry.npmjs.org/lodash
+137 verbose request no auth needed
+138 info attempt registry request try #1 at 4:52:35 PM
+139 verbose etag W/"377a30ecb2c8bcf13434b2f7fb36c327"
+140 verbose lastModified Thu, 21 Jun 2018 00:47:52 GMT
+141 http request GET https://registry.npmjs.org/lodash
+142 http 304 https://registry.npmjs.org/lodash
+143 verbose headers { date: 'Tue, 17 Jul 2018 23:52:33 GMT',
+143 verbose headers   connection: 'keep-alive',
+143 verbose headers   'set-cookie': [ '__cfduid=d72d4aa74e660785d274de06db0f97c691531871553; expires=Wed, 17-Jul-19 23:52:33 GMT; path=/; domain=.registry.npmjs.org; HttpOnly' ],
+143 verbose headers   'cache-control': 'max-age=300',
+143 verbose headers   'cf-cache-status': 'HIT',
+143 verbose headers   'cf-ray': '43c09f772b63982f-LAX',
+143 verbose headers   etag: '"377a30ecb2c8bcf13434b2f7fb36c327"',
+143 verbose headers   'expect-ct': 'max-age=604800, report-uri="https://report-uri.cloudflare.com/cdn-cgi/beacon/expect-ct"',
+143 verbose headers   'last-modified': 'Thu, 21 Jun 2018 00:47:52 GMT',
+143 verbose headers   vary: 'accept-encoding, accept',
+143 verbose headers   server: 'cloudflare' }
+144 silly get cb [ 304,
+144 silly get   { date: 'Tue, 17 Jul 2018 23:52:33 GMT',
+144 silly get     connection: 'keep-alive',
+144 silly get     'set-cookie': [ '__cfduid=d72d4aa74e660785d274de06db0f97c691531871553; expires=Wed, 17-Jul-19 23:52:33 GMT; path=/; domain=.registry.npmjs.org; HttpOnly' ],
+144 silly get     'cache-control': 'max-age=300',
+144 silly get     'cf-cache-status': 'HIT',
+144 silly get     'cf-ray': '43c09f772b63982f-LAX',
+144 silly get     etag: '"377a30ecb2c8bcf13434b2f7fb36c327"',
+144 silly get     'expect-ct': 'max-age=604800, report-uri="https://report-uri.cloudflare.com/cdn-cgi/beacon/expect-ct"',
+144 silly get     'last-modified': 'Thu, 21 Jun 2018 00:47:52 GMT',
+144 silly get     vary: 'accept-encoding, accept',
+144 silly get     server: 'cloudflare' } ]
+145 verbose etag https://registry.npmjs.org/lodash from cache
+146 verbose get saving lodash to /Users/dylanhsiao/.npm/registry.npmjs.org/lodash/.cache.json
+147 verbose correctMkdir /Users/dylanhsiao/.npm correctMkdir not in flight; initializing
+148 silly cache add args [ 'lodash@4.17.5', null ]
+149 verbose cache add spec lodash@4.17.5
+150 silly cache add parsed spec Result {
+150 silly cache add   raw: 'lodash@4.17.5',
+150 silly cache add   scope: null,
+150 silly cache add   escapedName: 'lodash',
+150 silly cache add   name: 'lodash',
+150 silly cache add   rawSpec: '4.17.5',
+150 silly cache add   spec: '4.17.5',
+150 silly cache add   type: 'version' }
+151 silly addNamed lodash@4.17.5
+152 verbose addNamed "4.17.5" is a plain semver version for lodash
+153 silly mapToRegistry name lodash
+154 silly mapToRegistry using default registry
+155 silly mapToRegistry registry https://registry.npmjs.org/
+156 silly mapToRegistry data Result {
+156 silly mapToRegistry   raw: 'lodash',
+156 silly mapToRegistry   scope: null,
+156 silly mapToRegistry   escapedName: 'lodash',
+156 silly mapToRegistry   name: 'lodash',
+156 silly mapToRegistry   rawSpec: '',
+156 silly mapToRegistry   spec: 'latest',
+156 silly mapToRegistry   type: 'tag' }
+157 silly mapToRegistry uri https://registry.npmjs.org/lodash
+158 verbose addNameVersion registry:https://registry.npmjs.org/lodash not in flight; fetching
+159 verbose get https://registry.npmjs.org/lodash not expired, no request
+160 silly mapToRegistry name lodash
+161 silly mapToRegistry using default registry
+162 silly mapToRegistry registry https://registry.npmjs.org/
+163 silly mapToRegistry data Result {
+163 silly mapToRegistry   raw: 'lodash',
+163 silly mapToRegistry   scope: null,
+163 silly mapToRegistry   escapedName: 'lodash',
+163 silly mapToRegistry   name: 'lodash',
+163 silly mapToRegistry   rawSpec: '',
+163 silly mapToRegistry   spec: 'latest',
+163 silly mapToRegistry   type: 'tag' }
+164 silly mapToRegistry uri https://registry.npmjs.org/lodash
+165 verbose addRemoteTarball https://registry.npmjs.org/lodash/-/lodash-4.17.5.tgz not in flight; adding
+166 verbose addRemoteTarball [ 'https://registry.npmjs.org/lodash/-/lodash-4.17.5.tgz',
+166 verbose addRemoteTarball   '99a92d65c0272debe8c96b6057bc8fbfa3bed511' ]
+167 info retry fetch attempt 1 at 4:52:36 PM
+168 info attempt registry request try #1 at 4:52:36 PM
+169 http fetch GET https://registry.npmjs.org/lodash/-/lodash-4.17.5.tgz
+170 http fetch 200 https://registry.npmjs.org/closure-compiler/-/closure-compiler-0.2.12.tgz
+171 silly fetchAndShaCheck shasum 6c3087cad12742c79e47f0ce50e87af91cf8e171
+172 verbose addTmpTarball /var/folders/k2/9f3qd81x3f78064kmblystzm0000gn/T/npm-52061-06a01a16/registry.npmjs.org/closure-compiler/-/closure-compiler-0.2.12.tgz not in flight; adding
+173 verbose correctMkdir /Users/dylanhsiao/.npm correctMkdir not in flight; initializing
+174 verbose addTmpTarball validating metadata from /var/folders/k2/9f3qd81x3f78064kmblystzm0000gn/T/npm-52061-06a01a16/registry.npmjs.org/closure-compiler/-/closure-compiler-0.2.12.tgz
+175 verbose tar unpack /var/folders/k2/9f3qd81x3f78064kmblystzm0000gn/T/npm-52061-06a01a16/registry.npmjs.org/closure-compiler/-/closure-compiler-0.2.12.tgz
+176 verbose tar unpacking to /var/folders/k2/9f3qd81x3f78064kmblystzm0000gn/T/npm-52061-06a01a16/unpack-98e86a7b
+177 silly gentlyRm /var/folders/k2/9f3qd81x3f78064kmblystzm0000gn/T/npm-52061-06a01a16/unpack-98e86a7b is being purged
+178 verbose gentlyRm don't care about contents; nuking /var/folders/k2/9f3qd81x3f78064kmblystzm0000gn/T/npm-52061-06a01a16/unpack-98e86a7b
+179 silly gunzTarPerm modes [ '755', '644' ]
+180 http fetch 200 https://registry.npmjs.org/glob/-/glob-7.1.1.tgz
+181 silly gunzTarPerm extractEntry package.json
+182 silly gunzTarPerm extractEntry .npmignore
+183 silly gunzTarPerm extractEntry README.md
+184 silly gunzTarPerm extractEntry Cakefile
+185 silly gunzTarPerm extractEntry LICENSE.txt
+186 silly gunzTarPerm extractEntry lib/index.js
+187 silly gunzTarPerm extractEntry src/index.coffee
+188 silly fetchAndShaCheck shasum 805211df04faaf1c63a3600306cdf5ade50b2ec8
+189 verbose addTmpTarball /var/folders/k2/9f3qd81x3f78064kmblystzm0000gn/T/npm-52061-06a01a16/registry.npmjs.org/glob/-/glob-7.1.1.tgz not in flight; adding
+190 verbose correctMkdir /Users/dylanhsiao/.npm correctMkdir not in flight; initializing
+191 verbose addTmpTarball validating metadata from /var/folders/k2/9f3qd81x3f78064kmblystzm0000gn/T/npm-52061-06a01a16/registry.npmjs.org/glob/-/glob-7.1.1.tgz
+192 verbose tar unpack /var/folders/k2/9f3qd81x3f78064kmblystzm0000gn/T/npm-52061-06a01a16/registry.npmjs.org/glob/-/glob-7.1.1.tgz
+193 verbose tar unpacking to /var/folders/k2/9f3qd81x3f78064kmblystzm0000gn/T/npm-52061-06a01a16/unpack-a30be6f8
+194 silly gentlyRm /var/folders/k2/9f3qd81x3f78064kmblystzm0000gn/T/npm-52061-06a01a16/unpack-a30be6f8 is being purged
+195 verbose gentlyRm don't care about contents; nuking /var/folders/k2/9f3qd81x3f78064kmblystzm0000gn/T/npm-52061-06a01a16/unpack-a30be6f8
+196 silly gunzTarPerm modes [ '755', '644' ]
+197 silly gunzTarPerm extractEntry package.json
+198 silly gunzTarPerm extractEntry README.md
+199 silly gunzTarPerm extractEntry LICENSE
+200 silly gunzTarPerm extractEntry common.js
+201 silly gunzTarPerm extractEntry glob.js
+202 silly gunzTarPerm extractEntry sync.js
+203 silly gunzTarPerm extractEntry changelog.md
+204 verbose correctMkdir /Users/dylanhsiao/.npm correctMkdir not in flight; initializing
+205 silly cache afterAdd closure-compiler@0.2.12
+206 verbose afterAdd /Users/dylanhsiao/.npm/closure-compiler/0.2.12/package/package.json not in flight; writing
+207 verbose correctMkdir /Users/dylanhsiao/.npm correctMkdir not in flight; initializing
+208 verbose afterAdd /Users/dylanhsiao/.npm/closure-compiler/0.2.12/package/package.json written
+209 silly fetchOtherPackageData google-closure-compiler@https://registry.npmjs.org/google-closure-compiler/-/google-closure-compiler-20150901.0.0.tgz
+210 silly cache add args [ 'google-closure-compiler@https://registry.npmjs.org/google-closure-compiler/-/google-closure-compiler-20150901.0.0.tgz',
+210 silly cache add   null ]
+211 verbose cache add spec google-closure-compiler@https://registry.npmjs.org/google-closure-compiler/-/google-closure-compiler-20150901.0.0.tgz
+212 silly cache add parsed spec Result {
+212 silly cache add   raw: 'google-closure-compiler@https://registry.npmjs.org/google-closure-compiler/-/google-closure-compiler-20150901.0.0.tgz',
+212 silly cache add   scope: null,
+212 silly cache add   escapedName: 'google-closure-compiler',
+212 silly cache add   name: 'google-closure-compiler',
+212 silly cache add   rawSpec: 'https://registry.npmjs.org/google-closure-compiler/-/google-closure-compiler-20150901.0.0.tgz',
+212 silly cache add   spec: 'https://registry.npmjs.org/google-closure-compiler/-/google-closure-compiler-20150901.0.0.tgz',
+212 silly cache add   type: 'remote' }
+213 silly mapToRegistry name google-closure-compiler@https://registry.npmjs.org/google-closure-compiler/-/google-closure-compiler-20150901.0.0.tgz
+214 silly mapToRegistry using default registry
+215 silly mapToRegistry registry https://registry.npmjs.org/
+216 silly mapToRegistry data Result {
+216 silly mapToRegistry   raw: 'google-closure-compiler@https://registry.npmjs.org/google-closure-compiler/-/google-closure-compiler-20150901.0.0.tgz',
+216 silly mapToRegistry   scope: null,
+216 silly mapToRegistry   escapedName: 'google-closure-compiler',
+216 silly mapToRegistry   name: 'google-closure-compiler',
+216 silly mapToRegistry   rawSpec: 'https://registry.npmjs.org/google-closure-compiler/-/google-closure-compiler-20150901.0.0.tgz',
+216 silly mapToRegistry   spec: 'https://registry.npmjs.org/google-closure-compiler/-/google-closure-compiler-20150901.0.0.tgz',
+216 silly mapToRegistry   type: 'remote' }
+217 silly mapToRegistry uri https://registry.npmjs.org/google-closure-compiler/-/google-closure-compiler-20150901.0.0.tgz
+218 verbose addRemoteTarball https://registry.npmjs.org/google-closure-compiler/-/google-closure-compiler-20150901.0.0.tgz not in flight; adding
+219 verbose addRemoteTarball [ 'https://registry.npmjs.org/google-closure-compiler/-/google-closure-compiler-20150901.0.0.tgz',
+219 verbose addRemoteTarball   null ]
+220 info retry fetch attempt 1 at 4:52:36 PM
+221 info attempt registry request try #1 at 4:52:36 PM
+222 http fetch GET https://registry.npmjs.org/google-closure-compiler/-/google-closure-compiler-20150901.0.0.tgz
+223 verbose correctMkdir /Users/dylanhsiao/.npm correctMkdir not in flight; initializing
+224 silly cache afterAdd glob@7.1.1
+225 verbose afterAdd /Users/dylanhsiao/.npm/glob/7.1.1/package/package.json not in flight; writing
+226 verbose correctMkdir /Users/dylanhsiao/.npm correctMkdir not in flight; initializing
+227 verbose afterAdd /Users/dylanhsiao/.npm/glob/7.1.1/package/package.json written
+228 silly fetchOtherPackageData fs.realpath@https://registry.npmjs.org/fs.realpath/-/fs.realpath-1.0.0.tgz
+229 silly cache add args [ 'fs.realpath@https://registry.npmjs.org/fs.realpath/-/fs.realpath-1.0.0.tgz',
+229 silly cache add   null ]
+230 verbose cache add spec fs.realpath@https://registry.npmjs.org/fs.realpath/-/fs.realpath-1.0.0.tgz
+231 silly fetchOtherPackageData inflight@https://registry.npmjs.org/inflight/-/inflight-1.0.6.tgz
+232 silly cache add args [ 'inflight@https://registry.npmjs.org/inflight/-/inflight-1.0.6.tgz',
+232 silly cache add   null ]
+233 verbose cache add spec inflight@https://registry.npmjs.org/inflight/-/inflight-1.0.6.tgz
+234 silly fetchOtherPackageData inherits@https://registry.npmjs.org/inherits/-/inherits-2.0.3.tgz
+235 silly cache add args [ 'inherits@https://registry.npmjs.org/inherits/-/inherits-2.0.3.tgz',
+235 silly cache add   null ]
+236 verbose cache add spec inherits@https://registry.npmjs.org/inherits/-/inherits-2.0.3.tgz
+237 silly fetchOtherPackageData minimatch@https://registry.npmjs.org/minimatch/-/minimatch-3.0.3.tgz
+238 silly cache add args [ 'minimatch@https://registry.npmjs.org/minimatch/-/minimatch-3.0.3.tgz',
+238 silly cache add   null ]
+239 verbose cache add spec minimatch@https://registry.npmjs.org/minimatch/-/minimatch-3.0.3.tgz
+240 silly fetchOtherPackageData once@https://registry.npmjs.org/once/-/once-1.4.0.tgz
+241 silly cache add args [ 'once@https://registry.npmjs.org/once/-/once-1.4.0.tgz',
+241 silly cache add   null ]
+242 verbose cache add spec once@https://registry.npmjs.org/once/-/once-1.4.0.tgz
+243 silly fetchOtherPackageData path-is-absolute@https://registry.npmjs.org/path-is-absolute/-/path-is-absolute-1.0.1.tgz
+244 silly cache add args [ 'path-is-absolute@https://registry.npmjs.org/path-is-absolute/-/path-is-absolute-1.0.1.tgz',
+244 silly cache add   null ]
+245 verbose cache add spec path-is-absolute@https://registry.npmjs.org/path-is-absolute/-/path-is-absolute-1.0.1.tgz
+246 silly cache add parsed spec Result {
+246 silly cache add   raw: 'fs.realpath@https://registry.npmjs.org/fs.realpath/-/fs.realpath-1.0.0.tgz',
+246 silly cache add   scope: null,
+246 silly cache add   escapedName: 'fs.realpath',
+246 silly cache add   name: 'fs.realpath',
+246 silly cache add   rawSpec: 'https://registry.npmjs.org/fs.realpath/-/fs.realpath-1.0.0.tgz',
+246 silly cache add   spec: 'https://registry.npmjs.org/fs.realpath/-/fs.realpath-1.0.0.tgz',
+246 silly cache add   type: 'remote' }
+247 silly mapToRegistry name fs.realpath@https://registry.npmjs.org/fs.realpath/-/fs.realpath-1.0.0.tgz
+248 silly mapToRegistry using default registry
+249 silly mapToRegistry registry https://registry.npmjs.org/
+250 silly mapToRegistry data Result {
+250 silly mapToRegistry   raw: 'fs.realpath@https://registry.npmjs.org/fs.realpath/-/fs.realpath-1.0.0.tgz',
+250 silly mapToRegistry   scope: null,
+250 silly mapToRegistry   escapedName: 'fs.realpath',
+250 silly mapToRegistry   name: 'fs.realpath',
+250 silly mapToRegistry   rawSpec: 'https://registry.npmjs.org/fs.realpath/-/fs.realpath-1.0.0.tgz',
+250 silly mapToRegistry   spec: 'https://registry.npmjs.org/fs.realpath/-/fs.realpath-1.0.0.tgz',
+250 silly mapToRegistry   type: 'remote' }
+251 silly mapToRegistry uri https://registry.npmjs.org/fs.realpath/-/fs.realpath-1.0.0.tgz
+252 verbose addRemoteTarball https://registry.npmjs.org/fs.realpath/-/fs.realpath-1.0.0.tgz not in flight; adding
+253 verbose addRemoteTarball [ 'https://registry.npmjs.org/fs.realpath/-/fs.realpath-1.0.0.tgz',
+253 verbose addRemoteTarball   null ]
+254 silly cache add parsed spec Result {
+254 silly cache add   raw: 'inflight@https://registry.npmjs.org/inflight/-/inflight-1.0.6.tgz',
+254 silly cache add   scope: null,
+254 silly cache add   escapedName: 'inflight',
+254 silly cache add   name: 'inflight',
+254 silly cache add   rawSpec: 'https://registry.npmjs.org/inflight/-/inflight-1.0.6.tgz',
+254 silly cache add   spec: 'https://registry.npmjs.org/inflight/-/inflight-1.0.6.tgz',
+254 silly cache add   type: 'remote' }
+255 silly mapToRegistry name inflight@https://registry.npmjs.org/inflight/-/inflight-1.0.6.tgz
+256 silly mapToRegistry using default registry
+257 silly mapToRegistry registry https://registry.npmjs.org/
+258 silly mapToRegistry data Result {
+258 silly mapToRegistry   raw: 'inflight@https://registry.npmjs.org/inflight/-/inflight-1.0.6.tgz',
+258 silly mapToRegistry   scope: null,
+258 silly mapToRegistry   escapedName: 'inflight',
+258 silly mapToRegistry   name: 'inflight',
+258 silly mapToRegistry   rawSpec: 'https://registry.npmjs.org/inflight/-/inflight-1.0.6.tgz',
+258 silly mapToRegistry   spec: 'https://registry.npmjs.org/inflight/-/inflight-1.0.6.tgz',
+258 silly mapToRegistry   type: 'remote' }
+259 silly mapToRegistry uri https://registry.npmjs.org/inflight/-/inflight-1.0.6.tgz
+260 verbose addRemoteTarball https://registry.npmjs.org/inflight/-/inflight-1.0.6.tgz not in flight; adding
+261 verbose addRemoteTarball [ 'https://registry.npmjs.org/inflight/-/inflight-1.0.6.tgz',
+261 verbose addRemoteTarball   null ]
+262 silly cache add parsed spec Result {
+262 silly cache add   raw: 'inherits@https://registry.npmjs.org/inherits/-/inherits-2.0.3.tgz',
+262 silly cache add   scope: null,
+262 silly cache add   escapedName: 'inherits',
+262 silly cache add   name: 'inherits',
+262 silly cache add   rawSpec: 'https://registry.npmjs.org/inherits/-/inherits-2.0.3.tgz',
+262 silly cache add   spec: 'https://registry.npmjs.org/inherits/-/inherits-2.0.3.tgz',
+262 silly cache add   type: 'remote' }
+263 silly mapToRegistry name inherits@https://registry.npmjs.org/inherits/-/inherits-2.0.3.tgz
+264 silly mapToRegistry using default registry
+265 silly mapToRegistry registry https://registry.npmjs.org/
+266 silly mapToRegistry data Result {
+266 silly mapToRegistry   raw: 'inherits@https://registry.npmjs.org/inherits/-/inherits-2.0.3.tgz',
+266 silly mapToRegistry   scope: null,
+266 silly mapToRegistry   escapedName: 'inherits',
+266 silly mapToRegistry   name: 'inherits',
+266 silly mapToRegistry   rawSpec: 'https://registry.npmjs.org/inherits/-/inherits-2.0.3.tgz',
+266 silly mapToRegistry   spec: 'https://registry.npmjs.org/inherits/-/inherits-2.0.3.tgz',
+266 silly mapToRegistry   type: 'remote' }
+267 silly mapToRegistry uri https://registry.npmjs.org/inherits/-/inherits-2.0.3.tgz
+268 verbose addRemoteTarball https://registry.npmjs.org/inherits/-/inherits-2.0.3.tgz not in flight; adding
+269 verbose addRemoteTarball [ 'https://registry.npmjs.org/inherits/-/inherits-2.0.3.tgz',
+269 verbose addRemoteTarball   null ]
+270 silly cache add parsed spec Result {
+270 silly cache add   raw: 'minimatch@https://registry.npmjs.org/minimatch/-/minimatch-3.0.3.tgz',
+270 silly cache add   scope: null,
+270 silly cache add   escapedName: 'minimatch',
+270 silly cache add   name: 'minimatch',
+270 silly cache add   rawSpec: 'https://registry.npmjs.org/minimatch/-/minimatch-3.0.3.tgz',
+270 silly cache add   spec: 'https://registry.npmjs.org/minimatch/-/minimatch-3.0.3.tgz',
+270 silly cache add   type: 'remote' }
+271 silly mapToRegistry name minimatch@https://registry.npmjs.org/minimatch/-/minimatch-3.0.3.tgz
+272 silly mapToRegistry using default registry
+273 silly mapToRegistry registry https://registry.npmjs.org/
+274 silly mapToRegistry data Result {
+274 silly mapToRegistry   raw: 'minimatch@https://registry.npmjs.org/minimatch/-/minimatch-3.0.3.tgz',
+274 silly mapToRegistry   scope: null,
+274 silly mapToRegistry   escapedName: 'minimatch',
+274 silly mapToRegistry   name: 'minimatch',
+274 silly mapToRegistry   rawSpec: 'https://registry.npmjs.org/minimatch/-/minimatch-3.0.3.tgz',
+274 silly mapToRegistry   spec: 'https://registry.npmjs.org/minimatch/-/minimatch-3.0.3.tgz',
+274 silly mapToRegistry   type: 'remote' }
+275 silly mapToRegistry uri https://registry.npmjs.org/minimatch/-/minimatch-3.0.3.tgz
+276 verbose addRemoteTarball https://registry.npmjs.org/minimatch/-/minimatch-3.0.3.tgz not in flight; adding
+277 verbose addRemoteTarball [ 'https://registry.npmjs.org/minimatch/-/minimatch-3.0.3.tgz',
+277 verbose addRemoteTarball   null ]
+278 silly cache add parsed spec Result {
+278 silly cache add   raw: 'once@https://registry.npmjs.org/once/-/once-1.4.0.tgz',
+278 silly cache add   scope: null,
+278 silly cache add   escapedName: 'once',
+278 silly cache add   name: 'once',
+278 silly cache add   rawSpec: 'https://registry.npmjs.org/once/-/once-1.4.0.tgz',
+278 silly cache add   spec: 'https://registry.npmjs.org/once/-/once-1.4.0.tgz',
+278 silly cache add   type: 'remote' }
+279 silly mapToRegistry name once@https://registry.npmjs.org/once/-/once-1.4.0.tgz
+280 silly mapToRegistry using default registry
+281 silly mapToRegistry registry https://registry.npmjs.org/
+282 silly mapToRegistry data Result {
+282 silly mapToRegistry   raw: 'once@https://registry.npmjs.org/once/-/once-1.4.0.tgz',
+282 silly mapToRegistry   scope: null,
+282 silly mapToRegistry   escapedName: 'once',
+282 silly mapToRegistry   name: 'once',
+282 silly mapToRegistry   rawSpec: 'https://registry.npmjs.org/once/-/once-1.4.0.tgz',
+282 silly mapToRegistry   spec: 'https://registry.npmjs.org/once/-/once-1.4.0.tgz',
+282 silly mapToRegistry   type: 'remote' }
+283 silly mapToRegistry uri https://registry.npmjs.org/once/-/once-1.4.0.tgz
+284 verbose addRemoteTarball https://registry.npmjs.org/once/-/once-1.4.0.tgz not in flight; adding
+285 verbose addRemoteTarball [ 'https://registry.npmjs.org/once/-/once-1.4.0.tgz', null ]
+286 silly cache add parsed spec Result {
+286 silly cache add   raw: 'path-is-absolute@https://registry.npmjs.org/path-is-absolute/-/path-is-absolute-1.0.1.tgz',
+286 silly cache add   scope: null,
+286 silly cache add   escapedName: 'path-is-absolute',
+286 silly cache add   name: 'path-is-absolute',
+286 silly cache add   rawSpec: 'https://registry.npmjs.org/path-is-absolute/-/path-is-absolute-1.0.1.tgz',
+286 silly cache add   spec: 'https://registry.npmjs.org/path-is-absolute/-/path-is-absolute-1.0.1.tgz',
+286 silly cache add   type: 'remote' }
+287 silly mapToRegistry name path-is-absolute@https://registry.npmjs.org/path-is-absolute/-/path-is-absolute-1.0.1.tgz
+288 silly mapToRegistry using default registry
+289 silly mapToRegistry registry https://registry.npmjs.org/
+290 silly mapToRegistry data Result {
+290 silly mapToRegistry   raw: 'path-is-absolute@https://registry.npmjs.org/path-is-absolute/-/path-is-absolute-1.0.1.tgz',
+290 silly mapToRegistry   scope: null,
+290 silly mapToRegistry   escapedName: 'path-is-absolute',
+290 silly mapToRegistry   name: 'path-is-absolute',
+290 silly mapToRegistry   rawSpec: 'https://registry.npmjs.org/path-is-absolute/-/path-is-absolute-1.0.1.tgz',
+290 silly mapToRegistry   spec: 'https://registry.npmjs.org/path-is-absolute/-/path-is-absolute-1.0.1.tgz',
+290 silly mapToRegistry   type: 'remote' }
+291 silly mapToRegistry uri https://registry.npmjs.org/path-is-absolute/-/path-is-absolute-1.0.1.tgz
+292 verbose addRemoteTarball https://registry.npmjs.org/path-is-absolute/-/path-is-absolute-1.0.1.tgz not in flight; adding
+293 verbose addRemoteTarball [ 'https://registry.npmjs.org/path-is-absolute/-/path-is-absolute-1.0.1.tgz',
+293 verbose addRemoteTarball   null ]
+294 info retry fetch attempt 1 at 4:52:36 PM
+295 info attempt registry request try #1 at 4:52:36 PM
+296 http fetch GET https://registry.npmjs.org/inherits/-/inherits-2.0.3.tgz
+297 info retry fetch attempt 1 at 4:52:36 PM
+298 info attempt registry request try #1 at 4:52:36 PM
+299 http fetch GET https://registry.npmjs.org/fs.realpath/-/fs.realpath-1.0.0.tgz
+300 info retry fetch attempt 1 at 4:52:36 PM
+301 info attempt registry request try #1 at 4:52:36 PM
+302 http fetch GET https://registry.npmjs.org/inflight/-/inflight-1.0.6.tgz
+303 info retry fetch attempt 1 at 4:52:36 PM
+304 info attempt registry request try #1 at 4:52:36 PM
+305 http fetch GET https://registry.npmjs.org/minimatch/-/minimatch-3.0.3.tgz
+306 info retry fetch attempt 1 at 4:52:36 PM
+307 info attempt registry request try #1 at 4:52:36 PM
+308 http fetch GET https://registry.npmjs.org/path-is-absolute/-/path-is-absolute-1.0.1.tgz
+309 info retry fetch attempt 1 at 4:52:36 PM
+310 info attempt registry request try #1 at 4:52:36 PM
+311 http fetch GET https://registry.npmjs.org/once/-/once-1.4.0.tgz
+312 http fetch 200 https://registry.npmjs.org/lodash/-/lodash-4.17.5.tgz
+313 http fetch 200 https://registry.npmjs.org/inherits/-/inherits-2.0.3.tgz
+314 silly fetchAndShaCheck shasum 633c2c83e3da42a502f52466022480f4208261de
+315 verbose addTmpTarball /var/folders/k2/9f3qd81x3f78064kmblystzm0000gn/T/npm-52061-06a01a16/registry.npmjs.org/inherits/-/inherits-2.0.3.tgz not in flight; adding
+316 verbose correctMkdir /Users/dylanhsiao/.npm correctMkdir not in flight; initializing
+317 verbose addTmpTarball validating metadata from /var/folders/k2/9f3qd81x3f78064kmblystzm0000gn/T/npm-52061-06a01a16/registry.npmjs.org/inherits/-/inherits-2.0.3.tgz
+318 verbose tar unpack /var/folders/k2/9f3qd81x3f78064kmblystzm0000gn/T/npm-52061-06a01a16/registry.npmjs.org/inherits/-/inherits-2.0.3.tgz
+319 verbose tar unpacking to /var/folders/k2/9f3qd81x3f78064kmblystzm0000gn/T/npm-52061-06a01a16/unpack-dc4490a0
+320 silly gentlyRm /var/folders/k2/9f3qd81x3f78064kmblystzm0000gn/T/npm-52061-06a01a16/unpack-dc4490a0 is being purged
+321 verbose gentlyRm don't care about contents; nuking /var/folders/k2/9f3qd81x3f78064kmblystzm0000gn/T/npm-52061-06a01a16/unpack-dc4490a0
+322 silly gunzTarPerm modes [ '755', '644' ]
+323 silly gunzTarPerm extractEntry package.json
+324 silly gunzTarPerm extractEntry README.md
+325 silly gunzTarPerm extractEntry LICENSE
+326 silly gunzTarPerm extractEntry inherits.js
+327 silly gunzTarPerm extractEntry inherits_browser.js
+328 verbose correctMkdir /Users/dylanhsiao/.npm correctMkdir not in flight; initializing
+329 silly cache afterAdd inherits@2.0.3
+330 verbose afterAdd /Users/dylanhsiao/.npm/inherits/2.0.3/package/package.json not in flight; writing
+331 verbose correctMkdir /Users/dylanhsiao/.npm correctMkdir not in flight; initializing
+332 verbose afterAdd /Users/dylanhsiao/.npm/inherits/2.0.3/package/package.json written
+333 http fetch 200 https://registry.npmjs.org/inflight/-/inflight-1.0.6.tgz
+334 silly fetchAndShaCheck shasum 49bd6331d7d02d0c09bc910a1075ba8165b56df9
+335 verbose addTmpTarball /var/folders/k2/9f3qd81x3f78064kmblystzm0000gn/T/npm-52061-06a01a16/registry.npmjs.org/inflight/-/inflight-1.0.6.tgz not in flight; adding
+336 verbose correctMkdir /Users/dylanhsiao/.npm correctMkdir not in flight; initializing
+337 verbose addTmpTarball validating metadata from /var/folders/k2/9f3qd81x3f78064kmblystzm0000gn/T/npm-52061-06a01a16/registry.npmjs.org/inflight/-/inflight-1.0.6.tgz
+338 verbose tar unpack /var/folders/k2/9f3qd81x3f78064kmblystzm0000gn/T/npm-52061-06a01a16/registry.npmjs.org/inflight/-/inflight-1.0.6.tgz
+339 verbose tar unpacking to /var/folders/k2/9f3qd81x3f78064kmblystzm0000gn/T/npm-52061-06a01a16/unpack-7a74a73c
+340 silly gentlyRm /var/folders/k2/9f3qd81x3f78064kmblystzm0000gn/T/npm-52061-06a01a16/unpack-7a74a73c is being purged
+341 verbose gentlyRm don't care about contents; nuking /var/folders/k2/9f3qd81x3f78064kmblystzm0000gn/T/npm-52061-06a01a16/unpack-7a74a73c
+342 silly gunzTarPerm modes [ '755', '644' ]
+343 silly gunzTarPerm extractEntry package.json
+344 silly gunzTarPerm extractEntry README.md
+345 silly gunzTarPerm extractEntry LICENSE
+346 silly gunzTarPerm extractEntry inflight.js
+347 verbose correctMkdir /Users/dylanhsiao/.npm correctMkdir not in flight; initializing
+348 silly cache afterAdd inflight@1.0.6
+349 verbose afterAdd /Users/dylanhsiao/.npm/inflight/1.0.6/package/package.json not in flight; writing
+350 verbose correctMkdir /Users/dylanhsiao/.npm correctMkdir not in flight; initializing
+351 verbose afterAdd /Users/dylanhsiao/.npm/inflight/1.0.6/package/package.json written
+352 silly fetchOtherPackageData wrappy@https://registry.npmjs.org/wrappy/-/wrappy-1.0.2.tgz
+353 silly cache add args [ 'wrappy@https://registry.npmjs.org/wrappy/-/wrappy-1.0.2.tgz',
+353 silly cache add   null ]
+354 verbose cache add spec wrappy@https://registry.npmjs.org/wrappy/-/wrappy-1.0.2.tgz
+355 silly cache add parsed spec Result {
+355 silly cache add   raw: 'wrappy@https://registry.npmjs.org/wrappy/-/wrappy-1.0.2.tgz',
+355 silly cache add   scope: null,
+355 silly cache add   escapedName: 'wrappy',
+355 silly cache add   name: 'wrappy',
+355 silly cache add   rawSpec: 'https://registry.npmjs.org/wrappy/-/wrappy-1.0.2.tgz',
+355 silly cache add   spec: 'https://registry.npmjs.org/wrappy/-/wrappy-1.0.2.tgz',
+355 silly cache add   type: 'remote' }
+356 silly mapToRegistry name wrappy@https://registry.npmjs.org/wrappy/-/wrappy-1.0.2.tgz
+357 silly mapToRegistry using default registry
+358 silly mapToRegistry registry https://registry.npmjs.org/
+359 silly mapToRegistry data Result {
+359 silly mapToRegistry   raw: 'wrappy@https://registry.npmjs.org/wrappy/-/wrappy-1.0.2.tgz',
+359 silly mapToRegistry   scope: null,
+359 silly mapToRegistry   escapedName: 'wrappy',
+359 silly mapToRegistry   name: 'wrappy',
+359 silly mapToRegistry   rawSpec: 'https://registry.npmjs.org/wrappy/-/wrappy-1.0.2.tgz',
+359 silly mapToRegistry   spec: 'https://registry.npmjs.org/wrappy/-/wrappy-1.0.2.tgz',
+359 silly mapToRegistry   type: 'remote' }
+360 silly mapToRegistry uri https://registry.npmjs.org/wrappy/-/wrappy-1.0.2.tgz
+361 verbose addRemoteTarball https://registry.npmjs.org/wrappy/-/wrappy-1.0.2.tgz not in flight; adding
+362 verbose addRemoteTarball [ 'https://registry.npmjs.org/wrappy/-/wrappy-1.0.2.tgz', null ]
+363 info retry fetch attempt 1 at 4:52:36 PM
+364 info attempt registry request try #1 at 4:52:36 PM
+365 http fetch GET https://registry.npmjs.org/wrappy/-/wrappy-1.0.2.tgz
+366 silly fetchAndShaCheck shasum 99a92d65c0272debe8c96b6057bc8fbfa3bed511
+367 verbose addTmpTarball /var/folders/k2/9f3qd81x3f78064kmblystzm0000gn/T/npm-52061-06a01a16/registry.npmjs.org/lodash/-/lodash-4.17.5.tgz not in flight; adding
+368 verbose addTmpTarball already have metadata; skipping unpack for lodash@4.17.5
+369 verbose correctMkdir /Users/dylanhsiao/.npm correctMkdir not in flight; initializing
+370 silly cache afterAdd lodash@4.17.5
+371 verbose afterAdd /Users/dylanhsiao/.npm/lodash/4.17.5/package/package.json not in flight; writing
+372 verbose correctMkdir /Users/dylanhsiao/.npm correctMkdir not in flight; initializing
+373 verbose afterAdd /Users/dylanhsiao/.npm/lodash/4.17.5/package/package.json written
+374 http fetch 200 https://registry.npmjs.org/wrappy/-/wrappy-1.0.2.tgz
+375 silly fetchAndShaCheck shasum b5243d8f3ec1aa35f1364605bc0d1036e30ab69f
+376 verbose addTmpTarball /var/folders/k2/9f3qd81x3f78064kmblystzm0000gn/T/npm-52061-06a01a16/registry.npmjs.org/wrappy/-/wrappy-1.0.2.tgz not in flight; adding
+377 verbose correctMkdir /Users/dylanhsiao/.npm correctMkdir not in flight; initializing
+378 verbose addTmpTarball validating metadata from /var/folders/k2/9f3qd81x3f78064kmblystzm0000gn/T/npm-52061-06a01a16/registry.npmjs.org/wrappy/-/wrappy-1.0.2.tgz
+379 verbose tar unpack /var/folders/k2/9f3qd81x3f78064kmblystzm0000gn/T/npm-52061-06a01a16/registry.npmjs.org/wrappy/-/wrappy-1.0.2.tgz
+380 verbose tar unpacking to /var/folders/k2/9f3qd81x3f78064kmblystzm0000gn/T/npm-52061-06a01a16/unpack-0b67db9f
+381 silly gentlyRm /var/folders/k2/9f3qd81x3f78064kmblystzm0000gn/T/npm-52061-06a01a16/unpack-0b67db9f is being purged
+382 verbose gentlyRm don't care about contents; nuking /var/folders/k2/9f3qd81x3f78064kmblystzm0000gn/T/npm-52061-06a01a16/unpack-0b67db9f
+383 http fetch 200 https://registry.npmjs.org/google-closure-compiler/-/google-closure-compiler-20150901.0.0.tgz
+384 silly gunzTarPerm modes [ '755', '644' ]
+385 silly gunzTarPerm extractEntry package.json
+386 silly gunzTarPerm extractEntry README.md
+387 silly gunzTarPerm extractEntry LICENSE
+388 silly gunzTarPerm extractEntry wrappy.js
+389 http fetch 200 https://registry.npmjs.org/minimatch/-/minimatch-3.0.3.tgz
+390 silly fetchAndShaCheck shasum 2a4e4090b96b2db06a9d7df01055a62a77c9b774
+391 verbose addTmpTarball /var/folders/k2/9f3qd81x3f78064kmblystzm0000gn/T/npm-52061-06a01a16/registry.npmjs.org/minimatch/-/minimatch-3.0.3.tgz not in flight; adding
+392 verbose correctMkdir /Users/dylanhsiao/.npm correctMkdir not in flight; initializing
+393 verbose addTmpTarball validating metadata from /var/folders/k2/9f3qd81x3f78064kmblystzm0000gn/T/npm-52061-06a01a16/registry.npmjs.org/minimatch/-/minimatch-3.0.3.tgz
+394 verbose tar unpack /var/folders/k2/9f3qd81x3f78064kmblystzm0000gn/T/npm-52061-06a01a16/registry.npmjs.org/minimatch/-/minimatch-3.0.3.tgz
+395 verbose tar unpacking to /var/folders/k2/9f3qd81x3f78064kmblystzm0000gn/T/npm-52061-06a01a16/unpack-a9346054
+396 silly gentlyRm /var/folders/k2/9f3qd81x3f78064kmblystzm0000gn/T/npm-52061-06a01a16/unpack-a9346054 is being purged
+397 verbose gentlyRm don't care about contents; nuking /var/folders/k2/9f3qd81x3f78064kmblystzm0000gn/T/npm-52061-06a01a16/unpack-a9346054
+398 silly gunzTarPerm modes [ '755', '644' ]
+399 silly gunzTarPerm extractEntry package.json
+400 verbose correctMkdir /Users/dylanhsiao/.npm correctMkdir not in flight; initializing
+401 silly gunzTarPerm extractEntry README.md
+402 silly gunzTarPerm extractEntry LICENSE
+403 silly gunzTarPerm extractEntry minimatch.js
+404 silly cache afterAdd wrappy@1.0.2
+405 verbose afterAdd /Users/dylanhsiao/.npm/wrappy/1.0.2/package/package.json not in flight; writing
+406 verbose correctMkdir /Users/dylanhsiao/.npm correctMkdir not in flight; initializing
+407 verbose afterAdd /Users/dylanhsiao/.npm/wrappy/1.0.2/package/package.json written
+408 verbose correctMkdir /Users/dylanhsiao/.npm correctMkdir not in flight; initializing
+409 silly cache afterAdd minimatch@3.0.3
+410 verbose afterAdd /Users/dylanhsiao/.npm/minimatch/3.0.3/package/package.json not in flight; writing
+411 verbose correctMkdir /Users/dylanhsiao/.npm correctMkdir not in flight; initializing
+412 verbose afterAdd /Users/dylanhsiao/.npm/minimatch/3.0.3/package/package.json written
+413 silly fetchOtherPackageData brace-expansion@https://registry.npmjs.org/brace-expansion/-/brace-expansion-1.1.6.tgz
+414 silly cache add args [ 'brace-expansion@https://registry.npmjs.org/brace-expansion/-/brace-expansion-1.1.6.tgz',
+414 silly cache add   null ]
+415 verbose cache add spec brace-expansion@https://registry.npmjs.org/brace-expansion/-/brace-expansion-1.1.6.tgz
+416 silly cache add parsed spec Result {
+416 silly cache add   raw: 'brace-expansion@https://registry.npmjs.org/brace-expansion/-/brace-expansion-1.1.6.tgz',
+416 silly cache add   scope: null,
+416 silly cache add   escapedName: 'brace-expansion',
+416 silly cache add   name: 'brace-expansion',
+416 silly cache add   rawSpec: 'https://registry.npmjs.org/brace-expansion/-/brace-expansion-1.1.6.tgz',
+416 silly cache add   spec: 'https://registry.npmjs.org/brace-expansion/-/brace-expansion-1.1.6.tgz',
+416 silly cache add   type: 'remote' }
+417 silly mapToRegistry name brace-expansion@https://registry.npmjs.org/brace-expansion/-/brace-expansion-1.1.6.tgz
+418 silly mapToRegistry using default registry
+419 silly mapToRegistry registry https://registry.npmjs.org/
+420 silly mapToRegistry data Result {
+420 silly mapToRegistry   raw: 'brace-expansion@https://registry.npmjs.org/brace-expansion/-/brace-expansion-1.1.6.tgz',
+420 silly mapToRegistry   scope: null,
+420 silly mapToRegistry   escapedName: 'brace-expansion',
+420 silly mapToRegistry   name: 'brace-expansion',
+420 silly mapToRegistry   rawSpec: 'https://registry.npmjs.org/brace-expansion/-/brace-expansion-1.1.6.tgz',
+420 silly mapToRegistry   spec: 'https://registry.npmjs.org/brace-expansion/-/brace-expansion-1.1.6.tgz',
+420 silly mapToRegistry   type: 'remote' }
+421 silly mapToRegistry uri https://registry.npmjs.org/brace-expansion/-/brace-expansion-1.1.6.tgz
+422 verbose addRemoteTarball https://registry.npmjs.org/brace-expansion/-/brace-expansion-1.1.6.tgz not in flight; adding
+423 verbose addRemoteTarball [ 'https://registry.npmjs.org/brace-expansion/-/brace-expansion-1.1.6.tgz',
+423 verbose addRemoteTarball   null ]
+424 info retry fetch attempt 1 at 4:52:36 PM
+425 info attempt registry request try #1 at 4:52:36 PM
+426 http fetch GET https://registry.npmjs.org/brace-expansion/-/brace-expansion-1.1.6.tgz
+427 http fetch 200 https://registry.npmjs.org/brace-expansion/-/brace-expansion-1.1.6.tgz
+428 silly fetchAndShaCheck shasum 7197d7eaa9b87e648390ea61fc66c84427420df9
+429 verbose addTmpTarball /var/folders/k2/9f3qd81x3f78064kmblystzm0000gn/T/npm-52061-06a01a16/registry.npmjs.org/brace-expansion/-/brace-expansion-1.1.6.tgz not in flight; adding
+430 verbose correctMkdir /Users/dylanhsiao/.npm correctMkdir not in flight; initializing
+431 verbose addTmpTarball validating metadata from /var/folders/k2/9f3qd81x3f78064kmblystzm0000gn/T/npm-52061-06a01a16/registry.npmjs.org/brace-expansion/-/brace-expansion-1.1.6.tgz
+432 verbose tar unpack /var/folders/k2/9f3qd81x3f78064kmblystzm0000gn/T/npm-52061-06a01a16/registry.npmjs.org/brace-expansion/-/brace-expansion-1.1.6.tgz
+433 verbose tar unpacking to /var/folders/k2/9f3qd81x3f78064kmblystzm0000gn/T/npm-52061-06a01a16/unpack-43e1fc12
+434 silly gentlyRm /var/folders/k2/9f3qd81x3f78064kmblystzm0000gn/T/npm-52061-06a01a16/unpack-43e1fc12 is being purged
+435 verbose gentlyRm don't care about contents; nuking /var/folders/k2/9f3qd81x3f78064kmblystzm0000gn/T/npm-52061-06a01a16/unpack-43e1fc12
+436 silly gunzTarPerm modes [ '755', '644' ]
+437 silly gunzTarPerm extractEntry package.json
+438 silly gunzTarPerm extractEntry README.md
+439 silly gunzTarPerm extractEntry index.js
+440 verbose correctMkdir /Users/dylanhsiao/.npm correctMkdir not in flight; initializing
+441 silly cache afterAdd brace-expansion@1.1.6
+442 verbose afterAdd /Users/dylanhsiao/.npm/brace-expansion/1.1.6/package/package.json not in flight; writing
+443 verbose correctMkdir /Users/dylanhsiao/.npm correctMkdir not in flight; initializing
+444 verbose afterAdd /Users/dylanhsiao/.npm/brace-expansion/1.1.6/package/package.json written
+445 silly fetchOtherPackageData balanced-match@https://registry.npmjs.org/balanced-match/-/balanced-match-0.4.2.tgz
+446 silly cache add args [ 'balanced-match@https://registry.npmjs.org/balanced-match/-/balanced-match-0.4.2.tgz',
+446 silly cache add   null ]
+447 verbose cache add spec balanced-match@https://registry.npmjs.org/balanced-match/-/balanced-match-0.4.2.tgz
+448 silly fetchOtherPackageData concat-map@https://registry.npmjs.org/concat-map/-/concat-map-0.0.1.tgz
+449 silly cache add args [ 'concat-map@https://registry.npmjs.org/concat-map/-/concat-map-0.0.1.tgz',
+449 silly cache add   null ]
+450 verbose cache add spec concat-map@https://registry.npmjs.org/concat-map/-/concat-map-0.0.1.tgz
+451 silly cache add parsed spec Result {
+451 silly cache add   raw: 'balanced-match@https://registry.npmjs.org/balanced-match/-/balanced-match-0.4.2.tgz',
+451 silly cache add   scope: null,
+451 silly cache add   escapedName: 'balanced-match',
+451 silly cache add   name: 'balanced-match',
+451 silly cache add   rawSpec: 'https://registry.npmjs.org/balanced-match/-/balanced-match-0.4.2.tgz',
+451 silly cache add   spec: 'https://registry.npmjs.org/balanced-match/-/balanced-match-0.4.2.tgz',
+451 silly cache add   type: 'remote' }
+452 silly mapToRegistry name balanced-match@https://registry.npmjs.org/balanced-match/-/balanced-match-0.4.2.tgz
+453 silly mapToRegistry using default registry
+454 silly mapToRegistry registry https://registry.npmjs.org/
+455 silly mapToRegistry data Result {
+455 silly mapToRegistry   raw: 'balanced-match@https://registry.npmjs.org/balanced-match/-/balanced-match-0.4.2.tgz',
+455 silly mapToRegistry   scope: null,
+455 silly mapToRegistry   escapedName: 'balanced-match',
+455 silly mapToRegistry   name: 'balanced-match',
+455 silly mapToRegistry   rawSpec: 'https://registry.npmjs.org/balanced-match/-/balanced-match-0.4.2.tgz',
+455 silly mapToRegistry   spec: 'https://registry.npmjs.org/balanced-match/-/balanced-match-0.4.2.tgz',
+455 silly mapToRegistry   type: 'remote' }
+456 silly mapToRegistry uri https://registry.npmjs.org/balanced-match/-/balanced-match-0.4.2.tgz
+457 verbose addRemoteTarball https://registry.npmjs.org/balanced-match/-/balanced-match-0.4.2.tgz not in flight; adding
+458 verbose addRemoteTarball [ 'https://registry.npmjs.org/balanced-match/-/balanced-match-0.4.2.tgz',
+458 verbose addRemoteTarball   null ]
+459 silly cache add parsed spec Result {
+459 silly cache add   raw: 'concat-map@https://registry.npmjs.org/concat-map/-/concat-map-0.0.1.tgz',
+459 silly cache add   scope: null,
+459 silly cache add   escapedName: 'concat-map',
+459 silly cache add   name: 'concat-map',
+459 silly cache add   rawSpec: 'https://registry.npmjs.org/concat-map/-/concat-map-0.0.1.tgz',
+459 silly cache add   spec: 'https://registry.npmjs.org/concat-map/-/concat-map-0.0.1.tgz',
+459 silly cache add   type: 'remote' }
+460 silly mapToRegistry name concat-map@https://registry.npmjs.org/concat-map/-/concat-map-0.0.1.tgz
+461 silly mapToRegistry using default registry
+462 silly mapToRegistry registry https://registry.npmjs.org/
+463 silly mapToRegistry data Result {
+463 silly mapToRegistry   raw: 'concat-map@https://registry.npmjs.org/concat-map/-/concat-map-0.0.1.tgz',
+463 silly mapToRegistry   scope: null,
+463 silly mapToRegistry   escapedName: 'concat-map',
+463 silly mapToRegistry   name: 'concat-map',
+463 silly mapToRegistry   rawSpec: 'https://registry.npmjs.org/concat-map/-/concat-map-0.0.1.tgz',
+463 silly mapToRegistry   spec: 'https://registry.npmjs.org/concat-map/-/concat-map-0.0.1.tgz',
+463 silly mapToRegistry   type: 'remote' }
+464 silly mapToRegistry uri https://registry.npmjs.org/concat-map/-/concat-map-0.0.1.tgz
+465 verbose addRemoteTarball https://registry.npmjs.org/concat-map/-/concat-map-0.0.1.tgz not in flight; adding
+466 verbose addRemoteTarball [ 'https://registry.npmjs.org/concat-map/-/concat-map-0.0.1.tgz',
+466 verbose addRemoteTarball   null ]
+467 info retry fetch attempt 1 at 4:52:36 PM
+468 info attempt registry request try #1 at 4:52:36 PM
+469 http fetch GET https://registry.npmjs.org/balanced-match/-/balanced-match-0.4.2.tgz
+470 info retry fetch attempt 1 at 4:52:36 PM
+471 info attempt registry request try #1 at 4:52:36 PM
+472 http fetch GET https://registry.npmjs.org/concat-map/-/concat-map-0.0.1.tgz
+473 http fetch 200 https://registry.npmjs.org/fs.realpath/-/fs.realpath-1.0.0.tgz
+474 silly fetchAndShaCheck shasum 1504ad2523158caa40db4a2787cb01411994ea4f
+475 verbose addTmpTarball /var/folders/k2/9f3qd81x3f78064kmblystzm0000gn/T/npm-52061-06a01a16/registry.npmjs.org/fs.realpath/-/fs.realpath-1.0.0.tgz not in flight; adding
+476 verbose correctMkdir /Users/dylanhsiao/.npm correctMkdir not in flight; initializing
+477 verbose addTmpTarball validating metadata from /var/folders/k2/9f3qd81x3f78064kmblystzm0000gn/T/npm-52061-06a01a16/registry.npmjs.org/fs.realpath/-/fs.realpath-1.0.0.tgz
+478 verbose tar unpack /var/folders/k2/9f3qd81x3f78064kmblystzm0000gn/T/npm-52061-06a01a16/registry.npmjs.org/fs.realpath/-/fs.realpath-1.0.0.tgz
+479 verbose tar unpacking to /var/folders/k2/9f3qd81x3f78064kmblystzm0000gn/T/npm-52061-06a01a16/unpack-cc6d4ec0
+480 silly gentlyRm /var/folders/k2/9f3qd81x3f78064kmblystzm0000gn/T/npm-52061-06a01a16/unpack-cc6d4ec0 is being purged
+481 verbose gentlyRm don't care about contents; nuking /var/folders/k2/9f3qd81x3f78064kmblystzm0000gn/T/npm-52061-06a01a16/unpack-cc6d4ec0
+482 silly gunzTarPerm modes [ '755', '644' ]
+483 silly gunzTarPerm extractEntry package.json
+484 silly gunzTarPerm extractEntry README.md
+485 silly gunzTarPerm extractEntry LICENSE
+486 silly gunzTarPerm extractEntry index.js
+487 silly gunzTarPerm extractEntry old.js
+488 verbose correctMkdir /Users/dylanhsiao/.npm correctMkdir not in flight; initializing
+489 silly cache afterAdd fs.realpath@1.0.0
+490 verbose afterAdd /Users/dylanhsiao/.npm/fs.realpath/1.0.0/package/package.json not in flight; writing
+491 verbose correctMkdir /Users/dylanhsiao/.npm correctMkdir not in flight; initializing
+492 verbose afterAdd /Users/dylanhsiao/.npm/fs.realpath/1.0.0/package/package.json written
+493 http fetch 200 https://registry.npmjs.org/balanced-match/-/balanced-match-0.4.2.tgz
+494 silly fetchAndShaCheck shasum cb3f3e3c732dc0f01ee70b403f302e61d7709838
+495 verbose addTmpTarball /var/folders/k2/9f3qd81x3f78064kmblystzm0000gn/T/npm-52061-06a01a16/registry.npmjs.org/balanced-match/-/balanced-match-0.4.2.tgz not in flight; adding
+496 verbose correctMkdir /Users/dylanhsiao/.npm correctMkdir not in flight; initializing
+497 verbose addTmpTarball validating metadata from /var/folders/k2/9f3qd81x3f78064kmblystzm0000gn/T/npm-52061-06a01a16/registry.npmjs.org/balanced-match/-/balanced-match-0.4.2.tgz
+498 verbose tar unpack /var/folders/k2/9f3qd81x3f78064kmblystzm0000gn/T/npm-52061-06a01a16/registry.npmjs.org/balanced-match/-/balanced-match-0.4.2.tgz
+499 verbose tar unpacking to /var/folders/k2/9f3qd81x3f78064kmblystzm0000gn/T/npm-52061-06a01a16/unpack-0158bdea
+500 silly gentlyRm /var/folders/k2/9f3qd81x3f78064kmblystzm0000gn/T/npm-52061-06a01a16/unpack-0158bdea is being purged
+501 verbose gentlyRm don't care about contents; nuking /var/folders/k2/9f3qd81x3f78064kmblystzm0000gn/T/npm-52061-06a01a16/unpack-0158bdea
+502 silly gunzTarPerm modes [ '755', '644' ]
+503 silly gunzTarPerm extractEntry package.json
+504 silly gunzTarPerm extractEntry .npmignore
+505 silly gunzTarPerm extractEntry README.md
+506 silly gunzTarPerm extractEntry index.js
+507 silly gunzTarPerm extractEntry LICENSE.md
+508 verbose correctMkdir /Users/dylanhsiao/.npm correctMkdir not in flight; initializing
+509 silly cache afterAdd balanced-match@0.4.2
+510 verbose afterAdd /Users/dylanhsiao/.npm/balanced-match/0.4.2/package/package.json not in flight; writing
+511 verbose correctMkdir /Users/dylanhsiao/.npm correctMkdir not in flight; initializing
+512 verbose afterAdd /Users/dylanhsiao/.npm/balanced-match/0.4.2/package/package.json written
+513 http fetch 200 https://registry.npmjs.org/concat-map/-/concat-map-0.0.1.tgz
+514 silly fetchAndShaCheck shasum d8a96bd77fd68df7793a73036a3ba0d5405d477b
+515 verbose addTmpTarball /var/folders/k2/9f3qd81x3f78064kmblystzm0000gn/T/npm-52061-06a01a16/registry.npmjs.org/concat-map/-/concat-map-0.0.1.tgz not in flight; adding
+516 verbose correctMkdir /Users/dylanhsiao/.npm correctMkdir not in flight; initializing
+517 verbose addTmpTarball validating metadata from /var/folders/k2/9f3qd81x3f78064kmblystzm0000gn/T/npm-52061-06a01a16/registry.npmjs.org/concat-map/-/concat-map-0.0.1.tgz
+518 verbose tar unpack /var/folders/k2/9f3qd81x3f78064kmblystzm0000gn/T/npm-52061-06a01a16/registry.npmjs.org/concat-map/-/concat-map-0.0.1.tgz
+519 verbose tar unpacking to /var/folders/k2/9f3qd81x3f78064kmblystzm0000gn/T/npm-52061-06a01a16/unpack-4023b323
+520 silly gentlyRm /var/folders/k2/9f3qd81x3f78064kmblystzm0000gn/T/npm-52061-06a01a16/unpack-4023b323 is being purged
+521 verbose gentlyRm don't care about contents; nuking /var/folders/k2/9f3qd81x3f78064kmblystzm0000gn/T/npm-52061-06a01a16/unpack-4023b323
+522 silly gunzTarPerm modes [ '755', '644' ]
+523 silly gunzTarPerm extractEntry package.json
+524 silly gunzTarPerm extractEntry LICENSE
+525 silly gunzTarPerm extractEntry index.js
+526 silly gunzTarPerm extractEntry .travis.yml
+527 silly gunzTarPerm extractEntry README.markdown
+528 silly gunzTarPerm extractEntry example/map.js
+529 silly gunzTarPerm extractEntry test/map.js
+530 verbose correctMkdir /Users/dylanhsiao/.npm correctMkdir not in flight; initializing
+531 silly cache afterAdd concat-map@0.0.1
+532 verbose afterAdd /Users/dylanhsiao/.npm/concat-map/0.0.1/package/package.json not in flight; writing
+533 verbose correctMkdir /Users/dylanhsiao/.npm correctMkdir not in flight; initializing
+534 verbose afterAdd /Users/dylanhsiao/.npm/concat-map/0.0.1/package/package.json written
+535 http fetch 200 https://registry.npmjs.org/semver/-/semver-5.3.0.tgz
+536 silly fetchAndShaCheck shasum 9b2ce5d3de02d17c6012ad326aa6b4d0cf54f94f
+537 verbose addTmpTarball /var/folders/k2/9f3qd81x3f78064kmblystzm0000gn/T/npm-52061-06a01a16/registry.npmjs.org/semver/-/semver-5.3.0.tgz not in flight; adding
+538 verbose correctMkdir /Users/dylanhsiao/.npm correctMkdir not in flight; initializing
+539 verbose addTmpTarball validating metadata from /var/folders/k2/9f3qd81x3f78064kmblystzm0000gn/T/npm-52061-06a01a16/registry.npmjs.org/semver/-/semver-5.3.0.tgz
+540 verbose tar unpack /var/folders/k2/9f3qd81x3f78064kmblystzm0000gn/T/npm-52061-06a01a16/registry.npmjs.org/semver/-/semver-5.3.0.tgz
+541 verbose tar unpacking to /var/folders/k2/9f3qd81x3f78064kmblystzm0000gn/T/npm-52061-06a01a16/unpack-66cfe89d
+542 silly gentlyRm /var/folders/k2/9f3qd81x3f78064kmblystzm0000gn/T/npm-52061-06a01a16/unpack-66cfe89d is being purged
+543 verbose gentlyRm don't care about contents; nuking /var/folders/k2/9f3qd81x3f78064kmblystzm0000gn/T/npm-52061-06a01a16/unpack-66cfe89d
+544 silly gunzTarPerm modes [ '755', '644' ]
+545 silly gunzTarPerm extractEntry package.json
+546 silly gunzTarPerm extractEntry README.md
+547 silly gunzTarPerm extractEntry LICENSE
+548 silly gunzTarPerm extractEntry semver.js
+549 silly gunzTarPerm extractEntry bin/semver
+550 silly gunzTarPerm extractEntry range.bnf
+551 verbose correctMkdir /Users/dylanhsiao/.npm correctMkdir not in flight; initializing
+552 silly cache afterAdd semver@5.3.0
+553 verbose afterAdd /Users/dylanhsiao/.npm/semver/5.3.0/package/package.json not in flight; writing
+554 verbose correctMkdir /Users/dylanhsiao/.npm correctMkdir not in flight; initializing
+555 verbose afterAdd /Users/dylanhsiao/.npm/semver/5.3.0/package/package.json written
+556 http fetch 200 https://registry.npmjs.org/once/-/once-1.4.0.tgz
+557 silly fetchAndShaCheck shasum 583b1aa775961d4b113ac17d9c50baef9dd76bd1
+558 verbose addTmpTarball /var/folders/k2/9f3qd81x3f78064kmblystzm0000gn/T/npm-52061-06a01a16/registry.npmjs.org/once/-/once-1.4.0.tgz not in flight; adding
+559 verbose correctMkdir /Users/dylanhsiao/.npm correctMkdir not in flight; initializing
+560 verbose addTmpTarball validating metadata from /var/folders/k2/9f3qd81x3f78064kmblystzm0000gn/T/npm-52061-06a01a16/registry.npmjs.org/once/-/once-1.4.0.tgz
+561 verbose tar unpack /var/folders/k2/9f3qd81x3f78064kmblystzm0000gn/T/npm-52061-06a01a16/registry.npmjs.org/once/-/once-1.4.0.tgz
+562 verbose tar unpacking to /var/folders/k2/9f3qd81x3f78064kmblystzm0000gn/T/npm-52061-06a01a16/unpack-925f821e
+563 silly gentlyRm /var/folders/k2/9f3qd81x3f78064kmblystzm0000gn/T/npm-52061-06a01a16/unpack-925f821e is being purged
+564 verbose gentlyRm don't care about contents; nuking /var/folders/k2/9f3qd81x3f78064kmblystzm0000gn/T/npm-52061-06a01a16/unpack-925f821e
+565 silly gunzTarPerm modes [ '755', '644' ]
+566 silly gunzTarPerm extractEntry package.json
+567 silly gunzTarPerm extractEntry README.md
+568 silly gunzTarPerm extractEntry LICENSE
+569 silly gunzTarPerm extractEntry once.js
+570 verbose correctMkdir /Users/dylanhsiao/.npm correctMkdir not in flight; initializing
+571 silly cache afterAdd once@1.4.0
+572 verbose afterAdd /Users/dylanhsiao/.npm/once/1.4.0/package/package.json not in flight; writing
+573 verbose correctMkdir /Users/dylanhsiao/.npm correctMkdir not in flight; initializing
+574 verbose afterAdd /Users/dylanhsiao/.npm/once/1.4.0/package/package.json written
+575 silly fetchOtherPackageData wrappy@https://registry.npmjs.org/wrappy/-/wrappy-1.0.2.tgz
+576 silly cache add args [ 'wrappy@https://registry.npmjs.org/wrappy/-/wrappy-1.0.2.tgz',
+576 silly cache add   null ]
+577 verbose cache add spec wrappy@https://registry.npmjs.org/wrappy/-/wrappy-1.0.2.tgz
+578 silly cache add parsed spec Result {
+578 silly cache add   raw: 'wrappy@https://registry.npmjs.org/wrappy/-/wrappy-1.0.2.tgz',
+578 silly cache add   scope: null,
+578 silly cache add   escapedName: 'wrappy',
+578 silly cache add   name: 'wrappy',
+578 silly cache add   rawSpec: 'https://registry.npmjs.org/wrappy/-/wrappy-1.0.2.tgz',
+578 silly cache add   spec: 'https://registry.npmjs.org/wrappy/-/wrappy-1.0.2.tgz',
+578 silly cache add   type: 'remote' }
+579 silly mapToRegistry name wrappy@https://registry.npmjs.org/wrappy/-/wrappy-1.0.2.tgz
+580 silly mapToRegistry using default registry
+581 silly mapToRegistry registry https://registry.npmjs.org/
+582 silly mapToRegistry data Result {
+582 silly mapToRegistry   raw: 'wrappy@https://registry.npmjs.org/wrappy/-/wrappy-1.0.2.tgz',
+582 silly mapToRegistry   scope: null,
+582 silly mapToRegistry   escapedName: 'wrappy',
+582 silly mapToRegistry   name: 'wrappy',
+582 silly mapToRegistry   rawSpec: 'https://registry.npmjs.org/wrappy/-/wrappy-1.0.2.tgz',
+582 silly mapToRegistry   spec: 'https://registry.npmjs.org/wrappy/-/wrappy-1.0.2.tgz',
+582 silly mapToRegistry   type: 'remote' }
+583 silly mapToRegistry uri https://registry.npmjs.org/wrappy/-/wrappy-1.0.2.tgz
+584 verbose addRemoteTarball https://registry.npmjs.org/wrappy/-/wrappy-1.0.2.tgz not in flight; adding
+585 verbose addRemoteTarball [ 'https://registry.npmjs.org/wrappy/-/wrappy-1.0.2.tgz', null ]
+586 info retry fetch attempt 1 at 4:52:37 PM
+587 info attempt registry request try #1 at 4:52:37 PM
+588 http fetch GET https://registry.npmjs.org/wrappy/-/wrappy-1.0.2.tgz
+589 http fetch 200 https://registry.npmjs.org/wrappy/-/wrappy-1.0.2.tgz
+590 silly fetchAndShaCheck shasum b5243d8f3ec1aa35f1364605bc0d1036e30ab69f
+591 verbose addTmpTarball /var/folders/k2/9f3qd81x3f78064kmblystzm0000gn/T/npm-52061-06a01a16/registry.npmjs.org/wrappy/-/wrappy-1.0.2.tgz not in flight; adding
+592 verbose correctMkdir /Users/dylanhsiao/.npm correctMkdir not in flight; initializing
+593 verbose addTmpTarball validating metadata from /var/folders/k2/9f3qd81x3f78064kmblystzm0000gn/T/npm-52061-06a01a16/registry.npmjs.org/wrappy/-/wrappy-1.0.2.tgz
+594 verbose tar unpack /var/folders/k2/9f3qd81x3f78064kmblystzm0000gn/T/npm-52061-06a01a16/registry.npmjs.org/wrappy/-/wrappy-1.0.2.tgz
+595 verbose tar unpacking to /var/folders/k2/9f3qd81x3f78064kmblystzm0000gn/T/npm-52061-06a01a16/unpack-8ceace32
+596 silly gentlyRm /var/folders/k2/9f3qd81x3f78064kmblystzm0000gn/T/npm-52061-06a01a16/unpack-8ceace32 is being purged
+597 verbose gentlyRm don't care about contents; nuking /var/folders/k2/9f3qd81x3f78064kmblystzm0000gn/T/npm-52061-06a01a16/unpack-8ceace32
+598 silly gunzTarPerm modes [ '755', '644' ]
+599 silly gunzTarPerm extractEntry package.json
+600 silly gunzTarPerm extractEntry README.md
+601 silly gunzTarPerm extractEntry LICENSE
+602 silly gunzTarPerm extractEntry wrappy.js
+603 verbose correctMkdir /Users/dylanhsiao/.npm correctMkdir not in flight; initializing
+604 silly cache afterAdd wrappy@1.0.2
+605 verbose afterAdd /Users/dylanhsiao/.npm/wrappy/1.0.2/package/package.json not in flight; writing
+606 verbose correctMkdir /Users/dylanhsiao/.npm correctMkdir not in flight; initializing
+607 verbose afterAdd /Users/dylanhsiao/.npm/wrappy/1.0.2/package/package.json written
+608 http fetch 200 https://registry.npmjs.org/path-is-absolute/-/path-is-absolute-1.0.1.tgz
+609 silly fetchAndShaCheck shasum 174b9268735534ffbc7ace6bf53a5a9e1b5c5f5f
+610 verbose addTmpTarball /var/folders/k2/9f3qd81x3f78064kmblystzm0000gn/T/npm-52061-06a01a16/registry.npmjs.org/path-is-absolute/-/path-is-absolute-1.0.1.tgz not in flight; adding
+611 verbose correctMkdir /Users/dylanhsiao/.npm correctMkdir not in flight; initializing
+612 verbose addTmpTarball validating metadata from /var/folders/k2/9f3qd81x3f78064kmblystzm0000gn/T/npm-52061-06a01a16/registry.npmjs.org/path-is-absolute/-/path-is-absolute-1.0.1.tgz
+613 verbose tar unpack /var/folders/k2/9f3qd81x3f78064kmblystzm0000gn/T/npm-52061-06a01a16/registry.npmjs.org/path-is-absolute/-/path-is-absolute-1.0.1.tgz
+614 verbose tar unpacking to /var/folders/k2/9f3qd81x3f78064kmblystzm0000gn/T/npm-52061-06a01a16/unpack-065501ca
+615 silly gentlyRm /var/folders/k2/9f3qd81x3f78064kmblystzm0000gn/T/npm-52061-06a01a16/unpack-065501ca is being purged
+616 verbose gentlyRm don't care about contents; nuking /var/folders/k2/9f3qd81x3f78064kmblystzm0000gn/T/npm-52061-06a01a16/unpack-065501ca
+617 silly gunzTarPerm modes [ '755', '644' ]
+618 silly gunzTarPerm extractEntry package.json
+619 silly gunzTarPerm extractEntry index.js
+620 silly gunzTarPerm extractEntry license
+621 silly gunzTarPerm extractEntry readme.md
+622 verbose correctMkdir /Users/dylanhsiao/.npm correctMkdir not in flight; initializing
+623 silly cache afterAdd path-is-absolute@1.0.1
+624 verbose afterAdd /Users/dylanhsiao/.npm/path-is-absolute/1.0.1/package/package.json not in flight; writing
+625 verbose correctMkdir /Users/dylanhsiao/.npm correctMkdir not in flight; initializing
+626 verbose afterAdd /Users/dylanhsiao/.npm/path-is-absolute/1.0.1/package/package.json written
+627 http fetch 200 https://registry.npmjs.org/uglify-js/-/uglify-js-2.7.5.tgz
+628 silly fetchAndShaCheck shasum 4612c0c7baaee2ba7c487de4904ae122079f2ca8
+629 verbose addTmpTarball /var/folders/k2/9f3qd81x3f78064kmblystzm0000gn/T/npm-52061-06a01a16/registry.npmjs.org/uglify-js/-/uglify-js-2.7.5.tgz not in flight; adding
+630 verbose correctMkdir /Users/dylanhsiao/.npm correctMkdir not in flight; initializing
+631 verbose addTmpTarball validating metadata from /var/folders/k2/9f3qd81x3f78064kmblystzm0000gn/T/npm-52061-06a01a16/registry.npmjs.org/uglify-js/-/uglify-js-2.7.5.tgz
+632 verbose tar unpack /var/folders/k2/9f3qd81x3f78064kmblystzm0000gn/T/npm-52061-06a01a16/registry.npmjs.org/uglify-js/-/uglify-js-2.7.5.tgz
+633 verbose tar unpacking to /var/folders/k2/9f3qd81x3f78064kmblystzm0000gn/T/npm-52061-06a01a16/unpack-cee82817
+634 silly gentlyRm /var/folders/k2/9f3qd81x3f78064kmblystzm0000gn/T/npm-52061-06a01a16/unpack-cee82817 is being purged
+635 verbose gentlyRm don't care about contents; nuking /var/folders/k2/9f3qd81x3f78064kmblystzm0000gn/T/npm-52061-06a01a16/unpack-cee82817
+636 silly gunzTarPerm modes [ '755', '644' ]
+637 silly gunzTarPerm extractEntry package.json
+638 silly gunzTarPerm extractEntry README.md
+639 silly gunzTarPerm extractEntry LICENSE
+640 silly gunzTarPerm extractEntry bin/extract-props.js
+641 silly gunzTarPerm extractEntry bin/uglifyjs
+642 silly gunzTarPerm extractEntry lib/ast.js
+643 silly gunzTarPerm extractEntry lib/compress.js
+644 silly gunzTarPerm extractEntry lib/mozilla-ast.js
+645 silly gunzTarPerm extractEntry lib/output.js
+646 silly gunzTarPerm extractEntry lib/parse.js
+647 silly gunzTarPerm extractEntry lib/propmangle.js
+648 silly gunzTarPerm extractEntry lib/scope.js
+649 silly gunzTarPerm extractEntry lib/sourcemap.js
+650 silly gunzTarPerm extractEntry lib/transform.js
+651 silly gunzTarPerm extractEntry lib/utils.js
+652 silly gunzTarPerm extractEntry tools/exports.js
+653 silly gunzTarPerm extractEntry tools/node.js
+654 silly gunzTarPerm extractEntry tools/domprops.json
+655 silly gunzTarPerm extractEntry tools/props.html
+656 verbose correctMkdir /Users/dylanhsiao/.npm correctMkdir not in flight; initializing
+657 silly cache afterAdd uglify-js@2.7.5
+658 verbose afterAdd /Users/dylanhsiao/.npm/uglify-js/2.7.5/package/package.json not in flight; writing
+659 verbose correctMkdir /Users/dylanhsiao/.npm correctMkdir not in flight; initializing
+660 verbose afterAdd /Users/dylanhsiao/.npm/uglify-js/2.7.5/package/package.json written
+661 silly fetchOtherPackageData async@https://registry.npmjs.org/async/-/async-0.2.10.tgz
+662 silly cache add args [ 'async@https://registry.npmjs.org/async/-/async-0.2.10.tgz',
+662 silly cache add   null ]
+663 verbose cache add spec async@https://registry.npmjs.org/async/-/async-0.2.10.tgz
+664 silly fetchOtherPackageData source-map@https://registry.npmjs.org/source-map/-/source-map-0.5.6.tgz
+665 silly cache add args [ 'source-map@https://registry.npmjs.org/source-map/-/source-map-0.5.6.tgz',
+665 silly cache add   null ]
+666 verbose cache add spec source-map@https://registry.npmjs.org/source-map/-/source-map-0.5.6.tgz
+667 silly fetchOtherPackageData uglify-to-browserify@https://registry.npmjs.org/uglify-to-browserify/-/uglify-to-browserify-1.0.2.tgz
+668 silly cache add args [ 'uglify-to-browserify@https://registry.npmjs.org/uglify-to-browserify/-/uglify-to-browserify-1.0.2.tgz',
+668 silly cache add   null ]
+669 verbose cache add spec uglify-to-browserify@https://registry.npmjs.org/uglify-to-browserify/-/uglify-to-browserify-1.0.2.tgz
+670 silly fetchOtherPackageData yargs@https://registry.npmjs.org/yargs/-/yargs-3.10.0.tgz
+671 silly cache add args [ 'yargs@https://registry.npmjs.org/yargs/-/yargs-3.10.0.tgz',
+671 silly cache add   null ]
+672 verbose cache add spec yargs@https://registry.npmjs.org/yargs/-/yargs-3.10.0.tgz
+673 silly cache add parsed spec Result {
+673 silly cache add   raw: 'async@https://registry.npmjs.org/async/-/async-0.2.10.tgz',
+673 silly cache add   scope: null,
+673 silly cache add   escapedName: 'async',
+673 silly cache add   name: 'async',
+673 silly cache add   rawSpec: 'https://registry.npmjs.org/async/-/async-0.2.10.tgz',
+673 silly cache add   spec: 'https://registry.npmjs.org/async/-/async-0.2.10.tgz',
+673 silly cache add   type: 'remote' }
+674 silly mapToRegistry name async@https://registry.npmjs.org/async/-/async-0.2.10.tgz
+675 silly mapToRegistry using default registry
+676 silly mapToRegistry registry https://registry.npmjs.org/
+677 silly mapToRegistry data Result {
+677 silly mapToRegistry   raw: 'async@https://registry.npmjs.org/async/-/async-0.2.10.tgz',
+677 silly mapToRegistry   scope: null,
+677 silly mapToRegistry   escapedName: 'async',
+677 silly mapToRegistry   name: 'async',
+677 silly mapToRegistry   rawSpec: 'https://registry.npmjs.org/async/-/async-0.2.10.tgz',
+677 silly mapToRegistry   spec: 'https://registry.npmjs.org/async/-/async-0.2.10.tgz',
+677 silly mapToRegistry   type: 'remote' }
+678 silly mapToRegistry uri https://registry.npmjs.org/async/-/async-0.2.10.tgz
+679 verbose addRemoteTarball https://registry.npmjs.org/async/-/async-0.2.10.tgz not in flight; adding
+680 verbose addRemoteTarball [ 'https://registry.npmjs.org/async/-/async-0.2.10.tgz', null ]
+681 silly cache add parsed spec Result {
+681 silly cache add   raw: 'source-map@https://registry.npmjs.org/source-map/-/source-map-0.5.6.tgz',
+681 silly cache add   scope: null,
+681 silly cache add   escapedName: 'source-map',
+681 silly cache add   name: 'source-map',
+681 silly cache add   rawSpec: 'https://registry.npmjs.org/source-map/-/source-map-0.5.6.tgz',
+681 silly cache add   spec: 'https://registry.npmjs.org/source-map/-/source-map-0.5.6.tgz',
+681 silly cache add   type: 'remote' }
+682 silly mapToRegistry name source-map@https://registry.npmjs.org/source-map/-/source-map-0.5.6.tgz
+683 silly mapToRegistry using default registry
+684 silly mapToRegistry registry https://registry.npmjs.org/
+685 silly mapToRegistry data Result {
+685 silly mapToRegistry   raw: 'source-map@https://registry.npmjs.org/source-map/-/source-map-0.5.6.tgz',
+685 silly mapToRegistry   scope: null,
+685 silly mapToRegistry   escapedName: 'source-map',
+685 silly mapToRegistry   name: 'source-map',
+685 silly mapToRegistry   rawSpec: 'https://registry.npmjs.org/source-map/-/source-map-0.5.6.tgz',
+685 silly mapToRegistry   spec: 'https://registry.npmjs.org/source-map/-/source-map-0.5.6.tgz',
+685 silly mapToRegistry   type: 'remote' }
+686 silly mapToRegistry uri https://registry.npmjs.org/source-map/-/source-map-0.5.6.tgz
+687 verbose addRemoteTarball https://registry.npmjs.org/source-map/-/source-map-0.5.6.tgz not in flight; adding
+688 verbose addRemoteTarball [ 'https://registry.npmjs.org/source-map/-/source-map-0.5.6.tgz',
+688 verbose addRemoteTarball   null ]
+689 silly cache add parsed spec Result {
+689 silly cache add   raw: 'uglify-to-browserify@https://registry.npmjs.org/uglify-to-browserify/-/uglify-to-browserify-1.0.2.tgz',
+689 silly cache add   scope: null,
+689 silly cache add   escapedName: 'uglify-to-browserify',
+689 silly cache add   name: 'uglify-to-browserify',
+689 silly cache add   rawSpec: 'https://registry.npmjs.org/uglify-to-browserify/-/uglify-to-browserify-1.0.2.tgz',
+689 silly cache add   spec: 'https://registry.npmjs.org/uglify-to-browserify/-/uglify-to-browserify-1.0.2.tgz',
+689 silly cache add   type: 'remote' }
+690 silly mapToRegistry name uglify-to-browserify@https://registry.npmjs.org/uglify-to-browserify/-/uglify-to-browserify-1.0.2.tgz
+691 silly mapToRegistry using default registry
+692 silly mapToRegistry registry https://registry.npmjs.org/
+693 silly mapToRegistry data Result {
+693 silly mapToRegistry   raw: 'uglify-to-browserify@https://registry.npmjs.org/uglify-to-browserify/-/uglify-to-browserify-1.0.2.tgz',
+693 silly mapToRegistry   scope: null,
+693 silly mapToRegistry   escapedName: 'uglify-to-browserify',
+693 silly mapToRegistry   name: 'uglify-to-browserify',
+693 silly mapToRegistry   rawSpec: 'https://registry.npmjs.org/uglify-to-browserify/-/uglify-to-browserify-1.0.2.tgz',
+693 silly mapToRegistry   spec: 'https://registry.npmjs.org/uglify-to-browserify/-/uglify-to-browserify-1.0.2.tgz',
+693 silly mapToRegistry   type: 'remote' }
+694 silly mapToRegistry uri https://registry.npmjs.org/uglify-to-browserify/-/uglify-to-browserify-1.0.2.tgz
+695 verbose addRemoteTarball https://registry.npmjs.org/uglify-to-browserify/-/uglify-to-browserify-1.0.2.tgz not in flight; adding
+696 verbose addRemoteTarball [ 'https://registry.npmjs.org/uglify-to-browserify/-/uglify-to-browserify-1.0.2.tgz',
+696 verbose addRemoteTarball   null ]
+697 silly cache add parsed spec Result {
+697 silly cache add   raw: 'yargs@https://registry.npmjs.org/yargs/-/yargs-3.10.0.tgz',
+697 silly cache add   scope: null,
+697 silly cache add   escapedName: 'yargs',
+697 silly cache add   name: 'yargs',
+697 silly cache add   rawSpec: 'https://registry.npmjs.org/yargs/-/yargs-3.10.0.tgz',
+697 silly cache add   spec: 'https://registry.npmjs.org/yargs/-/yargs-3.10.0.tgz',
+697 silly cache add   type: 'remote' }
+698 silly mapToRegistry name yargs@https://registry.npmjs.org/yargs/-/yargs-3.10.0.tgz
+699 silly mapToRegistry using default registry
+700 silly mapToRegistry registry https://registry.npmjs.org/
+701 silly mapToRegistry data Result {
+701 silly mapToRegistry   raw: 'yargs@https://registry.npmjs.org/yargs/-/yargs-3.10.0.tgz',
+701 silly mapToRegistry   scope: null,
+701 silly mapToRegistry   escapedName: 'yargs',
+701 silly mapToRegistry   name: 'yargs',
+701 silly mapToRegistry   rawSpec: 'https://registry.npmjs.org/yargs/-/yargs-3.10.0.tgz',
+701 silly mapToRegistry   spec: 'https://registry.npmjs.org/yargs/-/yargs-3.10.0.tgz',
+701 silly mapToRegistry   type: 'remote' }
+702 silly mapToRegistry uri https://registry.npmjs.org/yargs/-/yargs-3.10.0.tgz
+703 verbose addRemoteTarball https://registry.npmjs.org/yargs/-/yargs-3.10.0.tgz not in flight; adding
+704 verbose addRemoteTarball [ 'https://registry.npmjs.org/yargs/-/yargs-3.10.0.tgz', null ]
+705 info retry fetch attempt 1 at 4:52:38 PM
+706 info attempt registry request try #1 at 4:52:38 PM
+707 http fetch GET https://registry.npmjs.org/async/-/async-0.2.10.tgz
+708 info retry fetch attempt 1 at 4:52:38 PM
+709 info attempt registry request try #1 at 4:52:38 PM
+710 http fetch GET https://registry.npmjs.org/uglify-to-browserify/-/uglify-to-browserify-1.0.2.tgz
+711 info retry fetch attempt 1 at 4:52:38 PM
+712 info attempt registry request try #1 at 4:52:38 PM
+713 http fetch GET https://registry.npmjs.org/source-map/-/source-map-0.5.6.tgz
+714 info retry fetch attempt 1 at 4:52:38 PM
+715 info attempt registry request try #1 at 4:52:38 PM
+716 http fetch GET https://registry.npmjs.org/yargs/-/yargs-3.10.0.tgz
+717 http fetch 200 https://registry.npmjs.org/uglify-to-browserify/-/uglify-to-browserify-1.0.2.tgz
+718 silly fetchAndShaCheck shasum 6e0924d6bda6b5afe349e39a6d632850a0f882b7
+719 verbose addTmpTarball /var/folders/k2/9f3qd81x3f78064kmblystzm0000gn/T/npm-52061-06a01a16/registry.npmjs.org/uglify-to-browserify/-/uglify-to-browserify-1.0.2.tgz not in flight; adding
+720 verbose correctMkdir /Users/dylanhsiao/.npm correctMkdir not in flight; initializing
+721 verbose addTmpTarball validating metadata from /var/folders/k2/9f3qd81x3f78064kmblystzm0000gn/T/npm-52061-06a01a16/registry.npmjs.org/uglify-to-browserify/-/uglify-to-browserify-1.0.2.tgz
+722 verbose tar unpack /var/folders/k2/9f3qd81x3f78064kmblystzm0000gn/T/npm-52061-06a01a16/registry.npmjs.org/uglify-to-browserify/-/uglify-to-browserify-1.0.2.tgz
+723 verbose tar unpacking to /var/folders/k2/9f3qd81x3f78064kmblystzm0000gn/T/npm-52061-06a01a16/unpack-7c9400a2
+724 silly gentlyRm /var/folders/k2/9f3qd81x3f78064kmblystzm0000gn/T/npm-52061-06a01a16/unpack-7c9400a2 is being purged
+725 verbose gentlyRm don't care about contents; nuking /var/folders/k2/9f3qd81x3f78064kmblystzm0000gn/T/npm-52061-06a01a16/unpack-7c9400a2
+726 silly gunzTarPerm modes [ '755', '644' ]
+727 silly gunzTarPerm extractEntry package.json
+728 silly gunzTarPerm modified mode [ 'package.json', 438, 420 ]
+729 silly gunzTarPerm extractEntry .npmignore
+730 silly gunzTarPerm modified mode [ '.npmignore', 438, 420 ]
+731 silly gunzTarPerm extractEntry README.md
+732 silly gunzTarPerm modified mode [ 'README.md', 438, 420 ]
+733 silly gunzTarPerm extractEntry LICENSE
+734 silly gunzTarPerm modified mode [ 'LICENSE', 438, 420 ]
+735 silly gunzTarPerm extractEntry index.js
+736 silly gunzTarPerm modified mode [ 'index.js', 438, 420 ]
+737 silly gunzTarPerm extractEntry .travis.yml
+738 silly gunzTarPerm modified mode [ '.travis.yml', 438, 420 ]
+739 silly gunzTarPerm extractEntry test/index.js
+740 silly gunzTarPerm modified mode [ 'test/index.js', 438, 420 ]
+741 verbose correctMkdir /Users/dylanhsiao/.npm correctMkdir not in flight; initializing
+742 silly cache afterAdd uglify-to-browserify@1.0.2
+743 verbose afterAdd /Users/dylanhsiao/.npm/uglify-to-browserify/1.0.2/package/package.json not in flight; writing
+744 verbose correctMkdir /Users/dylanhsiao/.npm correctMkdir not in flight; initializing
+745 verbose afterAdd /Users/dylanhsiao/.npm/uglify-to-browserify/1.0.2/package/package.json written
+746 http fetch 200 https://registry.npmjs.org/source-map/-/source-map-0.5.6.tgz
+747 silly fetchAndShaCheck shasum 75ce38f52bf0733c5a7f0c118d81334a2bb5f412
+748 verbose addTmpTarball /var/folders/k2/9f3qd81x3f78064kmblystzm0000gn/T/npm-52061-06a01a16/registry.npmjs.org/source-map/-/source-map-0.5.6.tgz not in flight; adding
+749 verbose correctMkdir /Users/dylanhsiao/.npm correctMkdir not in flight; initializing
+750 verbose addTmpTarball validating metadata from /var/folders/k2/9f3qd81x3f78064kmblystzm0000gn/T/npm-52061-06a01a16/registry.npmjs.org/source-map/-/source-map-0.5.6.tgz
+751 verbose tar unpack /var/folders/k2/9f3qd81x3f78064kmblystzm0000gn/T/npm-52061-06a01a16/registry.npmjs.org/source-map/-/source-map-0.5.6.tgz
+752 verbose tar unpacking to /var/folders/k2/9f3qd81x3f78064kmblystzm0000gn/T/npm-52061-06a01a16/unpack-8b0dd80b
+753 silly gentlyRm /var/folders/k2/9f3qd81x3f78064kmblystzm0000gn/T/npm-52061-06a01a16/unpack-8b0dd80b is being purged
+754 verbose gentlyRm don't care about contents; nuking /var/folders/k2/9f3qd81x3f78064kmblystzm0000gn/T/npm-52061-06a01a16/unpack-8b0dd80b
+755 silly gunzTarPerm modes [ '755', '644' ]
+756 silly gunzTarPerm extractEntry package.json
+757 silly gunzTarPerm extractEntry README.md
+758 silly gunzTarPerm extractEntry LICENSE
+759 silly gunzTarPerm extractEntry source-map.js
+760 silly gunzTarPerm extractEntry lib/array-set.js
+761 silly gunzTarPerm extractEntry lib/base64-vlq.js
+762 silly gunzTarPerm extractEntry lib/base64.js
+763 silly gunzTarPerm extractEntry lib/binary-search.js
+764 silly gunzTarPerm extractEntry lib/mapping-list.js
+765 silly gunzTarPerm extractEntry lib/quick-sort.js
+766 silly gunzTarPerm extractEntry lib/source-map-consumer.js
+767 silly gunzTarPerm extractEntry lib/source-map-generator.js
+768 silly gunzTarPerm extractEntry lib/source-node.js
+769 silly gunzTarPerm extractEntry lib/util.js
+770 silly gunzTarPerm extractEntry dist/source-map.debug.js
+771 silly gunzTarPerm extractEntry dist/source-map.js
+772 silly gunzTarPerm extractEntry dist/source-map.min.js
+773 silly gunzTarPerm extractEntry dist/source-map.min.js.map
+774 silly gunzTarPerm extractEntry CHANGELOG.md
+775 http fetch 200 https://registry.npmjs.org/yargs/-/yargs-3.10.0.tgz
+776 verbose correctMkdir /Users/dylanhsiao/.npm correctMkdir not in flight; initializing
+777 http fetch 200 https://registry.npmjs.org/async/-/async-0.2.10.tgz
+778 silly cache afterAdd source-map@0.5.6
+779 verbose afterAdd /Users/dylanhsiao/.npm/source-map/0.5.6/package/package.json not in flight; writing
+780 verbose correctMkdir /Users/dylanhsiao/.npm correctMkdir not in flight; initializing
+781 verbose afterAdd /Users/dylanhsiao/.npm/source-map/0.5.6/package/package.json written
+782 silly fetchAndShaCheck shasum f7ee7bd857dd7c1d2d38c0e74efbd681d1431fd1
+783 verbose addTmpTarball /var/folders/k2/9f3qd81x3f78064kmblystzm0000gn/T/npm-52061-06a01a16/registry.npmjs.org/yargs/-/yargs-3.10.0.tgz not in flight; adding
+784 verbose correctMkdir /Users/dylanhsiao/.npm correctMkdir not in flight; initializing
+785 verbose addTmpTarball validating metadata from /var/folders/k2/9f3qd81x3f78064kmblystzm0000gn/T/npm-52061-06a01a16/registry.npmjs.org/yargs/-/yargs-3.10.0.tgz
+786 verbose tar unpack /var/folders/k2/9f3qd81x3f78064kmblystzm0000gn/T/npm-52061-06a01a16/registry.npmjs.org/yargs/-/yargs-3.10.0.tgz
+787 verbose tar unpacking to /var/folders/k2/9f3qd81x3f78064kmblystzm0000gn/T/npm-52061-06a01a16/unpack-0d7251b5
+788 silly gentlyRm /var/folders/k2/9f3qd81x3f78064kmblystzm0000gn/T/npm-52061-06a01a16/unpack-0d7251b5 is being purged
+789 verbose gentlyRm don't care about contents; nuking /var/folders/k2/9f3qd81x3f78064kmblystzm0000gn/T/npm-52061-06a01a16/unpack-0d7251b5
+790 silly gunzTarPerm modes [ '755', '644' ]
+791 silly gunzTarPerm extractEntry package.json
+792 silly gunzTarPerm extractEntry README.md
+793 silly gunzTarPerm extractEntry LICENSE
+794 silly gunzTarPerm extractEntry index.js
+795 silly gunzTarPerm extractEntry completion.sh.hbs
+796 silly gunzTarPerm extractEntry CHANGELOG.md
+797 silly gunzTarPerm extractEntry lib/completion.js
+798 silly gunzTarPerm extractEntry lib/parser.js
+799 silly gunzTarPerm extractEntry lib/usage.js
+800 silly gunzTarPerm extractEntry lib/validation.js
+801 verbose correctMkdir /Users/dylanhsiao/.npm correctMkdir not in flight; initializing
+802 silly fetchAndShaCheck shasum b6bbe0b0674b9d719708ca38de8c237cb526c3d1
+803 verbose addTmpTarball /var/folders/k2/9f3qd81x3f78064kmblystzm0000gn/T/npm-52061-06a01a16/registry.npmjs.org/async/-/async-0.2.10.tgz not in flight; adding
+804 verbose correctMkdir /Users/dylanhsiao/.npm correctMkdir not in flight; initializing
+805 verbose addTmpTarball validating metadata from /var/folders/k2/9f3qd81x3f78064kmblystzm0000gn/T/npm-52061-06a01a16/registry.npmjs.org/async/-/async-0.2.10.tgz
+806 verbose tar unpack /var/folders/k2/9f3qd81x3f78064kmblystzm0000gn/T/npm-52061-06a01a16/registry.npmjs.org/async/-/async-0.2.10.tgz
+807 verbose tar unpacking to /var/folders/k2/9f3qd81x3f78064kmblystzm0000gn/T/npm-52061-06a01a16/unpack-b2563c4b
+808 silly gentlyRm /var/folders/k2/9f3qd81x3f78064kmblystzm0000gn/T/npm-52061-06a01a16/unpack-b2563c4b is being purged
+809 verbose gentlyRm don't care about contents; nuking /var/folders/k2/9f3qd81x3f78064kmblystzm0000gn/T/npm-52061-06a01a16/unpack-b2563c4b
+810 silly gunzTarPerm modes [ '755', '644' ]
+811 silly gunzTarPerm extractEntry package.json
+812 silly gunzTarPerm extractEntry README.md
+813 silly gunzTarPerm extractEntry LICENSE
+814 silly gunzTarPerm extractEntry component.json
+815 silly gunzTarPerm extractEntry lib/async.js
+816 silly cache afterAdd yargs@3.10.0
+817 verbose afterAdd /Users/dylanhsiao/.npm/yargs/3.10.0/package/package.json not in flight; writing
+818 verbose correctMkdir /Users/dylanhsiao/.npm correctMkdir not in flight; initializing
+819 verbose afterAdd /Users/dylanhsiao/.npm/yargs/3.10.0/package/package.json written
+820 silly fetchOtherPackageData camelcase@https://registry.npmjs.org/camelcase/-/camelcase-1.2.1.tgz
+821 silly cache add args [ 'camelcase@https://registry.npmjs.org/camelcase/-/camelcase-1.2.1.tgz',
+821 silly cache add   null ]
+822 verbose cache add spec camelcase@https://registry.npmjs.org/camelcase/-/camelcase-1.2.1.tgz
+823 silly fetchOtherPackageData cliui@https://registry.npmjs.org/cliui/-/cliui-2.1.0.tgz
+824 silly cache add args [ 'cliui@https://registry.npmjs.org/cliui/-/cliui-2.1.0.tgz',
+824 silly cache add   null ]
+825 verbose cache add spec cliui@https://registry.npmjs.org/cliui/-/cliui-2.1.0.tgz
+826 silly fetchOtherPackageData decamelize@https://registry.npmjs.org/decamelize/-/decamelize-1.2.0.tgz
+827 silly cache add args [ 'decamelize@https://registry.npmjs.org/decamelize/-/decamelize-1.2.0.tgz',
+827 silly cache add   null ]
+828 verbose cache add spec decamelize@https://registry.npmjs.org/decamelize/-/decamelize-1.2.0.tgz
+829 silly fetchOtherPackageData window-size@https://registry.npmjs.org/window-size/-/window-size-0.1.0.tgz
+830 silly cache add args [ 'window-size@https://registry.npmjs.org/window-size/-/window-size-0.1.0.tgz',
+830 silly cache add   null ]
+831 verbose cache add spec window-size@https://registry.npmjs.org/window-size/-/window-size-0.1.0.tgz
+832 silly cache add parsed spec Result {
+832 silly cache add   raw: 'camelcase@https://registry.npmjs.org/camelcase/-/camelcase-1.2.1.tgz',
+832 silly cache add   scope: null,
+832 silly cache add   escapedName: 'camelcase',
+832 silly cache add   name: 'camelcase',
+832 silly cache add   rawSpec: 'https://registry.npmjs.org/camelcase/-/camelcase-1.2.1.tgz',
+832 silly cache add   spec: 'https://registry.npmjs.org/camelcase/-/camelcase-1.2.1.tgz',
+832 silly cache add   type: 'remote' }
+833 silly mapToRegistry name camelcase@https://registry.npmjs.org/camelcase/-/camelcase-1.2.1.tgz
+834 silly mapToRegistry using default registry
+835 silly mapToRegistry registry https://registry.npmjs.org/
+836 silly mapToRegistry data Result {
+836 silly mapToRegistry   raw: 'camelcase@https://registry.npmjs.org/camelcase/-/camelcase-1.2.1.tgz',
+836 silly mapToRegistry   scope: null,
+836 silly mapToRegistry   escapedName: 'camelcase',
+836 silly mapToRegistry   name: 'camelcase',
+836 silly mapToRegistry   rawSpec: 'https://registry.npmjs.org/camelcase/-/camelcase-1.2.1.tgz',
+836 silly mapToRegistry   spec: 'https://registry.npmjs.org/camelcase/-/camelcase-1.2.1.tgz',
+836 silly mapToRegistry   type: 'remote' }
+837 silly mapToRegistry uri https://registry.npmjs.org/camelcase/-/camelcase-1.2.1.tgz
+838 verbose addRemoteTarball https://registry.npmjs.org/camelcase/-/camelcase-1.2.1.tgz not in flight; adding
+839 verbose addRemoteTarball [ 'https://registry.npmjs.org/camelcase/-/camelcase-1.2.1.tgz',
+839 verbose addRemoteTarball   null ]
+840 silly cache add parsed spec Result {
+840 silly cache add   raw: 'cliui@https://registry.npmjs.org/cliui/-/cliui-2.1.0.tgz',
+840 silly cache add   scope: null,
+840 silly cache add   escapedName: 'cliui',
+840 silly cache add   name: 'cliui',
+840 silly cache add   rawSpec: 'https://registry.npmjs.org/cliui/-/cliui-2.1.0.tgz',
+840 silly cache add   spec: 'https://registry.npmjs.org/cliui/-/cliui-2.1.0.tgz',
+840 silly cache add   type: 'remote' }
+841 silly mapToRegistry name cliui@https://registry.npmjs.org/cliui/-/cliui-2.1.0.tgz
+842 silly mapToRegistry using default registry
+843 silly mapToRegistry registry https://registry.npmjs.org/
+844 silly mapToRegistry data Result {
+844 silly mapToRegistry   raw: 'cliui@https://registry.npmjs.org/cliui/-/cliui-2.1.0.tgz',
+844 silly mapToRegistry   scope: null,
+844 silly mapToRegistry   escapedName: 'cliui',
+844 silly mapToRegistry   name: 'cliui',
+844 silly mapToRegistry   rawSpec: 'https://registry.npmjs.org/cliui/-/cliui-2.1.0.tgz',
+844 silly mapToRegistry   spec: 'https://registry.npmjs.org/cliui/-/cliui-2.1.0.tgz',
+844 silly mapToRegistry   type: 'remote' }
+845 silly mapToRegistry uri https://registry.npmjs.org/cliui/-/cliui-2.1.0.tgz
+846 verbose addRemoteTarball https://registry.npmjs.org/cliui/-/cliui-2.1.0.tgz not in flight; adding
+847 verbose addRemoteTarball [ 'https://registry.npmjs.org/cliui/-/cliui-2.1.0.tgz', null ]
+848 silly cache add parsed spec Result {
+848 silly cache add   raw: 'decamelize@https://registry.npmjs.org/decamelize/-/decamelize-1.2.0.tgz',
+848 silly cache add   scope: null,
+848 silly cache add   escapedName: 'decamelize',
+848 silly cache add   name: 'decamelize',
+848 silly cache add   rawSpec: 'https://registry.npmjs.org/decamelize/-/decamelize-1.2.0.tgz',
+848 silly cache add   spec: 'https://registry.npmjs.org/decamelize/-/decamelize-1.2.0.tgz',
+848 silly cache add   type: 'remote' }
+849 silly mapToRegistry name decamelize@https://registry.npmjs.org/decamelize/-/decamelize-1.2.0.tgz
+850 silly mapToRegistry using default registry
+851 silly mapToRegistry registry https://registry.npmjs.org/
+852 silly mapToRegistry data Result {
+852 silly mapToRegistry   raw: 'decamelize@https://registry.npmjs.org/decamelize/-/decamelize-1.2.0.tgz',
+852 silly mapToRegistry   scope: null,
+852 silly mapToRegistry   escapedName: 'decamelize',
+852 silly mapToRegistry   name: 'decamelize',
+852 silly mapToRegistry   rawSpec: 'https://registry.npmjs.org/decamelize/-/decamelize-1.2.0.tgz',
+852 silly mapToRegistry   spec: 'https://registry.npmjs.org/decamelize/-/decamelize-1.2.0.tgz',
+852 silly mapToRegistry   type: 'remote' }
+853 silly mapToRegistry uri https://registry.npmjs.org/decamelize/-/decamelize-1.2.0.tgz
+854 verbose addRemoteTarball https://registry.npmjs.org/decamelize/-/decamelize-1.2.0.tgz not in flight; adding
+855 verbose addRemoteTarball [ 'https://registry.npmjs.org/decamelize/-/decamelize-1.2.0.tgz',
+855 verbose addRemoteTarball   null ]
+856 silly cache add parsed spec Result {
+856 silly cache add   raw: 'window-size@https://registry.npmjs.org/window-size/-/window-size-0.1.0.tgz',
+856 silly cache add   scope: null,
+856 silly cache add   escapedName: 'window-size',
+856 silly cache add   name: 'window-size',
+856 silly cache add   rawSpec: 'https://registry.npmjs.org/window-size/-/window-size-0.1.0.tgz',
+856 silly cache add   spec: 'https://registry.npmjs.org/window-size/-/window-size-0.1.0.tgz',
+856 silly cache add   type: 'remote' }
+857 silly mapToRegistry name window-size@https://registry.npmjs.org/window-size/-/window-size-0.1.0.tgz
+858 silly mapToRegistry using default registry
+859 silly mapToRegistry registry https://registry.npmjs.org/
+860 silly mapToRegistry data Result {
+860 silly mapToRegistry   raw: 'window-size@https://registry.npmjs.org/window-size/-/window-size-0.1.0.tgz',
+860 silly mapToRegistry   scope: null,
+860 silly mapToRegistry   escapedName: 'window-size',
+860 silly mapToRegistry   name: 'window-size',
+860 silly mapToRegistry   rawSpec: 'https://registry.npmjs.org/window-size/-/window-size-0.1.0.tgz',
+860 silly mapToRegistry   spec: 'https://registry.npmjs.org/window-size/-/window-size-0.1.0.tgz',
+860 silly mapToRegistry   type: 'remote' }
+861 silly mapToRegistry uri https://registry.npmjs.org/window-size/-/window-size-0.1.0.tgz
+862 verbose addRemoteTarball https://registry.npmjs.org/window-size/-/window-size-0.1.0.tgz not in flight; adding
+863 verbose addRemoteTarball [ 'https://registry.npmjs.org/window-size/-/window-size-0.1.0.tgz',
+863 verbose addRemoteTarball   null ]
+864 info retry fetch attempt 1 at 4:52:38 PM
+865 info attempt registry request try #1 at 4:52:38 PM
+866 http fetch GET https://registry.npmjs.org/camelcase/-/camelcase-1.2.1.tgz
+867 info retry fetch attempt 1 at 4:52:38 PM
+868 info attempt registry request try #1 at 4:52:38 PM
+869 http fetch GET https://registry.npmjs.org/cliui/-/cliui-2.1.0.tgz
+870 info retry fetch attempt 1 at 4:52:38 PM
+871 info attempt registry request try #1 at 4:52:38 PM
+872 http fetch GET https://registry.npmjs.org/decamelize/-/decamelize-1.2.0.tgz
+873 info retry fetch attempt 1 at 4:52:38 PM
+874 info attempt registry request try #1 at 4:52:38 PM
+875 http fetch GET https://registry.npmjs.org/window-size/-/window-size-0.1.0.tgz
+876 verbose correctMkdir /Users/dylanhsiao/.npm correctMkdir not in flight; initializing
+877 silly cache afterAdd async@0.2.10
+878 verbose afterAdd /Users/dylanhsiao/.npm/async/0.2.10/package/package.json not in flight; writing
+879 verbose correctMkdir /Users/dylanhsiao/.npm correctMkdir not in flight; initializing
+880 verbose afterAdd /Users/dylanhsiao/.npm/async/0.2.10/package/package.json written
+881 http fetch 200 https://registry.npmjs.org/decamelize/-/decamelize-1.2.0.tgz
+882 silly fetchAndShaCheck shasum f6534d15148269b20352e7bee26f501f9a191290
+883 verbose addTmpTarball /var/folders/k2/9f3qd81x3f78064kmblystzm0000gn/T/npm-52061-06a01a16/registry.npmjs.org/decamelize/-/decamelize-1.2.0.tgz not in flight; adding
+884 verbose correctMkdir /Users/dylanhsiao/.npm correctMkdir not in flight; initializing
+885 verbose addTmpTarball validating metadata from /var/folders/k2/9f3qd81x3f78064kmblystzm0000gn/T/npm-52061-06a01a16/registry.npmjs.org/decamelize/-/decamelize-1.2.0.tgz
+886 verbose tar unpack /var/folders/k2/9f3qd81x3f78064kmblystzm0000gn/T/npm-52061-06a01a16/registry.npmjs.org/decamelize/-/decamelize-1.2.0.tgz
+887 verbose tar unpacking to /var/folders/k2/9f3qd81x3f78064kmblystzm0000gn/T/npm-52061-06a01a16/unpack-fc53dc8e
+888 silly gentlyRm /var/folders/k2/9f3qd81x3f78064kmblystzm0000gn/T/npm-52061-06a01a16/unpack-fc53dc8e is being purged
+889 verbose gentlyRm don't care about contents; nuking /var/folders/k2/9f3qd81x3f78064kmblystzm0000gn/T/npm-52061-06a01a16/unpack-fc53dc8e
+890 silly gunzTarPerm modes [ '755', '644' ]
+891 silly gunzTarPerm extractEntry package.json
+892 silly gunzTarPerm extractEntry index.js
+893 silly gunzTarPerm extractEntry license
+894 silly gunzTarPerm extractEntry readme.md
+895 http fetch 200 https://registry.npmjs.org/cliui/-/cliui-2.1.0.tgz
+896 silly fetchAndShaCheck shasum 4b475760ff80264c762c3a1719032e91c7fea0d1
+897 verbose addTmpTarball /var/folders/k2/9f3qd81x3f78064kmblystzm0000gn/T/npm-52061-06a01a16/registry.npmjs.org/cliui/-/cliui-2.1.0.tgz not in flight; adding
+898 verbose correctMkdir /Users/dylanhsiao/.npm correctMkdir not in flight; initializing
+899 verbose addTmpTarball validating metadata from /var/folders/k2/9f3qd81x3f78064kmblystzm0000gn/T/npm-52061-06a01a16/registry.npmjs.org/cliui/-/cliui-2.1.0.tgz
+900 verbose tar unpack /var/folders/k2/9f3qd81x3f78064kmblystzm0000gn/T/npm-52061-06a01a16/registry.npmjs.org/cliui/-/cliui-2.1.0.tgz
+901 verbose tar unpacking to /var/folders/k2/9f3qd81x3f78064kmblystzm0000gn/T/npm-52061-06a01a16/unpack-836d455a
+902 silly gentlyRm /var/folders/k2/9f3qd81x3f78064kmblystzm0000gn/T/npm-52061-06a01a16/unpack-836d455a is being purged
+903 verbose gentlyRm don't care about contents; nuking /var/folders/k2/9f3qd81x3f78064kmblystzm0000gn/T/npm-52061-06a01a16/unpack-836d455a
+904 silly gunzTarPerm modes [ '755', '644' ]
+905 http fetch 200 https://registry.npmjs.org/camelcase/-/camelcase-1.2.1.tgz
+906 silly gunzTarPerm extractEntry package.json
+907 verbose correctMkdir /Users/dylanhsiao/.npm correctMkdir not in flight; initializing
+908 silly fetchAndShaCheck shasum 9bb5304d2e0b56698b2c758b08a3eaa9daa58a39
+909 verbose addTmpTarball /var/folders/k2/9f3qd81x3f78064kmblystzm0000gn/T/npm-52061-06a01a16/registry.npmjs.org/camelcase/-/camelcase-1.2.1.tgz not in flight; adding
+910 verbose correctMkdir /Users/dylanhsiao/.npm correctMkdir not in flight; initializing
+911 verbose addTmpTarball validating metadata from /var/folders/k2/9f3qd81x3f78064kmblystzm0000gn/T/npm-52061-06a01a16/registry.npmjs.org/camelcase/-/camelcase-1.2.1.tgz
+912 verbose tar unpack /var/folders/k2/9f3qd81x3f78064kmblystzm0000gn/T/npm-52061-06a01a16/registry.npmjs.org/camelcase/-/camelcase-1.2.1.tgz
+913 verbose tar unpacking to /var/folders/k2/9f3qd81x3f78064kmblystzm0000gn/T/npm-52061-06a01a16/unpack-a91491c6
+914 silly gentlyRm /var/folders/k2/9f3qd81x3f78064kmblystzm0000gn/T/npm-52061-06a01a16/unpack-a91491c6 is being purged
+915 verbose gentlyRm don't care about contents; nuking /var/folders/k2/9f3qd81x3f78064kmblystzm0000gn/T/npm-52061-06a01a16/unpack-a91491c6
+916 silly gunzTarPerm extractEntry .npmignore
+917 silly gunzTarPerm extractEntry README.md
+918 silly gunzTarPerm modes [ '755', '644' ]
+919 silly gunzTarPerm extractEntry package.json
+920 silly gunzTarPerm extractEntry index.js
+921 silly gunzTarPerm extractEntry .coveralls.yml
+922 silly gunzTarPerm extractEntry index.js
+923 silly gunzTarPerm extractEntry license
+924 http fetch 200 https://registry.npmjs.org/window-size/-/window-size-0.1.0.tgz
+925 silly cache afterAdd decamelize@1.2.0
+926 verbose afterAdd /Users/dylanhsiao/.npm/decamelize/1.2.0/package/package.json not in flight; writing
+927 verbose correctMkdir /Users/dylanhsiao/.npm correctMkdir not in flight; initializing
+928 silly gunzTarPerm extractEntry .travis.yml
+929 silly gunzTarPerm extractEntry LICENSE.txt
+930 silly gunzTarPerm extractEntry readme.md
+931 silly fetchAndShaCheck shasum 5438cd2ea93b202efa3a19fe8887aee7c94f9c9d
+932 verbose addTmpTarball /var/folders/k2/9f3qd81x3f78064kmblystzm0000gn/T/npm-52061-06a01a16/registry.npmjs.org/window-size/-/window-size-0.1.0.tgz not in flight; adding
+933 verbose correctMkdir /Users/dylanhsiao/.npm correctMkdir not in flight; initializing
+934 verbose addTmpTarball validating metadata from /var/folders/k2/9f3qd81x3f78064kmblystzm0000gn/T/npm-52061-06a01a16/registry.npmjs.org/window-size/-/window-size-0.1.0.tgz
+935 verbose tar unpack /var/folders/k2/9f3qd81x3f78064kmblystzm0000gn/T/npm-52061-06a01a16/registry.npmjs.org/window-size/-/window-size-0.1.0.tgz
+936 verbose tar unpacking to /var/folders/k2/9f3qd81x3f78064kmblystzm0000gn/T/npm-52061-06a01a16/unpack-0945a618
+937 silly gentlyRm /var/folders/k2/9f3qd81x3f78064kmblystzm0000gn/T/npm-52061-06a01a16/unpack-0945a618 is being purged
+938 verbose gentlyRm don't care about contents; nuking /var/folders/k2/9f3qd81x3f78064kmblystzm0000gn/T/npm-52061-06a01a16/unpack-0945a618
+939 silly gunzTarPerm modes [ '755', '644' ]
+940 verbose afterAdd /Users/dylanhsiao/.npm/decamelize/1.2.0/package/package.json written
+941 silly gunzTarPerm extractEntry test/cliui.js
+942 silly gunzTarPerm extractEntry package.json
+943 silly gunzTarPerm modified mode [ 'package.json', 438, 420 ]
+944 silly gunzTarPerm extractEntry README.md
+945 silly gunzTarPerm modified mode [ 'README.md', 438, 420 ]
+946 silly gunzTarPerm extractEntry index.js
+947 silly gunzTarPerm modified mode [ 'index.js', 438, 420 ]
+948 silly gunzTarPerm extractEntry LICENSE-MIT
+949 silly gunzTarPerm modified mode [ 'LICENSE-MIT', 438, 420 ]
+950 verbose correctMkdir /Users/dylanhsiao/.npm correctMkdir not in flight; initializing
+951 silly cache afterAdd camelcase@1.2.1
+952 verbose afterAdd /Users/dylanhsiao/.npm/camelcase/1.2.1/package/package.json not in flight; writing
+953 verbose correctMkdir /Users/dylanhsiao/.npm correctMkdir not in flight; initializing
+954 verbose afterAdd /Users/dylanhsiao/.npm/camelcase/1.2.1/package/package.json written
+955 verbose correctMkdir /Users/dylanhsiao/.npm correctMkdir not in flight; initializing
+956 verbose correctMkdir /Users/dylanhsiao/.npm correctMkdir not in flight; initializing
+957 silly cache afterAdd window-size@0.1.0
+958 verbose afterAdd /Users/dylanhsiao/.npm/window-size/0.1.0/package/package.json not in flight; writing
+959 verbose correctMkdir /Users/dylanhsiao/.npm correctMkdir not in flight; initializing
+960 silly cache afterAdd cliui@2.1.0
+961 verbose afterAdd /Users/dylanhsiao/.npm/cliui/2.1.0/package/package.json not in flight; writing
+962 verbose correctMkdir /Users/dylanhsiao/.npm correctMkdir not in flight; initializing
+963 verbose afterAdd /Users/dylanhsiao/.npm/window-size/0.1.0/package/package.json written
+964 verbose afterAdd /Users/dylanhsiao/.npm/cliui/2.1.0/package/package.json written
+965 silly fetchOtherPackageData center-align@https://registry.npmjs.org/center-align/-/center-align-0.1.3.tgz
+966 silly cache add args [ 'center-align@https://registry.npmjs.org/center-align/-/center-align-0.1.3.tgz',
+966 silly cache add   null ]
+967 verbose cache add spec center-align@https://registry.npmjs.org/center-align/-/center-align-0.1.3.tgz
+968 silly fetchOtherPackageData right-align@https://registry.npmjs.org/right-align/-/right-align-0.1.3.tgz
+969 silly cache add args [ 'right-align@https://registry.npmjs.org/right-align/-/right-align-0.1.3.tgz',
+969 silly cache add   null ]
+970 verbose cache add spec right-align@https://registry.npmjs.org/right-align/-/right-align-0.1.3.tgz
+971 silly fetchOtherPackageData wordwrap@https://registry.npmjs.org/wordwrap/-/wordwrap-0.0.2.tgz
+972 silly cache add args [ 'wordwrap@https://registry.npmjs.org/wordwrap/-/wordwrap-0.0.2.tgz',
+972 silly cache add   null ]
+973 verbose cache add spec wordwrap@https://registry.npmjs.org/wordwrap/-/wordwrap-0.0.2.tgz
+974 silly cache add parsed spec Result {
+974 silly cache add   raw: 'center-align@https://registry.npmjs.org/center-align/-/center-align-0.1.3.tgz',
+974 silly cache add   scope: null,
+974 silly cache add   escapedName: 'center-align',
+974 silly cache add   name: 'center-align',
+974 silly cache add   rawSpec: 'https://registry.npmjs.org/center-align/-/center-align-0.1.3.tgz',
+974 silly cache add   spec: 'https://registry.npmjs.org/center-align/-/center-align-0.1.3.tgz',
+974 silly cache add   type: 'remote' }
+975 silly mapToRegistry name center-align@https://registry.npmjs.org/center-align/-/center-align-0.1.3.tgz
+976 silly mapToRegistry using default registry
+977 silly mapToRegistry registry https://registry.npmjs.org/
+978 silly mapToRegistry data Result {
+978 silly mapToRegistry   raw: 'center-align@https://registry.npmjs.org/center-align/-/center-align-0.1.3.tgz',
+978 silly mapToRegistry   scope: null,
+978 silly mapToRegistry   escapedName: 'center-align',
+978 silly mapToRegistry   name: 'center-align',
+978 silly mapToRegistry   rawSpec: 'https://registry.npmjs.org/center-align/-/center-align-0.1.3.tgz',
+978 silly mapToRegistry   spec: 'https://registry.npmjs.org/center-align/-/center-align-0.1.3.tgz',
+978 silly mapToRegistry   type: 'remote' }
+979 silly mapToRegistry uri https://registry.npmjs.org/center-align/-/center-align-0.1.3.tgz
+980 verbose addRemoteTarball https://registry.npmjs.org/center-align/-/center-align-0.1.3.tgz not in flight; adding
+981 verbose addRemoteTarball [ 'https://registry.npmjs.org/center-align/-/center-align-0.1.3.tgz',
+981 verbose addRemoteTarball   null ]
+982 silly cache add parsed spec Result {
+982 silly cache add   raw: 'right-align@https://registry.npmjs.org/right-align/-/right-align-0.1.3.tgz',
+982 silly cache add   scope: null,
+982 silly cache add   escapedName: 'right-align',
+982 silly cache add   name: 'right-align',
+982 silly cache add   rawSpec: 'https://registry.npmjs.org/right-align/-/right-align-0.1.3.tgz',
+982 silly cache add   spec: 'https://registry.npmjs.org/right-align/-/right-align-0.1.3.tgz',
+982 silly cache add   type: 'remote' }
+983 silly mapToRegistry name right-align@https://registry.npmjs.org/right-align/-/right-align-0.1.3.tgz
+984 silly mapToRegistry using default registry
+985 silly mapToRegistry registry https://registry.npmjs.org/
+986 silly mapToRegistry data Result {
+986 silly mapToRegistry   raw: 'right-align@https://registry.npmjs.org/right-align/-/right-align-0.1.3.tgz',
+986 silly mapToRegistry   scope: null,
+986 silly mapToRegistry   escapedName: 'right-align',
+986 silly mapToRegistry   name: 'right-align',
+986 silly mapToRegistry   rawSpec: 'https://registry.npmjs.org/right-align/-/right-align-0.1.3.tgz',
+986 silly mapToRegistry   spec: 'https://registry.npmjs.org/right-align/-/right-align-0.1.3.tgz',
+986 silly mapToRegistry   type: 'remote' }
+987 silly mapToRegistry uri https://registry.npmjs.org/right-align/-/right-align-0.1.3.tgz
+988 verbose addRemoteTarball https://registry.npmjs.org/right-align/-/right-align-0.1.3.tgz not in flight; adding
+989 verbose addRemoteTarball [ 'https://registry.npmjs.org/right-align/-/right-align-0.1.3.tgz',
+989 verbose addRemoteTarball   null ]
+990 silly cache add parsed spec Result {
+990 silly cache add   raw: 'wordwrap@https://registry.npmjs.org/wordwrap/-/wordwrap-0.0.2.tgz',
+990 silly cache add   scope: null,
+990 silly cache add   escapedName: 'wordwrap',
+990 silly cache add   name: 'wordwrap',
+990 silly cache add   rawSpec: 'https://registry.npmjs.org/wordwrap/-/wordwrap-0.0.2.tgz',
+990 silly cache add   spec: 'https://registry.npmjs.org/wordwrap/-/wordwrap-0.0.2.tgz',
+990 silly cache add   type: 'remote' }
+991 silly mapToRegistry name wordwrap@https://registry.npmjs.org/wordwrap/-/wordwrap-0.0.2.tgz
+992 silly mapToRegistry using default registry
+993 silly mapToRegistry registry https://registry.npmjs.org/
+994 silly mapToRegistry data Result {
+994 silly mapToRegistry   raw: 'wordwrap@https://registry.npmjs.org/wordwrap/-/wordwrap-0.0.2.tgz',
+994 silly mapToRegistry   scope: null,
+994 silly mapToRegistry   escapedName: 'wordwrap',
+994 silly mapToRegistry   name: 'wordwrap',
+994 silly mapToRegistry   rawSpec: 'https://registry.npmjs.org/wordwrap/-/wordwrap-0.0.2.tgz',
+994 silly mapToRegistry   spec: 'https://registry.npmjs.org/wordwrap/-/wordwrap-0.0.2.tgz',
+994 silly mapToRegistry   type: 'remote' }
+995 silly mapToRegistry uri https://registry.npmjs.org/wordwrap/-/wordwrap-0.0.2.tgz
+996 verbose addRemoteTarball https://registry.npmjs.org/wordwrap/-/wordwrap-0.0.2.tgz not in flight; adding
+997 verbose addRemoteTarball [ 'https://registry.npmjs.org/wordwrap/-/wordwrap-0.0.2.tgz',
+997 verbose addRemoteTarball   null ]
+998 info retry fetch attempt 1 at 4:52:38 PM
+999 info attempt registry request try #1 at 4:52:38 PM
+1000 http fetch GET https://registry.npmjs.org/center-align/-/center-align-0.1.3.tgz
+1001 info retry fetch attempt 1 at 4:52:38 PM
+1002 info attempt registry request try #1 at 4:52:38 PM
+1003 http fetch GET https://registry.npmjs.org/wordwrap/-/wordwrap-0.0.2.tgz
+1004 info retry fetch attempt 1 at 4:52:38 PM
+1005 info attempt registry request try #1 at 4:52:38 PM
+1006 http fetch GET https://registry.npmjs.org/right-align/-/right-align-0.1.3.tgz
+1007 http fetch 200 https://registry.npmjs.org/center-align/-/center-align-0.1.3.tgz
+1008 silly fetchAndShaCheck shasum aa0d32629b6ee972200411cbd4461c907bc2b7ad
+1009 verbose addTmpTarball /var/folders/k2/9f3qd81x3f78064kmblystzm0000gn/T/npm-52061-06a01a16/registry.npmjs.org/center-align/-/center-align-0.1.3.tgz not in flight; adding
+1010 verbose correctMkdir /Users/dylanhsiao/.npm correctMkdir not in flight; initializing
+1011 verbose addTmpTarball validating metadata from /var/folders/k2/9f3qd81x3f78064kmblystzm0000gn/T/npm-52061-06a01a16/registry.npmjs.org/center-align/-/center-align-0.1.3.tgz
+1012 verbose tar unpack /var/folders/k2/9f3qd81x3f78064kmblystzm0000gn/T/npm-52061-06a01a16/registry.npmjs.org/center-align/-/center-align-0.1.3.tgz
+1013 verbose tar unpacking to /var/folders/k2/9f3qd81x3f78064kmblystzm0000gn/T/npm-52061-06a01a16/unpack-91cb355b
+1014 silly gentlyRm /var/folders/k2/9f3qd81x3f78064kmblystzm0000gn/T/npm-52061-06a01a16/unpack-91cb355b is being purged
+1015 verbose gentlyRm don't care about contents; nuking /var/folders/k2/9f3qd81x3f78064kmblystzm0000gn/T/npm-52061-06a01a16/unpack-91cb355b
+1016 silly gunzTarPerm modes [ '755', '644' ]
+1017 silly gunzTarPerm extractEntry package.json
+1018 http fetch 200 https://registry.npmjs.org/right-align/-/right-align-0.1.3.tgz
+1019 http fetch 200 https://registry.npmjs.org/wordwrap/-/wordwrap-0.0.2.tgz
+1020 silly gunzTarPerm extractEntry README.md
+1021 silly gunzTarPerm extractEntry LICENSE
+1022 silly fetchAndShaCheck shasum 61339b722fe6a3515689210d24e14c96148613ef
+1023 verbose addTmpTarball /var/folders/k2/9f3qd81x3f78064kmblystzm0000gn/T/npm-52061-06a01a16/registry.npmjs.org/right-align/-/right-align-0.1.3.tgz not in flight; adding
+1024 verbose correctMkdir /Users/dylanhsiao/.npm correctMkdir not in flight; initializing
+1025 verbose addTmpTarball validating metadata from /var/folders/k2/9f3qd81x3f78064kmblystzm0000gn/T/npm-52061-06a01a16/registry.npmjs.org/right-align/-/right-align-0.1.3.tgz
+1026 verbose tar unpack /var/folders/k2/9f3qd81x3f78064kmblystzm0000gn/T/npm-52061-06a01a16/registry.npmjs.org/right-align/-/right-align-0.1.3.tgz
+1027 verbose tar unpacking to /var/folders/k2/9f3qd81x3f78064kmblystzm0000gn/T/npm-52061-06a01a16/unpack-fcc98349
+1028 silly gentlyRm /var/folders/k2/9f3qd81x3f78064kmblystzm0000gn/T/npm-52061-06a01a16/unpack-fcc98349 is being purged
+1029 verbose gentlyRm don't care about contents; nuking /var/folders/k2/9f3qd81x3f78064kmblystzm0000gn/T/npm-52061-06a01a16/unpack-fcc98349
+1030 silly gunzTarPerm extractEntry index.js
+1031 silly gunzTarPerm extractEntry utils.js
+1032 silly gunzTarPerm modes [ '755', '644' ]
+1033 silly gunzTarPerm extractEntry package.json
+1034 silly gunzTarPerm extractEntry README.md
+1035 silly gunzTarPerm extractEntry LICENSE
+1036 silly gunzTarPerm extractEntry index.js
+1037 verbose correctMkdir /Users/dylanhsiao/.npm correctMkdir not in flight; initializing
+1038 verbose correctMkdir /Users/dylanhsiao/.npm correctMkdir not in flight; initializing
+1039 silly cache afterAdd center-align@0.1.3
+1040 verbose afterAdd /Users/dylanhsiao/.npm/center-align/0.1.3/package/package.json not in flight; writing
+1041 verbose correctMkdir /Users/dylanhsiao/.npm correctMkdir not in flight; initializing
+1042 verbose afterAdd /Users/dylanhsiao/.npm/center-align/0.1.3/package/package.json written
+1043 silly cache afterAdd right-align@0.1.3
+1044 verbose afterAdd /Users/dylanhsiao/.npm/right-align/0.1.3/package/package.json not in flight; writing
+1045 verbose correctMkdir /Users/dylanhsiao/.npm correctMkdir not in flight; initializing
+1046 silly fetchOtherPackageData align-text@https://registry.npmjs.org/align-text/-/align-text-0.1.4.tgz
+1047 silly cache add args [ 'align-text@https://registry.npmjs.org/align-text/-/align-text-0.1.4.tgz',
+1047 silly cache add   null ]
+1048 verbose cache add spec align-text@https://registry.npmjs.org/align-text/-/align-text-0.1.4.tgz
+1049 silly fetchOtherPackageData lazy-cache@https://registry.npmjs.org/lazy-cache/-/lazy-cache-1.0.4.tgz
+1050 silly cache add args [ 'lazy-cache@https://registry.npmjs.org/lazy-cache/-/lazy-cache-1.0.4.tgz',
+1050 silly cache add   null ]
+1051 verbose cache add spec lazy-cache@https://registry.npmjs.org/lazy-cache/-/lazy-cache-1.0.4.tgz
+1052 silly cache add parsed spec Result {
+1052 silly cache add   raw: 'align-text@https://registry.npmjs.org/align-text/-/align-text-0.1.4.tgz',
+1052 silly cache add   scope: null,
+1052 silly cache add   escapedName: 'align-text',
+1052 silly cache add   name: 'align-text',
+1052 silly cache add   rawSpec: 'https://registry.npmjs.org/align-text/-/align-text-0.1.4.tgz',
+1052 silly cache add   spec: 'https://registry.npmjs.org/align-text/-/align-text-0.1.4.tgz',
+1052 silly cache add   type: 'remote' }
+1053 silly mapToRegistry name align-text@https://registry.npmjs.org/align-text/-/align-text-0.1.4.tgz
+1054 silly mapToRegistry using default registry
+1055 silly mapToRegistry registry https://registry.npmjs.org/
+1056 silly mapToRegistry data Result {
+1056 silly mapToRegistry   raw: 'align-text@https://registry.npmjs.org/align-text/-/align-text-0.1.4.tgz',
+1056 silly mapToRegistry   scope: null,
+1056 silly mapToRegistry   escapedName: 'align-text',
+1056 silly mapToRegistry   name: 'align-text',
+1056 silly mapToRegistry   rawSpec: 'https://registry.npmjs.org/align-text/-/align-text-0.1.4.tgz',
+1056 silly mapToRegistry   spec: 'https://registry.npmjs.org/align-text/-/align-text-0.1.4.tgz',
+1056 silly mapToRegistry   type: 'remote' }
+1057 silly mapToRegistry uri https://registry.npmjs.org/align-text/-/align-text-0.1.4.tgz
+1058 verbose addRemoteTarball https://registry.npmjs.org/align-text/-/align-text-0.1.4.tgz not in flight; adding
+1059 verbose addRemoteTarball [ 'https://registry.npmjs.org/align-text/-/align-text-0.1.4.tgz',
+1059 verbose addRemoteTarball   null ]
+1060 silly cache add parsed spec Result {
+1060 silly cache add   raw: 'lazy-cache@https://registry.npmjs.org/lazy-cache/-/lazy-cache-1.0.4.tgz',
+1060 silly cache add   scope: null,
+1060 silly cache add   escapedName: 'lazy-cache',
+1060 silly cache add   name: 'lazy-cache',
+1060 silly cache add   rawSpec: 'https://registry.npmjs.org/lazy-cache/-/lazy-cache-1.0.4.tgz',
+1060 silly cache add   spec: 'https://registry.npmjs.org/lazy-cache/-/lazy-cache-1.0.4.tgz',
+1060 silly cache add   type: 'remote' }
+1061 silly mapToRegistry name lazy-cache@https://registry.npmjs.org/lazy-cache/-/lazy-cache-1.0.4.tgz
+1062 silly mapToRegistry using default registry
+1063 silly mapToRegistry registry https://registry.npmjs.org/
+1064 silly mapToRegistry data Result {
+1064 silly mapToRegistry   raw: 'lazy-cache@https://registry.npmjs.org/lazy-cache/-/lazy-cache-1.0.4.tgz',
+1064 silly mapToRegistry   scope: null,
+1064 silly mapToRegistry   escapedName: 'lazy-cache',
+1064 silly mapToRegistry   name: 'lazy-cache',
+1064 silly mapToRegistry   rawSpec: 'https://registry.npmjs.org/lazy-cache/-/lazy-cache-1.0.4.tgz',
+1064 silly mapToRegistry   spec: 'https://registry.npmjs.org/lazy-cache/-/lazy-cache-1.0.4.tgz',
+1064 silly mapToRegistry   type: 'remote' }
+1065 silly mapToRegistry uri https://registry.npmjs.org/lazy-cache/-/lazy-cache-1.0.4.tgz
+1066 verbose addRemoteTarball https://registry.npmjs.org/lazy-cache/-/lazy-cache-1.0.4.tgz not in flight; adding
+1067 verbose addRemoteTarball [ 'https://registry.npmjs.org/lazy-cache/-/lazy-cache-1.0.4.tgz',
+1067 verbose addRemoteTarball   null ]
+1068 verbose afterAdd /Users/dylanhsiao/.npm/right-align/0.1.3/package/package.json written
+1069 silly fetchAndShaCheck shasum b79669bb42ecb409f83d583cad52ca17eaa1643f
+1070 verbose addTmpTarball /var/folders/k2/9f3qd81x3f78064kmblystzm0000gn/T/npm-52061-06a01a16/registry.npmjs.org/wordwrap/-/wordwrap-0.0.2.tgz not in flight; adding
+1071 verbose correctMkdir /Users/dylanhsiao/.npm correctMkdir not in flight; initializing
+1072 verbose addTmpTarball validating metadata from /var/folders/k2/9f3qd81x3f78064kmblystzm0000gn/T/npm-52061-06a01a16/registry.npmjs.org/wordwrap/-/wordwrap-0.0.2.tgz
+1073 verbose tar unpack /var/folders/k2/9f3qd81x3f78064kmblystzm0000gn/T/npm-52061-06a01a16/registry.npmjs.org/wordwrap/-/wordwrap-0.0.2.tgz
+1074 verbose tar unpacking to /var/folders/k2/9f3qd81x3f78064kmblystzm0000gn/T/npm-52061-06a01a16/unpack-2502983b
+1075 silly gentlyRm /var/folders/k2/9f3qd81x3f78064kmblystzm0000gn/T/npm-52061-06a01a16/unpack-2502983b is being purged
+1076 verbose gentlyRm don't care about contents; nuking /var/folders/k2/9f3qd81x3f78064kmblystzm0000gn/T/npm-52061-06a01a16/unpack-2502983b
+1077 silly gunzTarPerm modes [ '755', '644' ]
+1078 info retry fetch attempt 1 at 4:52:38 PM
+1079 info attempt registry request try #1 at 4:52:38 PM
+1080 http fetch GET https://registry.npmjs.org/align-text/-/align-text-0.1.4.tgz
+1081 info retry fetch attempt 1 at 4:52:38 PM
+1082 info attempt registry request try #1 at 4:52:38 PM
+1083 http fetch GET https://registry.npmjs.org/lazy-cache/-/lazy-cache-1.0.4.tgz
+1084 silly fetchOtherPackageData align-text@https://registry.npmjs.org/align-text/-/align-text-0.1.4.tgz
+1085 silly cache add args [ 'align-text@https://registry.npmjs.org/align-text/-/align-text-0.1.4.tgz',
+1085 silly cache add   null ]
+1086 verbose cache add spec align-text@https://registry.npmjs.org/align-text/-/align-text-0.1.4.tgz
+1087 silly cache add parsed spec Result {
+1087 silly cache add   raw: 'align-text@https://registry.npmjs.org/align-text/-/align-text-0.1.4.tgz',
+1087 silly cache add   scope: null,
+1087 silly cache add   escapedName: 'align-text',
+1087 silly cache add   name: 'align-text',
+1087 silly cache add   rawSpec: 'https://registry.npmjs.org/align-text/-/align-text-0.1.4.tgz',
+1087 silly cache add   spec: 'https://registry.npmjs.org/align-text/-/align-text-0.1.4.tgz',
+1087 silly cache add   type: 'remote' }
+1088 silly mapToRegistry name align-text@https://registry.npmjs.org/align-text/-/align-text-0.1.4.tgz
+1089 silly mapToRegistry using default registry
+1090 silly mapToRegistry registry https://registry.npmjs.org/
+1091 silly mapToRegistry data Result {
+1091 silly mapToRegistry   raw: 'align-text@https://registry.npmjs.org/align-text/-/align-text-0.1.4.tgz',
+1091 silly mapToRegistry   scope: null,
+1091 silly mapToRegistry   escapedName: 'align-text',
+1091 silly mapToRegistry   name: 'align-text',
+1091 silly mapToRegistry   rawSpec: 'https://registry.npmjs.org/align-text/-/align-text-0.1.4.tgz',
+1091 silly mapToRegistry   spec: 'https://registry.npmjs.org/align-text/-/align-text-0.1.4.tgz',
+1091 silly mapToRegistry   type: 'remote' }
+1092 silly mapToRegistry uri https://registry.npmjs.org/align-text/-/align-text-0.1.4.tgz
+1093 verbose addRemoteTarball https://registry.npmjs.org/align-text/-/align-text-0.1.4.tgz already in flight; waiting
+1094 silly gunzTarPerm extractEntry index.js
+1095 silly gunzTarPerm extractEntry .npmignore
+1096 silly gunzTarPerm extractEntry package.json
+1097 silly gunzTarPerm extractEntry README.markdown
+1098 silly gunzTarPerm extractEntry example/center.js
+1099 silly gunzTarPerm extractEntry example/meat.js
+1100 silly gunzTarPerm extractEntry test/wrap.js
+1101 silly gunzTarPerm extractEntry test/break.js
+1102 silly gunzTarPerm extractEntry test/idleness.txt
+1103 verbose correctMkdir /Users/dylanhsiao/.npm correctMkdir not in flight; initializing
+1104 silly cache afterAdd wordwrap@0.0.2
+1105 verbose afterAdd /Users/dylanhsiao/.npm/wordwrap/0.0.2/package/package.json not in flight; writing
+1106 verbose correctMkdir /Users/dylanhsiao/.npm correctMkdir not in flight; initializing
+1107 verbose afterAdd /Users/dylanhsiao/.npm/wordwrap/0.0.2/package/package.json written
+1108 http fetch 200 https://registry.npmjs.org/lazy-cache/-/lazy-cache-1.0.4.tgz
+1109 http fetch 200 https://registry.npmjs.org/align-text/-/align-text-0.1.4.tgz
+1110 silly fetchAndShaCheck shasum a1d78fc3a50474cb80845d3b3b6e1da49a446e8e
+1111 verbose addTmpTarball /var/folders/k2/9f3qd81x3f78064kmblystzm0000gn/T/npm-52061-06a01a16/registry.npmjs.org/lazy-cache/-/lazy-cache-1.0.4.tgz not in flight; adding
+1112 verbose correctMkdir /Users/dylanhsiao/.npm correctMkdir not in flight; initializing
+1113 verbose addTmpTarball validating metadata from /var/folders/k2/9f3qd81x3f78064kmblystzm0000gn/T/npm-52061-06a01a16/registry.npmjs.org/lazy-cache/-/lazy-cache-1.0.4.tgz
+1114 verbose tar unpack /var/folders/k2/9f3qd81x3f78064kmblystzm0000gn/T/npm-52061-06a01a16/registry.npmjs.org/lazy-cache/-/lazy-cache-1.0.4.tgz
+1115 verbose tar unpacking to /var/folders/k2/9f3qd81x3f78064kmblystzm0000gn/T/npm-52061-06a01a16/unpack-1b72baa8
+1116 silly gentlyRm /var/folders/k2/9f3qd81x3f78064kmblystzm0000gn/T/npm-52061-06a01a16/unpack-1b72baa8 is being purged
+1117 verbose gentlyRm don't care about contents; nuking /var/folders/k2/9f3qd81x3f78064kmblystzm0000gn/T/npm-52061-06a01a16/unpack-1b72baa8
+1118 silly fetchAndShaCheck shasum 0cd90a561093f35d0a99256c22b7069433fad117
+1119 verbose addTmpTarball /var/folders/k2/9f3qd81x3f78064kmblystzm0000gn/T/npm-52061-06a01a16/registry.npmjs.org/align-text/-/align-text-0.1.4.tgz not in flight; adding
+1120 verbose correctMkdir /Users/dylanhsiao/.npm correctMkdir not in flight; initializing
+1121 verbose addTmpTarball validating metadata from /var/folders/k2/9f3qd81x3f78064kmblystzm0000gn/T/npm-52061-06a01a16/registry.npmjs.org/align-text/-/align-text-0.1.4.tgz
+1122 verbose tar unpack /var/folders/k2/9f3qd81x3f78064kmblystzm0000gn/T/npm-52061-06a01a16/registry.npmjs.org/align-text/-/align-text-0.1.4.tgz
+1123 verbose tar unpacking to /var/folders/k2/9f3qd81x3f78064kmblystzm0000gn/T/npm-52061-06a01a16/unpack-795bf45d
+1124 silly gentlyRm /var/folders/k2/9f3qd81x3f78064kmblystzm0000gn/T/npm-52061-06a01a16/unpack-795bf45d is being purged
+1125 verbose gentlyRm don't care about contents; nuking /var/folders/k2/9f3qd81x3f78064kmblystzm0000gn/T/npm-52061-06a01a16/unpack-795bf45d
+1126 silly gunzTarPerm modes [ '755', '644' ]
+1127 silly gunzTarPerm modes [ '755', '644' ]
+1128 silly gunzTarPerm extractEntry package.json
+1129 silly gunzTarPerm extractEntry package.json
+1130 silly gunzTarPerm extractEntry README.md
+1131 silly gunzTarPerm extractEntry LICENSE
+1132 silly gunzTarPerm extractEntry README.md
+1133 silly gunzTarPerm extractEntry LICENSE
+1134 silly gunzTarPerm extractEntry index.js
+1135 silly gunzTarPerm extractEntry index.js
+1136 verbose correctMkdir /Users/dylanhsiao/.npm correctMkdir not in flight; initializing
+1137 verbose correctMkdir /Users/dylanhsiao/.npm correctMkdir not in flight; initializing
+1138 silly cache afterAdd align-text@0.1.4
+1139 verbose afterAdd /Users/dylanhsiao/.npm/align-text/0.1.4/package/package.json not in flight; writing
+1140 verbose correctMkdir /Users/dylanhsiao/.npm correctMkdir not in flight; initializing
+1141 silly cache afterAdd align-text@0.1.4
+1142 verbose afterAdd /Users/dylanhsiao/.npm/align-text/0.1.4/package/package.json already in flight; not writing
+1143 silly cache afterAdd lazy-cache@1.0.4
+1144 verbose afterAdd /Users/dylanhsiao/.npm/lazy-cache/1.0.4/package/package.json not in flight; writing
+1145 verbose correctMkdir /Users/dylanhsiao/.npm correctMkdir not in flight; initializing
+1146 verbose afterAdd /Users/dylanhsiao/.npm/align-text/0.1.4/package/package.json written
+1147 verbose afterAdd /Users/dylanhsiao/.npm/lazy-cache/1.0.4/package/package.json written
+1148 silly fetchOtherPackageData kind-of@https://registry.npmjs.org/kind-of/-/kind-of-3.1.0.tgz
+1149 silly cache add args [ 'kind-of@https://registry.npmjs.org/kind-of/-/kind-of-3.1.0.tgz',
+1149 silly cache add   null ]
+1150 verbose cache add spec kind-of@https://registry.npmjs.org/kind-of/-/kind-of-3.1.0.tgz
+1151 silly fetchOtherPackageData longest@https://registry.npmjs.org/longest/-/longest-1.0.1.tgz
+1152 silly cache add args [ 'longest@https://registry.npmjs.org/longest/-/longest-1.0.1.tgz',
+1152 silly cache add   null ]
+1153 verbose cache add spec longest@https://registry.npmjs.org/longest/-/longest-1.0.1.tgz
+1154 silly fetchOtherPackageData repeat-string@https://registry.npmjs.org/repeat-string/-/repeat-string-1.6.1.tgz
+1155 silly cache add args [ 'repeat-string@https://registry.npmjs.org/repeat-string/-/repeat-string-1.6.1.tgz',
+1155 silly cache add   null ]
+1156 verbose cache add spec repeat-string@https://registry.npmjs.org/repeat-string/-/repeat-string-1.6.1.tgz
+1157 silly fetchOtherPackageData kind-of@https://registry.npmjs.org/kind-of/-/kind-of-3.1.0.tgz
+1158 silly cache add args [ 'kind-of@https://registry.npmjs.org/kind-of/-/kind-of-3.1.0.tgz',
+1158 silly cache add   null ]
+1159 verbose cache add spec kind-of@https://registry.npmjs.org/kind-of/-/kind-of-3.1.0.tgz
+1160 silly fetchOtherPackageData longest@https://registry.npmjs.org/longest/-/longest-1.0.1.tgz
+1161 silly cache add args [ 'longest@https://registry.npmjs.org/longest/-/longest-1.0.1.tgz',
+1161 silly cache add   null ]
+1162 verbose cache add spec longest@https://registry.npmjs.org/longest/-/longest-1.0.1.tgz
+1163 silly fetchOtherPackageData repeat-string@https://registry.npmjs.org/repeat-string/-/repeat-string-1.6.1.tgz
+1164 silly cache add args [ 'repeat-string@https://registry.npmjs.org/repeat-string/-/repeat-string-1.6.1.tgz',
+1164 silly cache add   null ]
+1165 verbose cache add spec repeat-string@https://registry.npmjs.org/repeat-string/-/repeat-string-1.6.1.tgz
+1166 silly cache add parsed spec Result {
+1166 silly cache add   raw: 'kind-of@https://registry.npmjs.org/kind-of/-/kind-of-3.1.0.tgz',
+1166 silly cache add   scope: null,
+1166 silly cache add   escapedName: 'kind-of',
+1166 silly cache add   name: 'kind-of',
+1166 silly cache add   rawSpec: 'https://registry.npmjs.org/kind-of/-/kind-of-3.1.0.tgz',
+1166 silly cache add   spec: 'https://registry.npmjs.org/kind-of/-/kind-of-3.1.0.tgz',
+1166 silly cache add   type: 'remote' }
+1167 silly mapToRegistry name kind-of@https://registry.npmjs.org/kind-of/-/kind-of-3.1.0.tgz
+1168 silly mapToRegistry using default registry
+1169 silly mapToRegistry registry https://registry.npmjs.org/
+1170 silly mapToRegistry data Result {
+1170 silly mapToRegistry   raw: 'kind-of@https://registry.npmjs.org/kind-of/-/kind-of-3.1.0.tgz',
+1170 silly mapToRegistry   scope: null,
+1170 silly mapToRegistry   escapedName: 'kind-of',
+1170 silly mapToRegistry   name: 'kind-of',
+1170 silly mapToRegistry   rawSpec: 'https://registry.npmjs.org/kind-of/-/kind-of-3.1.0.tgz',
+1170 silly mapToRegistry   spec: 'https://registry.npmjs.org/kind-of/-/kind-of-3.1.0.tgz',
+1170 silly mapToRegistry   type: 'remote' }
+1171 silly mapToRegistry uri https://registry.npmjs.org/kind-of/-/kind-of-3.1.0.tgz
+1172 verbose addRemoteTarball https://registry.npmjs.org/kind-of/-/kind-of-3.1.0.tgz not in flight; adding
+1173 verbose addRemoteTarball [ 'https://registry.npmjs.org/kind-of/-/kind-of-3.1.0.tgz',
+1173 verbose addRemoteTarball   null ]
+1174 silly cache add parsed spec Result {
+1174 silly cache add   raw: 'longest@https://registry.npmjs.org/longest/-/longest-1.0.1.tgz',
+1174 silly cache add   scope: null,
+1174 silly cache add   escapedName: 'longest',
+1174 silly cache add   name: 'longest',
+1174 silly cache add   rawSpec: 'https://registry.npmjs.org/longest/-/longest-1.0.1.tgz',
+1174 silly cache add   spec: 'https://registry.npmjs.org/longest/-/longest-1.0.1.tgz',
+1174 silly cache add   type: 'remote' }
+1175 silly mapToRegistry name longest@https://registry.npmjs.org/longest/-/longest-1.0.1.tgz
+1176 silly mapToRegistry using default registry
+1177 silly mapToRegistry registry https://registry.npmjs.org/
+1178 silly mapToRegistry data Result {
+1178 silly mapToRegistry   raw: 'longest@https://registry.npmjs.org/longest/-/longest-1.0.1.tgz',
+1178 silly mapToRegistry   scope: null,
+1178 silly mapToRegistry   escapedName: 'longest',
+1178 silly mapToRegistry   name: 'longest',
+1178 silly mapToRegistry   rawSpec: 'https://registry.npmjs.org/longest/-/longest-1.0.1.tgz',
+1178 silly mapToRegistry   spec: 'https://registry.npmjs.org/longest/-/longest-1.0.1.tgz',
+1178 silly mapToRegistry   type: 'remote' }
+1179 silly mapToRegistry uri https://registry.npmjs.org/longest/-/longest-1.0.1.tgz
+1180 verbose addRemoteTarball https://registry.npmjs.org/longest/-/longest-1.0.1.tgz not in flight; adding
+1181 verbose addRemoteTarball [ 'https://registry.npmjs.org/longest/-/longest-1.0.1.tgz',
+1181 verbose addRemoteTarball   null ]
+1182 silly cache add parsed spec Result {
+1182 silly cache add   raw: 'repeat-string@https://registry.npmjs.org/repeat-string/-/repeat-string-1.6.1.tgz',
+1182 silly cache add   scope: null,
+1182 silly cache add   escapedName: 'repeat-string',
+1182 silly cache add   name: 'repeat-string',
+1182 silly cache add   rawSpec: 'https://registry.npmjs.org/repeat-string/-/repeat-string-1.6.1.tgz',
+1182 silly cache add   spec: 'https://registry.npmjs.org/repeat-string/-/repeat-string-1.6.1.tgz',
+1182 silly cache add   type: 'remote' }
+1183 silly mapToRegistry name repeat-string@https://registry.npmjs.org/repeat-string/-/repeat-string-1.6.1.tgz
+1184 silly mapToRegistry using default registry
+1185 silly mapToRegistry registry https://registry.npmjs.org/
+1186 silly mapToRegistry data Result {
+1186 silly mapToRegistry   raw: 'repeat-string@https://registry.npmjs.org/repeat-string/-/repeat-string-1.6.1.tgz',
+1186 silly mapToRegistry   scope: null,
+1186 silly mapToRegistry   escapedName: 'repeat-string',
+1186 silly mapToRegistry   name: 'repeat-string',
+1186 silly mapToRegistry   rawSpec: 'https://registry.npmjs.org/repeat-string/-/repeat-string-1.6.1.tgz',
+1186 silly mapToRegistry   spec: 'https://registry.npmjs.org/repeat-string/-/repeat-string-1.6.1.tgz',
+1186 silly mapToRegistry   type: 'remote' }
+1187 silly mapToRegistry uri https://registry.npmjs.org/repeat-string/-/repeat-string-1.6.1.tgz
+1188 verbose addRemoteTarball https://registry.npmjs.org/repeat-string/-/repeat-string-1.6.1.tgz not in flight; adding
+1189 verbose addRemoteTarball [ 'https://registry.npmjs.org/repeat-string/-/repeat-string-1.6.1.tgz',
+1189 verbose addRemoteTarball   null ]
+1190 silly cache add parsed spec Result {
+1190 silly cache add   raw: 'kind-of@https://registry.npmjs.org/kind-of/-/kind-of-3.1.0.tgz',
+1190 silly cache add   scope: null,
+1190 silly cache add   escapedName: 'kind-of',
+1190 silly cache add   name: 'kind-of',
+1190 silly cache add   rawSpec: 'https://registry.npmjs.org/kind-of/-/kind-of-3.1.0.tgz',
+1190 silly cache add   spec: 'https://registry.npmjs.org/kind-of/-/kind-of-3.1.0.tgz',
+1190 silly cache add   type: 'remote' }
+1191 silly mapToRegistry name kind-of@https://registry.npmjs.org/kind-of/-/kind-of-3.1.0.tgz
+1192 silly mapToRegistry using default registry
+1193 silly mapToRegistry registry https://registry.npmjs.org/
+1194 silly mapToRegistry data Result {
+1194 silly mapToRegistry   raw: 'kind-of@https://registry.npmjs.org/kind-of/-/kind-of-3.1.0.tgz',
+1194 silly mapToRegistry   scope: null,
+1194 silly mapToRegistry   escapedName: 'kind-of',
+1194 silly mapToRegistry   name: 'kind-of',
+1194 silly mapToRegistry   rawSpec: 'https://registry.npmjs.org/kind-of/-/kind-of-3.1.0.tgz',
+1194 silly mapToRegistry   spec: 'https://registry.npmjs.org/kind-of/-/kind-of-3.1.0.tgz',
+1194 silly mapToRegistry   type: 'remote' }
+1195 silly mapToRegistry uri https://registry.npmjs.org/kind-of/-/kind-of-3.1.0.tgz
+1196 verbose addRemoteTarball https://registry.npmjs.org/kind-of/-/kind-of-3.1.0.tgz already in flight; waiting
+1197 silly cache add parsed spec Result {
+1197 silly cache add   raw: 'longest@https://registry.npmjs.org/longest/-/longest-1.0.1.tgz',
+1197 silly cache add   scope: null,
+1197 silly cache add   escapedName: 'longest',
+1197 silly cache add   name: 'longest',
+1197 silly cache add   rawSpec: 'https://registry.npmjs.org/longest/-/longest-1.0.1.tgz',
+1197 silly cache add   spec: 'https://registry.npmjs.org/longest/-/longest-1.0.1.tgz',
+1197 silly cache add   type: 'remote' }
+1198 silly mapToRegistry name longest@https://registry.npmjs.org/longest/-/longest-1.0.1.tgz
+1199 silly mapToRegistry using default registry
+1200 silly mapToRegistry registry https://registry.npmjs.org/
+1201 silly mapToRegistry data Result {
+1201 silly mapToRegistry   raw: 'longest@https://registry.npmjs.org/longest/-/longest-1.0.1.tgz',
+1201 silly mapToRegistry   scope: null,
+1201 silly mapToRegistry   escapedName: 'longest',
+1201 silly mapToRegistry   name: 'longest',
+1201 silly mapToRegistry   rawSpec: 'https://registry.npmjs.org/longest/-/longest-1.0.1.tgz',
+1201 silly mapToRegistry   spec: 'https://registry.npmjs.org/longest/-/longest-1.0.1.tgz',
+1201 silly mapToRegistry   type: 'remote' }
+1202 silly mapToRegistry uri https://registry.npmjs.org/longest/-/longest-1.0.1.tgz
+1203 verbose addRemoteTarball https://registry.npmjs.org/longest/-/longest-1.0.1.tgz already in flight; waiting
+1204 silly cache add parsed spec Result {
+1204 silly cache add   raw: 'repeat-string@https://registry.npmjs.org/repeat-string/-/repeat-string-1.6.1.tgz',
+1204 silly cache add   scope: null,
+1204 silly cache add   escapedName: 'repeat-string',
+1204 silly cache add   name: 'repeat-string',
+1204 silly cache add   rawSpec: 'https://registry.npmjs.org/repeat-string/-/repeat-string-1.6.1.tgz',
+1204 silly cache add   spec: 'https://registry.npmjs.org/repeat-string/-/repeat-string-1.6.1.tgz',
+1204 silly cache add   type: 'remote' }
+1205 silly mapToRegistry name repeat-string@https://registry.npmjs.org/repeat-string/-/repeat-string-1.6.1.tgz
+1206 silly mapToRegistry using default registry
+1207 silly mapToRegistry registry https://registry.npmjs.org/
+1208 silly mapToRegistry data Result {
+1208 silly mapToRegistry   raw: 'repeat-string@https://registry.npmjs.org/repeat-string/-/repeat-string-1.6.1.tgz',
+1208 silly mapToRegistry   scope: null,
+1208 silly mapToRegistry   escapedName: 'repeat-string',
+1208 silly mapToRegistry   name: 'repeat-string',
+1208 silly mapToRegistry   rawSpec: 'https://registry.npmjs.org/repeat-string/-/repeat-string-1.6.1.tgz',
+1208 silly mapToRegistry   spec: 'https://registry.npmjs.org/repeat-string/-/repeat-string-1.6.1.tgz',
+1208 silly mapToRegistry   type: 'remote' }
+1209 silly mapToRegistry uri https://registry.npmjs.org/repeat-string/-/repeat-string-1.6.1.tgz
+1210 verbose addRemoteTarball https://registry.npmjs.org/repeat-string/-/repeat-string-1.6.1.tgz already in flight; waiting
+1211 info retry fetch attempt 1 at 4:52:38 PM
+1212 info attempt registry request try #1 at 4:52:38 PM
+1213 http fetch GET https://registry.npmjs.org/kind-of/-/kind-of-3.1.0.tgz
+1214 info retry fetch attempt 1 at 4:52:38 PM
+1215 info attempt registry request try #1 at 4:52:38 PM
+1216 http fetch GET https://registry.npmjs.org/repeat-string/-/repeat-string-1.6.1.tgz
+1217 info retry fetch attempt 1 at 4:52:38 PM
+1218 info attempt registry request try #1 at 4:52:38 PM
+1219 http fetch GET https://registry.npmjs.org/longest/-/longest-1.0.1.tgz
+1220 silly fetchAndShaCheck shasum 3d01c6cade65790a9bfb4e30b2158b7635acbade
+1221 verbose addTmpTarball /var/folders/k2/9f3qd81x3f78064kmblystzm0000gn/T/npm-52061-06a01a16/registry.npmjs.org/google-closure-compiler/-/google-closure-compiler-20150901.0.0.tgz not in flight; adding
+1222 verbose correctMkdir /Users/dylanhsiao/.npm correctMkdir not in flight; initializing
+1223 verbose addTmpTarball validating metadata from /var/folders/k2/9f3qd81x3f78064kmblystzm0000gn/T/npm-52061-06a01a16/registry.npmjs.org/google-closure-compiler/-/google-closure-compiler-20150901.0.0.tgz
+1224 verbose tar unpack /var/folders/k2/9f3qd81x3f78064kmblystzm0000gn/T/npm-52061-06a01a16/registry.npmjs.org/google-closure-compiler/-/google-closure-compiler-20150901.0.0.tgz
+1225 verbose tar unpacking to /var/folders/k2/9f3qd81x3f78064kmblystzm0000gn/T/npm-52061-06a01a16/unpack-c0a30e98
+1226 silly gentlyRm /var/folders/k2/9f3qd81x3f78064kmblystzm0000gn/T/npm-52061-06a01a16/unpack-c0a30e98 is being purged
+1227 verbose gentlyRm don't care about contents; nuking /var/folders/k2/9f3qd81x3f78064kmblystzm0000gn/T/npm-52061-06a01a16/unpack-c0a30e98
+1228 silly gunzTarPerm modes [ '755', '644' ]
+1229 silly gunzTarPerm extractEntry package.json
+1230 silly gunzTarPerm extractEntry README.md
+1231 silly gunzTarPerm extractEntry COPYING
+1232 silly gunzTarPerm extractEntry compiler.jar
+1233 http fetch 200 https://registry.npmjs.org/kind-of/-/kind-of-3.1.0.tgz
+1234 http fetch 200 https://registry.npmjs.org/repeat-string/-/repeat-string-1.6.1.tgz
+1235 silly fetchAndShaCheck shasum 475d698a5e49ff5e53d14e3e732429dc8bf4cf47
+1236 verbose addTmpTarball /var/folders/k2/9f3qd81x3f78064kmblystzm0000gn/T/npm-52061-06a01a16/registry.npmjs.org/kind-of/-/kind-of-3.1.0.tgz not in flight; adding
+1237 verbose correctMkdir /Users/dylanhsiao/.npm correctMkdir not in flight; initializing
+1238 verbose addTmpTarball validating metadata from /var/folders/k2/9f3qd81x3f78064kmblystzm0000gn/T/npm-52061-06a01a16/registry.npmjs.org/kind-of/-/kind-of-3.1.0.tgz
+1239 verbose tar unpack /var/folders/k2/9f3qd81x3f78064kmblystzm0000gn/T/npm-52061-06a01a16/registry.npmjs.org/kind-of/-/kind-of-3.1.0.tgz
+1240 verbose tar unpacking to /var/folders/k2/9f3qd81x3f78064kmblystzm0000gn/T/npm-52061-06a01a16/unpack-fd35ef5a
+1241 silly gentlyRm /var/folders/k2/9f3qd81x3f78064kmblystzm0000gn/T/npm-52061-06a01a16/unpack-fd35ef5a is being purged
+1242 verbose gentlyRm don't care about contents; nuking /var/folders/k2/9f3qd81x3f78064kmblystzm0000gn/T/npm-52061-06a01a16/unpack-fd35ef5a
+1243 silly gunzTarPerm modes [ '755', '644' ]
+1244 silly gunzTarPerm extractEntry package.json
+1245 silly fetchAndShaCheck shasum 8dcae470e1c88abc2d600fff4a776286da75e637
+1246 verbose addTmpTarball /var/folders/k2/9f3qd81x3f78064kmblystzm0000gn/T/npm-52061-06a01a16/registry.npmjs.org/repeat-string/-/repeat-string-1.6.1.tgz not in flight; adding
+1247 verbose correctMkdir /Users/dylanhsiao/.npm correctMkdir not in flight; initializing
+1248 verbose addTmpTarball validating metadata from /var/folders/k2/9f3qd81x3f78064kmblystzm0000gn/T/npm-52061-06a01a16/registry.npmjs.org/repeat-string/-/repeat-string-1.6.1.tgz
+1249 verbose tar unpack /var/folders/k2/9f3qd81x3f78064kmblystzm0000gn/T/npm-52061-06a01a16/registry.npmjs.org/repeat-string/-/repeat-string-1.6.1.tgz
+1250 verbose tar unpacking to /var/folders/k2/9f3qd81x3f78064kmblystzm0000gn/T/npm-52061-06a01a16/unpack-e13ddc88
+1251 silly gentlyRm /var/folders/k2/9f3qd81x3f78064kmblystzm0000gn/T/npm-52061-06a01a16/unpack-e13ddc88 is being purged
+1252 verbose gentlyRm don't care about contents; nuking /var/folders/k2/9f3qd81x3f78064kmblystzm0000gn/T/npm-52061-06a01a16/unpack-e13ddc88
+1253 silly gunzTarPerm modes [ '755', '644' ]
+1254 silly gunzTarPerm extractEntry README.md
+1255 silly gunzTarPerm extractEntry LICENSE
+1256 http fetch 200 https://registry.npmjs.org/longest/-/longest-1.0.1.tgz
+1257 silly gunzTarPerm extractEntry package.json
+1258 silly gunzTarPerm extractEntry README.md
+1259 silly gunzTarPerm extractEntry LICENSE
+1260 silly gunzTarPerm extractEntry index.js
+1261 silly fetchAndShaCheck shasum 30a0b2da38f73770e8294a0d22e6625ed77d0097
+1262 verbose addTmpTarball /var/folders/k2/9f3qd81x3f78064kmblystzm0000gn/T/npm-52061-06a01a16/registry.npmjs.org/longest/-/longest-1.0.1.tgz not in flight; adding
+1263 verbose correctMkdir /Users/dylanhsiao/.npm correctMkdir not in flight; initializing
+1264 verbose addTmpTarball validating metadata from /var/folders/k2/9f3qd81x3f78064kmblystzm0000gn/T/npm-52061-06a01a16/registry.npmjs.org/longest/-/longest-1.0.1.tgz
+1265 verbose tar unpack /var/folders/k2/9f3qd81x3f78064kmblystzm0000gn/T/npm-52061-06a01a16/registry.npmjs.org/longest/-/longest-1.0.1.tgz
+1266 verbose tar unpacking to /var/folders/k2/9f3qd81x3f78064kmblystzm0000gn/T/npm-52061-06a01a16/unpack-fac5df09
+1267 silly gentlyRm /var/folders/k2/9f3qd81x3f78064kmblystzm0000gn/T/npm-52061-06a01a16/unpack-fac5df09 is being purged
+1268 verbose gentlyRm don't care about contents; nuking /var/folders/k2/9f3qd81x3f78064kmblystzm0000gn/T/npm-52061-06a01a16/unpack-fac5df09
+1269 silly gunzTarPerm modes [ '755', '644' ]
+1270 silly gunzTarPerm extractEntry index.js
+1271 silly gunzTarPerm extractEntry package.json
+1272 silly gunzTarPerm extractEntry README.md
+1273 silly gunzTarPerm extractEntry LICENSE
+1274 silly gunzTarPerm extractEntry index.js
+1275 verbose correctMkdir /Users/dylanhsiao/.npm correctMkdir not in flight; initializing
+1276 verbose correctMkdir /Users/dylanhsiao/.npm correctMkdir not in flight; initializing
+1277 silly cache afterAdd kind-of@3.1.0
+1278 verbose afterAdd /Users/dylanhsiao/.npm/kind-of/3.1.0/package/package.json not in flight; writing
+1279 verbose correctMkdir /Users/dylanhsiao/.npm correctMkdir not in flight; initializing
+1280 silly cache afterAdd kind-of@3.1.0
+1281 verbose afterAdd /Users/dylanhsiao/.npm/kind-of/3.1.0/package/package.json already in flight; not writing
+1282 verbose afterAdd /Users/dylanhsiao/.npm/kind-of/3.1.0/package/package.json written
+1283 verbose correctMkdir /Users/dylanhsiao/.npm correctMkdir not in flight; initializing
+1284 silly cache afterAdd repeat-string@1.6.1
+1285 verbose afterAdd /Users/dylanhsiao/.npm/repeat-string/1.6.1/package/package.json not in flight; writing
+1286 verbose correctMkdir /Users/dylanhsiao/.npm correctMkdir not in flight; initializing
+1287 silly cache afterAdd repeat-string@1.6.1
+1288 verbose afterAdd /Users/dylanhsiao/.npm/repeat-string/1.6.1/package/package.json already in flight; not writing
+1289 silly fetchOtherPackageData is-buffer@https://registry.npmjs.org/is-buffer/-/is-buffer-1.1.4.tgz
+1290 silly cache add args [ 'is-buffer@https://registry.npmjs.org/is-buffer/-/is-buffer-1.1.4.tgz',
+1290 silly cache add   null ]
+1291 verbose cache add spec is-buffer@https://registry.npmjs.org/is-buffer/-/is-buffer-1.1.4.tgz
+1292 silly fetchOtherPackageData is-buffer@https://registry.npmjs.org/is-buffer/-/is-buffer-1.1.4.tgz
+1293 silly cache add args [ 'is-buffer@https://registry.npmjs.org/is-buffer/-/is-buffer-1.1.4.tgz',
+1293 silly cache add   null ]
+1294 verbose cache add spec is-buffer@https://registry.npmjs.org/is-buffer/-/is-buffer-1.1.4.tgz
+1295 silly cache add parsed spec Result {
+1295 silly cache add   raw: 'is-buffer@https://registry.npmjs.org/is-buffer/-/is-buffer-1.1.4.tgz',
+1295 silly cache add   scope: null,
+1295 silly cache add   escapedName: 'is-buffer',
+1295 silly cache add   name: 'is-buffer',
+1295 silly cache add   rawSpec: 'https://registry.npmjs.org/is-buffer/-/is-buffer-1.1.4.tgz',
+1295 silly cache add   spec: 'https://registry.npmjs.org/is-buffer/-/is-buffer-1.1.4.tgz',
+1295 silly cache add   type: 'remote' }
+1296 silly mapToRegistry name is-buffer@https://registry.npmjs.org/is-buffer/-/is-buffer-1.1.4.tgz
+1297 silly mapToRegistry using default registry
+1298 silly mapToRegistry registry https://registry.npmjs.org/
+1299 silly mapToRegistry data Result {
+1299 silly mapToRegistry   raw: 'is-buffer@https://registry.npmjs.org/is-buffer/-/is-buffer-1.1.4.tgz',
+1299 silly mapToRegistry   scope: null,
+1299 silly mapToRegistry   escapedName: 'is-buffer',
+1299 silly mapToRegistry   name: 'is-buffer',
+1299 silly mapToRegistry   rawSpec: 'https://registry.npmjs.org/is-buffer/-/is-buffer-1.1.4.tgz',
+1299 silly mapToRegistry   spec: 'https://registry.npmjs.org/is-buffer/-/is-buffer-1.1.4.tgz',
+1299 silly mapToRegistry   type: 'remote' }
+1300 silly mapToRegistry uri https://registry.npmjs.org/is-buffer/-/is-buffer-1.1.4.tgz
+1301 verbose addRemoteTarball https://registry.npmjs.org/is-buffer/-/is-buffer-1.1.4.tgz not in flight; adding
+1302 verbose addRemoteTarball [ 'https://registry.npmjs.org/is-buffer/-/is-buffer-1.1.4.tgz',
+1302 verbose addRemoteTarball   null ]
+1303 silly cache add parsed spec Result {
+1303 silly cache add   raw: 'is-buffer@https://registry.npmjs.org/is-buffer/-/is-buffer-1.1.4.tgz',
+1303 silly cache add   scope: null,
+1303 silly cache add   escapedName: 'is-buffer',
+1303 silly cache add   name: 'is-buffer',
+1303 silly cache add   rawSpec: 'https://registry.npmjs.org/is-buffer/-/is-buffer-1.1.4.tgz',
+1303 silly cache add   spec: 'https://registry.npmjs.org/is-buffer/-/is-buffer-1.1.4.tgz',
+1303 silly cache add   type: 'remote' }
+1304 silly mapToRegistry name is-buffer@https://registry.npmjs.org/is-buffer/-/is-buffer-1.1.4.tgz
+1305 silly mapToRegistry using default registry
+1306 silly mapToRegistry registry https://registry.npmjs.org/
+1307 silly mapToRegistry data Result {
+1307 silly mapToRegistry   raw: 'is-buffer@https://registry.npmjs.org/is-buffer/-/is-buffer-1.1.4.tgz',
+1307 silly mapToRegistry   scope: null,
+1307 silly mapToRegistry   escapedName: 'is-buffer',
+1307 silly mapToRegistry   name: 'is-buffer',
+1307 silly mapToRegistry   rawSpec: 'https://registry.npmjs.org/is-buffer/-/is-buffer-1.1.4.tgz',
+1307 silly mapToRegistry   spec: 'https://registry.npmjs.org/is-buffer/-/is-buffer-1.1.4.tgz',
+1307 silly mapToRegistry   type: 'remote' }
+1308 silly mapToRegistry uri https://registry.npmjs.org/is-buffer/-/is-buffer-1.1.4.tgz
+1309 verbose addRemoteTarball https://registry.npmjs.org/is-buffer/-/is-buffer-1.1.4.tgz already in flight; waiting
+1310 info retry fetch attempt 1 at 4:52:38 PM
+1311 info attempt registry request try #1 at 4:52:38 PM
+1312 http fetch GET https://registry.npmjs.org/is-buffer/-/is-buffer-1.1.4.tgz
+1313 verbose afterAdd /Users/dylanhsiao/.npm/repeat-string/1.6.1/package/package.json written
+1314 silly cache afterAdd longest@1.0.1
+1315 verbose afterAdd /Users/dylanhsiao/.npm/longest/1.0.1/package/package.json not in flight; writing
+1316 verbose correctMkdir /Users/dylanhsiao/.npm correctMkdir not in flight; initializing
+1317 silly cache afterAdd longest@1.0.1
+1318 verbose afterAdd /Users/dylanhsiao/.npm/longest/1.0.1/package/package.json already in flight; not writing
+1319 verbose afterAdd /Users/dylanhsiao/.npm/longest/1.0.1/package/package.json written
+1320 http fetch 200 https://registry.npmjs.org/is-buffer/-/is-buffer-1.1.4.tgz
+1321 silly fetchAndShaCheck shasum cfc86ccd5dc5a52fa80489111c6920c457e2d98b
+1322 verbose addTmpTarball /var/folders/k2/9f3qd81x3f78064kmblystzm0000gn/T/npm-52061-06a01a16/registry.npmjs.org/is-buffer/-/is-buffer-1.1.4.tgz not in flight; adding
+1323 verbose correctMkdir /Users/dylanhsiao/.npm correctMkdir not in flight; initializing
+1324 verbose addTmpTarball validating metadata from /var/folders/k2/9f3qd81x3f78064kmblystzm0000gn/T/npm-52061-06a01a16/registry.npmjs.org/is-buffer/-/is-buffer-1.1.4.tgz
+1325 verbose tar unpack /var/folders/k2/9f3qd81x3f78064kmblystzm0000gn/T/npm-52061-06a01a16/registry.npmjs.org/is-buffer/-/is-buffer-1.1.4.tgz
+1326 verbose tar unpacking to /var/folders/k2/9f3qd81x3f78064kmblystzm0000gn/T/npm-52061-06a01a16/unpack-5a6bc146
+1327 silly gentlyRm /var/folders/k2/9f3qd81x3f78064kmblystzm0000gn/T/npm-52061-06a01a16/unpack-5a6bc146 is being purged
+1328 verbose gentlyRm don't care about contents; nuking /var/folders/k2/9f3qd81x3f78064kmblystzm0000gn/T/npm-52061-06a01a16/unpack-5a6bc146
+1329 silly gunzTarPerm modes [ '755', '644' ]
+1330 silly gunzTarPerm extractEntry package.json
+1331 silly gunzTarPerm extractEntry README.md
+1332 silly gunzTarPerm extractEntry LICENSE
+1333 silly gunzTarPerm extractEntry index.js
+1334 silly gunzTarPerm extractEntry .travis.yml
+1335 silly gunzTarPerm extractEntry .zuul.yml
+1336 silly gunzTarPerm extractEntry test/basic.js
+1337 verbose correctMkdir /Users/dylanhsiao/.npm correctMkdir not in flight; initializing
+1338 silly cache afterAdd is-buffer@1.1.4
+1339 verbose afterAdd /Users/dylanhsiao/.npm/is-buffer/1.1.4/package/package.json not in flight; writing
+1340 verbose correctMkdir /Users/dylanhsiao/.npm correctMkdir not in flight; initializing
+1341 silly cache afterAdd is-buffer@1.1.4
+1342 verbose afterAdd /Users/dylanhsiao/.npm/is-buffer/1.1.4/package/package.json already in flight; not writing
+1343 verbose afterAdd /Users/dylanhsiao/.npm/is-buffer/1.1.4/package/package.json written
+1344 silly gunzTarPerm extractEntry contrib/externs/angular-1.0.js
+1345 silly gunzTarPerm extractEntry contrib/externs/fileapi_synchronous.js
+1346 silly gunzTarPerm extractEntry contrib/externs/google_analytics_api.js
+1347 silly gunzTarPerm extractEntry contrib/externs/google_feed_api.js
+1348 silly gunzTarPerm extractEntry contrib/externs/google_loader_api.js
+1349 silly gunzTarPerm extractEntry contrib/externs/facebook_javascript_sdk.js
+1350 silly gunzTarPerm extractEntry contrib/externs/angular-1.2-http-promise.js
+1351 silly gunzTarPerm extractEntry contrib/externs/google_visualization_api.js
+1352 silly gunzTarPerm extractEntry contrib/externs/google_youtube_iframe.js
+1353 silly gunzTarPerm extractEntry contrib/externs/jasmine-2.0.js
+1354 silly gunzTarPerm extractEntry contrib/externs/jasmine.js
+1355 silly gunzTarPerm extractEntry contrib/externs/empty.js
+1356 silly gunzTarPerm extractEntry contrib/externs/jquery-1.3.2.externs.js
+1357 silly gunzTarPerm extractEntry contrib/externs/chrome_extensions.js
+1358 silly gunzTarPerm extractEntry contrib/externs/jquery-1.4.4.js
+1359 silly gunzTarPerm extractEntry contrib/externs/w3c_speech.js
+1360 silly gunzTarPerm extractEntry contrib/externs/jquery-1.5.js
+1361 silly gunzTarPerm extractEntry contrib/externs/angular_ui_router.js
+1362 silly gunzTarPerm extractEntry contrib/externs/jquery-1.6.js
+1363 silly gunzTarPerm extractEntry contrib/externs/angular-material.js
+1364 silly gunzTarPerm extractEntry contrib/externs/jquery-1.7.js
+1365 silly gunzTarPerm extractEntry contrib/externs/angular-1.4.js
+1366 silly gunzTarPerm extractEntry contrib/externs/jquery-1.8.js
+1367 silly gunzTarPerm extractEntry contrib/externs/angular-1.4-q_templated.js
+1368 silly gunzTarPerm extractEntry contrib/externs/jquery-1.9.js
+1369 silly gunzTarPerm extractEntry contrib/externs/angular-1.4-mocks.js
+1370 silly gunzTarPerm extractEntry contrib/externs/w3c_pointer_events.js
+1371 silly gunzTarPerm extractEntry contrib/externs/angular-1.4-http-promise_templated.js
+1372 silly gunzTarPerm extractEntry contrib/externs/processing-1.4.8.js
+1373 silly gunzTarPerm extractEntry contrib/externs/angular-1.3.js
+1374 silly gunzTarPerm extractEntry contrib/externs/silverlight.js
+1375 silly gunzTarPerm extractEntry contrib/externs/angular-1.3-q_templated.js
+1376 silly gunzTarPerm extractEntry contrib/externs/ui-bootstrap.js
+1377 silly gunzTarPerm extractEntry contrib/externs/angular-1.3-q.js
+1378 silly gunzTarPerm extractEntry contrib/externs/underscore-1.3.1.js
+1379 silly gunzTarPerm extractEntry contrib/externs/angular-1.3-mocks.js
+1380 silly gunzTarPerm extractEntry contrib/externs/underscore-1.4.4.js
+1381 silly gunzTarPerm extractEntry contrib/externs/angular-1.3-http-promise_templated.js
+1382 silly gunzTarPerm extractEntry contrib/externs/underscore-1.5.2.js
+1383 silly gunzTarPerm extractEntry contrib/externs/angular-1.3-http-promise.js
+1384 silly gunzTarPerm extractEntry contrib/externs/universal_analytics_api.js
+1385 silly gunzTarPerm extractEntry contrib/externs/angular-1.2.js
+1386 silly gunzTarPerm extractEntry contrib/externs/w3c_css.js
+1387 silly gunzTarPerm extractEntry contrib/externs/angular-1.2-q_templated.js
+1388 silly gunzTarPerm extractEntry contrib/externs/w3c_eventsource.js
+1389 silly gunzTarPerm extractEntry contrib/externs/angular-1.2-q.js
+1390 silly gunzTarPerm extractEntry contrib/externs/w3c_gamepad.js
+1391 silly gunzTarPerm extractEntry contrib/externs/angular-1.2-http-promise_templated.js
+1392 silly gunzTarPerm extractEntry contrib/externs/w3c_midi.js
+1393 silly gunzTarPerm extractEntry contrib/externs/google_maps_api_v2.js
+1394 silly gunzTarPerm extractEntry contrib/externs/youtubeplayer.js
+1395 silly gunzTarPerm extractEntry contrib/externs/google_tag_manager_api.js
+1396 silly gunzTarPerm extractEntry contrib/externs/maps/google_maps_api_v3.js
+1397 silly gunzTarPerm extractEntry contrib/externs/maps/google_maps_api_v3_16.js
+1398 silly gunzTarPerm extractEntry contrib/externs/maps/google_maps_api_v3_17.js
+1399 silly gunzTarPerm extractEntry contrib/externs/maps/google_maps_api_v3_18.js
+1400 silly gunzTarPerm extractEntry contrib/externs/maps/google_maps_api_v3_15.js
+1401 silly gunzTarPerm extractEntry contrib/externs/maps/google_maps_api_v3_20.js
+1402 silly gunzTarPerm extractEntry contrib/externs/maps/google_maps_api_v3_21.js
+1403 silly gunzTarPerm extractEntry contrib/externs/maps/google_maps_api_v3_3.js
+1404 silly gunzTarPerm extractEntry contrib/externs/maps/google_maps_api_v3_4.js
+1405 silly gunzTarPerm extractEntry contrib/externs/maps/google_maps_api_v3_5.js
+1406 silly gunzTarPerm extractEntry contrib/externs/maps/google_maps_api_v3_14.js
+1407 silly gunzTarPerm extractEntry contrib/externs/maps/google_maps_api_v3_6.js
+1408 silly gunzTarPerm extractEntry contrib/externs/maps/google_maps_api_v3_13.js
+1409 silly gunzTarPerm extractEntry contrib/externs/maps/google_maps_api_v3_7.js
+1410 silly gunzTarPerm extractEntry contrib/externs/maps/google_maps_api_v3_12.js
+1411 silly gunzTarPerm extractEntry contrib/externs/maps/google_maps_api_v3_8.js
+1412 silly gunzTarPerm extractEntry contrib/externs/maps/google_maps_api_v3_11.js
+1413 silly gunzTarPerm extractEntry contrib/externs/maps/google_maps_api_v3_9.js
+1414 silly gunzTarPerm extractEntry contrib/externs/maps/google_maps_api_v3_10.js
+1415 silly gunzTarPerm extractEntry contrib/externs/maps/google_maps_api_v3_exp.js
+1416 silly gunzTarPerm extractEntry contrib/externs/maps/google_maps_api_v3_19.js
+1417 silly gunzTarPerm extractEntry contrib/externs/api/gadgets/google.container.js
+1418 silly gunzTarPerm extractEntry contrib/externs/api/gadgets/iframes.js
+1419 silly gunzTarPerm extractEntry contrib/externs/api/gadgets/oauth.js
+1420 silly gunzTarPerm extractEntry contrib/externs/api/gadgets/oauth2.js
+1421 silly gunzTarPerm extractEntry contrib/externs/api/gadgets/opensocial.js
+1422 silly gunzTarPerm extractEntry contrib/externs/api/gadgets/plusone.js
+1423 silly gunzTarPerm extractEntry contrib/externs/api/gadgets/shindig.js
+1424 silly gunzTarPerm extractEntry contrib/nodejs/assert.js
+1425 silly gunzTarPerm extractEntry contrib/nodejs/globals.js
+1426 silly gunzTarPerm extractEntry contrib/nodejs/http.js
+1427 silly gunzTarPerm extractEntry contrib/nodejs/https.js
+1428 silly gunzTarPerm extractEntry contrib/nodejs/net.js
+1429 silly gunzTarPerm extractEntry contrib/nodejs/fs.js
+1430 silly gunzTarPerm extractEntry contrib/nodejs/path.js
+1431 silly gunzTarPerm extractEntry contrib/nodejs/punycode.js
+1432 silly gunzTarPerm extractEntry contrib/nodejs/querystring.js
+1433 silly gunzTarPerm extractEntry contrib/nodejs/readline.js
+1434 silly gunzTarPerm extractEntry contrib/nodejs/repl.js
+1435 silly gunzTarPerm extractEntry contrib/nodejs/events.js
+1436 silly gunzTarPerm extractEntry contrib/nodejs/stream.js
+1437 silly gunzTarPerm extractEntry contrib/nodejs/domain.js
+1438 silly gunzTarPerm extractEntry contrib/nodejs/string_decoder.js
+1439 silly gunzTarPerm extractEntry contrib/nodejs/dns.js
+1440 silly gunzTarPerm extractEntry contrib/nodejs/tls.js
+1441 silly gunzTarPerm extractEntry contrib/nodejs/dgram.js
+1442 silly gunzTarPerm extractEntry contrib/nodejs/tty.js
+1443 silly gunzTarPerm extractEntry contrib/nodejs/crypto.js
+1444 silly gunzTarPerm extractEntry contrib/nodejs/url.js
+1445 silly gunzTarPerm extractEntry contrib/nodejs/cluster.js
+1446 silly gunzTarPerm extractEntry contrib/nodejs/util.js
+1447 silly gunzTarPerm extractEntry contrib/nodejs/child_process.js
+1448 silly gunzTarPerm extractEntry contrib/nodejs/vm.js
+1449 silly gunzTarPerm extractEntry contrib/nodejs/buffer.js
+1450 silly gunzTarPerm extractEntry contrib/nodejs/zlib.js
+1451 silly gunzTarPerm extractEntry contrib/nodejs/os.js
+1452 verbose correctMkdir /Users/dylanhsiao/.npm correctMkdir not in flight; initializing
+1453 silly cache afterAdd google-closure-compiler@20150901.0.0
+1454 verbose afterAdd /Users/dylanhsiao/.npm/google-closure-compiler/20150901.0.0/package/package.json not in flight; writing
+1455 verbose correctMkdir /Users/dylanhsiao/.npm correctMkdir not in flight; initializing
+1456 verbose afterAdd /Users/dylanhsiao/.npm/google-closure-compiler/20150901.0.0/package/package.json written
+1457 silly loadAllDepsIntoIdealTree Finishing
+1458 silly loadIdealTree Finishing
+1459 silly currentTree lib
+1460 silly idealTree lib
+1460 silly idealTree └─┬ lodash-cli@4.17.5
+1460 silly idealTree   ├─┬ closure-compiler@0.2.12
+1460 silly idealTree   │ └── google-closure-compiler@20150901.0.0
+1460 silly idealTree   ├─┬ glob@7.1.1
+1460 silly idealTree   │ ├── fs.realpath@1.0.0
+1460 silly idealTree   │ ├─┬ inflight@1.0.6
+1460 silly idealTree   │ │ └── wrappy@1.0.2
+1460 silly idealTree   │ ├── inherits@2.0.3
+1460 silly idealTree   │ ├─┬ minimatch@3.0.3
+1460 silly idealTree   │ │ └─┬ brace-expansion@1.1.6
+1460 silly idealTree   │ │   ├── balanced-match@0.4.2
+1460 silly idealTree   │ │   └── concat-map@0.0.1
+1460 silly idealTree   │ ├─┬ once@1.4.0
+1460 silly idealTree   │ │ └── wrappy@1.0.2
+1460 silly idealTree   │ └── path-is-absolute@1.0.1
+1460 silly idealTree   ├── lodash@4.17.5
+1460 silly idealTree   ├── semver@5.3.0
+1460 silly idealTree   └─┬ uglify-js@2.7.5
+1460 silly idealTree     ├── async@0.2.10
+1460 silly idealTree     ├── source-map@0.5.6
+1460 silly idealTree     ├── uglify-to-browserify@1.0.2
+1460 silly idealTree     └─┬ yargs@3.10.0
+1460 silly idealTree       ├── camelcase@1.2.1
+1460 silly idealTree       ├─┬ cliui@2.1.0
+1460 silly idealTree       │ ├─┬ center-align@0.1.3
+1460 silly idealTree       │ │ ├─┬ align-text@0.1.4
+1460 silly idealTree       │ │ │ ├─┬ kind-of@3.1.0
+1460 silly idealTree       │ │ │ │ └── is-buffer@1.1.4
+1460 silly idealTree       │ │ │ ├── longest@1.0.1
+1460 silly idealTree       │ │ │ └── repeat-string@1.6.1
+1460 silly idealTree       │ │ └── lazy-cache@1.0.4
+1460 silly idealTree       │ ├─┬ right-align@0.1.3
+1460 silly idealTree       │ │ └─┬ align-text@0.1.4
+1460 silly idealTree       │ │   ├─┬ kind-of@3.1.0
+1460 silly idealTree       │ │   │ └── is-buffer@1.1.4
+1460 silly idealTree       │ │   ├── longest@1.0.1
+1460 silly idealTree       │ │   └── repeat-string@1.6.1
+1460 silly idealTree       │ └── wordwrap@0.0.2
+1460 silly idealTree       ├── decamelize@1.2.0
+1460 silly idealTree       └── window-size@0.1.0
+1461 silly generateActionsToTake Starting
+1462 silly install generateActionsToTake
+1463 warn checkPermissions Missing write access to /usr/local/lib/node_modules
+1464 silly rollbackFailedOptional Starting
+1465 silly rollbackFailedOptional Finishing
+1466 silly runTopLevelLifecycles Finishing
+1467 silly install printInstalled
+1468 verbose stack Error: EACCES: permission denied, access '/usr/local/lib/node_modules'
+1468 verbose stack     at Error (native)
+1469 verbose cwd /Users/dylanhsiao/Dropbox/00_Portfolio/Web-DylanHsiao/03_FTP/dylanhsiao.com
+1470 error Darwin 15.4.0
+1471 error argv "/usr/local/bin/node" "/usr/local/bin/npm" "i" "-g" "lodash-cli"
+1472 error node v6.11.0
+1473 error npm  v3.10.10
+1474 error path /usr/local/lib/node_modules
+1475 error code EACCES
+1476 error errno -13
+1477 error syscall access
+1478 error Error: EACCES: permission denied, access '/usr/local/lib/node_modules'
+1478 error     at Error (native)
+1478 error  { Error: EACCES: permission denied, access '/usr/local/lib/node_modules'
+1478 error     at Error (native)
+1478 error   errno: -13,
+1478 error   code: 'EACCES',
+1478 error   syscall: 'access',
+1478 error   path: '/usr/local/lib/node_modules' }
+1479 error Please try running this command again as root/Administrator.
+1480 verbose exit [ -13, true ]

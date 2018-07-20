@@ -5,12 +5,14 @@ import {projects} from './project.js'
 var cell = $('.centered .carousel__content'),
 circle1 = $('.centered .circle-outer'),
 circle2 = $('.centered .circle-inner'),
-image = $('.centered .image-wrapper'),
-winWidth = $(window).width();
+image = $('.centered .image-wrapper');
+
 
 export function expandCircles(){
-  //hide overlay video image layer
 
+  var winWidth = $(window).width();
+
+  //hide overlay video image layer
   $('.video-wrapper').addClass('is__hiding');
 
   // move two circles and project image in the center of the screen / vw
@@ -76,13 +78,16 @@ export function expandCircles(){
 
 
 
-var dataIndex = $('.centered').attr("data-project-index");
-var subColor = projects[dataIndex].subColor;
+
 
 
 
 export function shrinkCircles(){
-  console.log(subColor);
+
+  var dataIndex = $('.centered').attr("data-project-index");
+  var subColor = projects[dataIndex].subColor;
+  var winWidth = $(window).width();
+
   circle2.children('circle').css({
     'fill' : '' + subColor + '',
   });

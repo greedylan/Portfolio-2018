@@ -140,19 +140,37 @@ function loadPresentation(projectClicked, projectIndex){
           </div>\
         </div>\
       `;
+      var divVideo = `\
+        <!-- Module-- Image Full Span -->\
+        <div class="detail-module detail__video-wrapper container vertical-spacing" id="${blockNumber}">\
+          <h2 class="text-center"></h2>\
+          <p class="text-center"></p>\
+          <video class="project-detail__video" autoplay muted loop>\
+            <source src="" type="video/mp4">
+          </video>
+        </div>\
+      `;
 
       if(block.style === "1-col"){
         $('.project-detail').append(divStyle1);
         $(`#${blockNumber} h2`).text(block.mainTitle);
         $(`#${blockNumber} p`).text(block.subTitle);
-        $(`#${blockNumber} img`).attr("src", `${block.imageUrl}`);
+        $(`#${blockNumber} img`).attr("src", `${block.imageURL}`);
       }
       else if(block.style === "2-col"){
         $('.project-detail').append(divStyle2);
         $(`#${blockNumber} h2`).text(block.mainTitle);
         $(`#${blockNumber} p`).text(block.subTitle);
-        $(`#${blockNumber} img.left`).attr("src", `${block.imageUrlLeft}`);
-        $(`#${blockNumber} img.right`).attr("src", `${block.imageUrlRight}`);
+        $(`#${blockNumber} img.left`).attr("src", `${block.imageURLLeft}`);
+        $(`#${blockNumber} img.right`).attr("src", `${block.imageURLRight}`);
+      }
+      else if(block.style === "video"){
+        $('.project-detail').append(divVideo);
+        $(`#${blockNumber} h2`).text(block.mainTitle);
+        $(`#${blockNumber} p`).text(block.subTitle);
+        $(`#${blockNumber} .project-detail__video`).children('source').attr('src', `${block.videoURL}`);
+        $(`#${blockNumber} .project-detail__video`)[0].load();
+        $(`#${blockNumber} .project-detail__video`)[0].play();
       }
     }
   })();
@@ -205,6 +223,7 @@ function toShowroom(){
         // SCREEN TRANSITION //
         ///////////////////////
         (function transitionToShowroom(){
+          window.scrollTo(0, 0);
           $('body').addClass('no-scroll');
           titleOut();
           letterDOut();
@@ -248,8 +267,8 @@ function toShowroom(){
 
           //// for logo parallax effect
           // $('.logo').removeClass('is__above-carousel');
-          //// lift presentation div to cover parallax hero title
-          // $('.presentation').addClass('z-index--100');
+          // lift presentation div to cover parallax hero title
+          $('.presentation').addClass('z-index--100');
 
 
           //// parallax effects

@@ -3,13 +3,21 @@ import {projects} from './project.js';
 
 
 var titleMain = $('.main-title'),
-titleSub = $('.sub-title');
+titleSub = $('.field');
+
+
+
+
 
 // onload, insert the middle set title texts in array "titles"
 export function loadCenteredTitle(){
   var index = Math.floor(projects.length/2);
   titleMain.html(projects[index].mainTitle);
-  titleSub.html(projects[index].subTitle);
+
+
+  for(var i=0; i<projects[index].field.length; i++){
+    titleSub.append(`<li>${projects[index].field[i]}</li>`);
+  }
 }
 
 
@@ -25,7 +33,7 @@ export function titleOut(){
   });
   titleSub.css({
     'transform' : 'translateX(-120%)',
-    'transition' : '600ms cubic-bezier(.25, 1, .25, 1)'
+    'transition' : '400ms cubic-bezier(.25, 1, .25, 1)'
   });
 }
 export function titleIn(){
@@ -35,7 +43,7 @@ export function titleIn(){
   });
   titleSub.css({
     'transform' : 'translateX(0%)',
-    'transition' : '600ms cubic-bezier(.25, 1, .25, 1)'
+    'transition' : '800ms cubic-bezier(.25, 1, .25, 1)'
   });
 }
 
@@ -44,10 +52,13 @@ function animateTitle(index){
     titleOut();
   }, 100);
   setTimeout(function(){
+    titleSub.empty();
     titleMain.html(projects[index].mainTitle);
-    titleSub.html(projects[index].subTitle);
+    for(var i=0; i<projects[index].field.length; i++){
+      titleSub.append(`<li>${projects[index].field[i]}</li>`);
+    }
     titleIn();
-  }, 800);
+  }, 400);
 }
 
 
@@ -58,7 +69,6 @@ export function loadNextTitle(){
   var index = ( centerPosition + scrollPosition );
   // console.log(index, scrollPosition, centerPosition);
   animateTitle(index);
-  // loadGif(index);
 }
 export function loadPreviousTitle(){
   scrollPosition = scrollPosition - 1;

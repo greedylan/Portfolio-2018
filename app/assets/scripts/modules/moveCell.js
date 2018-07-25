@@ -137,10 +137,10 @@ export function swipeMoveCell(){
   var cellWidth = $('.carousel__cell').width();
   var swipe = new MoveCell('', cellWidth);
 
-  $('.home').swipe({
+  $('.main-inner').swipe({
     // Generic swipe handler for all directions
     swipe:function(event, direction, distance, duration, fingerCount, fingerData) {
-      // console.log(direction, distance, fingerCount);
+      console.log(direction, distance, fingerCount);
 
       if( direction == 'left' && winWidth < '992' && !$('.showroom').hasClass('loaded')){
         // console.log('swiping left');

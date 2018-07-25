@@ -6,8 +6,9 @@
 @import "normalize.css";
 @import "bootstrap-4-grid/css/grid.css";
 
-@import "modules/_global";
+
 @import "modules/_mixins";
+@import "modules/_global";
 @import "modules/_carousel";
 @import "modules/_letter";
 @import "modules/_showroom";

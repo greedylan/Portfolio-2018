@@ -173,12 +173,9 @@ section.hero{
 
 section.presentation{
   background: #EFEFEF;
-
-
   .project-bulletpoints{
-
     h4{
-      margin-bottom: .5rem;
+
       color: #20456D;
     }
     p{
@@ -186,13 +183,32 @@ section.presentation{
     }
   }
   .project-detail{
+    h2{
+      margin: 0 auto 1rem auto;
+    }
     p {
-      width: 50%;
-      margin: 0 auto;
+      width: 100%;
+      margin: 0 auto 2rem auto;
+      text-align: left;
+      @mixin tablet-up{
+        width:75%;
+        text-align: center;
+      }
     }
   }
 }
 
+
+.detail-module p{
+  padding-bottom: 1rem;
+}
+
+.project-detail__video{
+  display: block;
+  margin: 0 auto;
+  width: 100%;
+  max-width: 600px;
+}
 
 section.more-projects{
   div[class^="more-projects__"]{

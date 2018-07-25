@@ -19,6 +19,12 @@ img{
   width: 100%;
 }
 
+p{
+  font-family: 'Lato', san-serif;
+  font-weight: 300;
+  font-size: .875rem;
+  line-height: 1.1rem;
+}
 
 
 /* Flex Box */
@@ -61,7 +67,7 @@ h1.main-title{
 
 h2{
   font-family: 'Arvo', serif;
-  font-size: 1.5rem;
+  font-size: 1.25rem;
 }
 
 h3{
@@ -76,6 +82,7 @@ h4{
   font-family: 'Lato', sans-serif;
   font-size: 1rem;
   font-weight: 900;
+  margin: .75rem 0;
 }
 
 .text-center{
@@ -181,10 +188,13 @@ hr{
 
 /* spacing */
 .vertical-spacing{
-  /* margin: 5rem auto; */
-  padding-top: 5rem;
-  padding-bottom: 5rem;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
 
+  @mixin laptop-up{
+    padding-top: 3rem;
+    padding-bottom: 3rem;
+  }
 }
 
 

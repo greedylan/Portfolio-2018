@@ -2,6 +2,7 @@
 function Project(
   mainTitle,
   subTitle,
+  field,
   previewImage,
   previewVideo,
   primaryColor,
@@ -15,6 +16,7 @@ function Project(
 ){
   this.mainTitle = mainTitle;
   this.subTitle = subTitle;
+  this.field = field;
   this.previewImage = previewImage;
   this.previewVideo = previewVideo;
   this.primaryColor = primaryColor;
@@ -28,7 +30,6 @@ function Project(
 }
 
 
-
 // objext that store apps' icon image url
 export var apps = {
   sketch : "images/app-sketch.png",
@@ -37,9 +38,6 @@ export var apps = {
   illustrator : "images/app-illustrator.png",
   atom : "images/app-atom.png",
 };
-
-
-
 
 
 var bullets1 = {
@@ -64,11 +62,11 @@ var bullets3 = {
   role     : 'role contnet #3'
 };
 var bullets4 = {
-  about    : 'I love you I love you I love you I love you I love you I love you I love you ',
-  mission  : 'do you really do you really do you really do you really do you really',
-  strategy : 'yes I do yes I do yes I doyes I doyes I doyes I doyes I do',
-  team     : 'ok then ok thenok thenok thenok thenok thenok thenok then',
-  role     : 'come give daddy a hug come give daddy a hugcome give daddy a hugcome give daddy a hug'
+  about    : 'The company that holds onto massive amount of personal data sets it ambition to target new homeowners, the group that has greater expenditure during transition, according to internal marketing research',
+  mission  : 'A platform offers advertising partnership for corporations/local businesses. For consumers, to introduce new shopping channels that could possibly become returning customers',
+  strategy : 'The project aims for clear, intuitive interface due to complex information and site structure. Utilize smart phone for redeeming offers on the go',
+  team     : 'CEO, Vice President, Account Executives, Project Managers, Software Programmers',
+  role     : 'Bridging multiple parties communications-wise, I produced wireframe, user flow, high/low fidelity UI mockups, interactive prototypes and eventually carried out approved designs throguh front-end codes'
 };
 var bullets5 = {
   about    : 'about content #5',
@@ -93,7 +91,6 @@ var bullets7 = {
 };
 
 
-
 var detail1 = {
   blockCount : 1,
 };
@@ -116,19 +113,72 @@ var detail3 = {
   }
 };
 var detail4 = {
-  block1 : {
-    style : "1-col",
-    mainTitle : "presentation #4-1 main title ",
-    subTitle : "presentation #4-1 sub title",
-    imageUrl : "/images/detail-image--1@3x.png"
+  // block1 : {
+  //   style : "1-col",
+  //   mainTitle : "Style Guide",
+  //   subTitle : "",
+  //   imageUrl : "/images/detail-image--1@3x.png"
+  // },
+
+  block1: {
+    style: "1-col",
+    mainTitle: "UX Structure",
+    subTitle: "Before beautiful UI design was created, there were wireframes with basic compositions, proportions and elements.",
+    imageURL: "/images/detail--04_1_1.png",
+    imageURL_m: "",
   },
-  block2 : {
+
+  block2: {
+    style : "1-col",
+    mainTitle : "User Flow - Redeem Offer",
+    subTitle : "After defining the basics, we immediately found imperative needs to define a smooth transition when redeeming offers. It is ideal to have users to trust and love NHOO at the first sight then further sign up an account. But we think people are most likely to be attracted by the offer itself; therefor we need an alternative to facilitate users to go through as less steps as possible to complete the deal. Here is what we come up with: according to how a user signs up (phone number/social login) the account initially, we assign either SMS text or Facebook's messenger to send directions and coupon codes after clicking the redeem button.",
+    imageURL : "/images/detail--04_2_1.png"
+  },
+
+  block3 : {
     style : "2-col",
-    mainTitle : "presentation #4-2 main title ",
-    subTitle : "presentation #4-2 sub title",
-    imageUrlLeft : "/images/detail-splitImage--left@3x.png",
-    imageUrlRight : "/images/detail-splitImage--right@3x.png"
-  }
+    mainTitle : "Style Guide",
+    subTitle : "At this step we establish the cosmetics including: color theme, typography, category icons, forms, offer cards…etc.",
+    imageURLLeft : "/images/detail--04_3_1.png",
+    imageURLRight : "/images/detail--04_3_2.png"
+  },
+
+  block4 : {
+    style : "1-col",
+    mainTitle : "Interface Design",
+    subTitle : "Carefully crafted responsive layouts with 12-columns grid, making sure every piece of information displays properly in all devices",
+    imageURL : "/images/detail--04_4_1.png",
+  },
+
+  block5: {
+    style: "video",
+    mainTitle: "App In Action",
+    subTitle: "",
+    videoURL: "/videos/detail-video--04_5_1.mp4"
+  },
+
+  block6: {
+    style: "video",
+    mainTitle: "Redeem offer",
+    subTitle: "",
+    videoURL: "/videos/detail-video--04_6_1.mp4"
+  },
+
+  block7: {
+    style: "video",
+    mainTitle: "Interactive Design - Signup Form",
+    subTitle: "",
+    videoURL: "/videos/detail-video--04_7_1.mp4"
+  },
+
+  block8: {
+    style: "video",
+    mainTitle: "Interactive Design - Catergories & Offers",
+    subTitle: "Triggered by hovering, clicking and scrolling, the instant feedback of highlighted categories shows the relation of offers in focus",
+    videoURL: "/videos/detail-video--04_8_1.mp4"
+  },
+
+
 };
 var detail5 = {
   blockCount : 3,
@@ -141,15 +191,15 @@ var detail7 = {
 };
 
 
-
 var project1 = new Project(
   "main title - 1",
   "sub title - 1",
-  "images/previewImage-1.png",
+  ["UX/UI"],
+  "images/previewImage-01.png",
   "videos/previewVideo-01.mp4",
   "#9AB999",
   "#C5DEC4",
-  "images/heroBackground-1.jpg",
+  "images/heroBackground-01.jpg",
   "sketch",
   "HTML",
   { cta : false,
@@ -163,11 +213,12 @@ var project1 = new Project(
 var project2 = new Project(
   "main title - 2",
   "sub title - 2",
-  "images/previewImage-2.png",
+  ["UX/UI"],
+  "images/previewImage-02.png",
   "videos/previewVideo-02.mp4",
   "#EC7F7A",
   "#FFB3AF",
-  "images/heroBackground-2.jpg",
+  "images/heroBackground-02.jpg",
   "sketch, principle",
   "HTML, CSS/SASS",
   { cta : false,
@@ -181,11 +232,12 @@ var project2 = new Project(
 var project3 = new Project(
   "main title - 3",
   "sub title - 3",
-  "images/previewImage-3.png",
+  ["UX/UI"],
+  "images/previewImage-03.png",
   "videos/previewVideo-03.mp4",
   "#E4475C",
-  "#C45C6A",
-  "images/heroBackground-3.jpg",
+  "#6C000E",
+  "images/heroBackground-03.jpg",
   "principle, sketch, photoshop",
   "HTML, CSS/SASS, Github",
   { cta : true,
@@ -198,14 +250,15 @@ var project3 = new Project(
 );
 var project4 = new Project(
   "NHOO.com",
-  "A freaking title that going be so awesome that you gonna go wow is this for real",
-  "images/previewImage-4.png",
+  "Web App Connects Adjacent Retail Stores And New Homeowners With Exclusive Offers",
+  ["UX / UI", "Interaction Design", "Frontend Development"],
+  "images/previewImage-04.png",
   "videos/previewVideo-04.mp4",
   "#234E77",
   "#53DEE9",
-  "images/heroBackground-4.jpg",
+  "images/heroBackground-04.jpg",
   "sketch, principle, photoshop, illustrator, atom",
-  "HTML, CSS/SASS, Github, Bootstrap",
+  "HTML, CSS/SASS, Bootstrap, Github",
   { cta : true,
     type: "github",
     url: "https://www.msn.com",
@@ -217,11 +270,12 @@ var project4 = new Project(
 var project5 = new Project(
   "main title - 5",
   "sub title - 5",
-  "images/previewImage-5.png",
+  ["UX/UI"],
+  "images/previewImage-05.png",
   "videos/previewVideo-05.mp4",
   "#355D7D",
   "#6DA2CC",
-  "images/heroBackground-5.jpg",
+  "images/heroBackground-05.jpg",
   "",
   "",
   { cta : true,
@@ -235,11 +289,12 @@ var project5 = new Project(
 var project6 = new Project(
   "main title - 6",
   "sub title - 6",
-  "images/previewImage-6.png",
+  ["UX/UI"],
+  "images/previewImage-06.png",
   "videos/previewVideo-06.mp4",
   "#283338",
   "#638B9E",
-  "images/heroBackground-6.jpg",
+  "images/heroBackground-06.jpg",
   "",
   "",
   { cta : false,
@@ -253,11 +308,12 @@ var project6 = new Project(
 var project7 = new Project(
   "main title - 7",
   "sub title - 7",
-  "images/previewImage-7.png",
+  ["UX/UI"],
+  "images/previewImage-07.png",
   "videos/previewVideo-07.mp4",
   "#CDE377",
   "#AAB67A",
-  "images/heroBackground-7.jpg",
+  "images/heroBackground-07.jpg",
   "",
   "",
   { cta : false,
@@ -268,7 +324,6 @@ var project7 = new Project(
   bullets7,
   detail7
 );
-
 
 
 export var projects = [project1, project2, project3, project4, project5, project6, project7];

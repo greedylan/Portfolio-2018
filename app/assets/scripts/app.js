@@ -3,22 +3,22 @@
 var $ = require('jquery');
 var ScrollReveal = require('scrollreveal');
 
-// lodash debouncing
-import './modules/lodash.custom.min.js';
+
+
 
 import initialize from './modules/initialize.js';
 import {projects, apps, detail} from './modules/project.js';
 import {expandCircles, shrinkCircles} from './modules/animation-circle.js';
 import {loadPreview, loadPreviousProject, loadNextProject, loadDataIndex} from './modules/loadCell.js';
-import {scrollMoveCell, scrollLoadCell, swipeMoveCell,} from './modules/moveCell.js';
+import {scrollMoveCell, scrollLoadCell, swipeMoveCell} from './modules/moveCell.js';
 
 import {loadCenteredTitle, titleOut, titleIn} from './modules/title.js';
 import frameClipPath, {frameReveal, frameHide}  from './modules/animation-frame.js';
 import clickEvents from './modules/clickEvents.js';
+import {resizeSpear, spearIn, spearOut} from './modules/animation-letter.js';
 
-
-import {resizeSpear, spearIn, spearOut} from './modules/animation-letter.js'
-
+// lodash debouncing
+import './modules/lodash.custom.min.js';
 
 // cache global variables
 let projectCount = $('.carousel__cell').length;
@@ -56,13 +56,16 @@ function reIntroduceData(){
   spearIn();
 
   (function(){
+
     $('.centered').click(function(){
       expandCircles();
     });
+
   })();
 
   // test
-  // console.log('sup');
+  // console.log('hummmmmmmm');
 }
-var debouncedWindowResizing = _.debounce(reIntroduceData, 500, {leading: true, trailing: false});
+
+var debouncedWindowResizing = _.debounce(reIntroduceData, 500);
 $(window).on('resize', debouncedWindowResizing);

@@ -3630,6 +3630,12 @@ body{
 img{
   width: 100%;
 }
+p{
+  font-family: 'Lato', san-serif;
+  font-weight: 300;
+  font-size: .875rem;
+  line-height: 1.1rem;
+}
 /* Flex Box */
 .flex{
   display: flex;
@@ -3664,7 +3670,7 @@ h1.main-title{
 }
 h2{
   font-family: 'Arvo', serif;
-  font-size: 1.5rem;
+  font-size: 1.25rem;
 }
 h3{
   font-family: 'Arvo', serif;
@@ -3677,6 +3683,7 @@ h4{
   font-family: 'Lato', sans-serif;
   font-size: 1rem;
   font-weight: 900;
+  margin: .75rem 0;
 }
 .text-center{
   text-align: center;
@@ -3759,18 +3766,24 @@ hr{
 }
 /* spacing */
 .vertical-spacing{
-  /* margin: 5rem auto; */
-  padding-top: 5rem;
-  padding-bottom: 5rem;
-
+  padding-top: 1rem;
+  padding-bottom: 1rem;
 }
+@media(min-width: 992px){
+.vertical-spacing{
+    padding-top: 3rem;
+    padding-bottom: 3rem
+}
+  }
 /* scrolling */
 .no-scroll{
   overflow: hidden;
 }
 .main{
-  height: 100%;
+  width: 100vw;
+  height: 100vh;
   background: #D4D4D4;
+  position: fixed;
 }
 .main.is__hiding{
     opacity: 0;
@@ -3779,7 +3792,7 @@ hr{
 .main.is__hidden{
     display: none;
   }
-.home{
+.main-inner{
   height: 100%;
   overflow: hidden;
   position: relative;
@@ -3788,7 +3801,6 @@ hr{
 .titles-wrapper{
   width: 100%;
   height: 50vh;
-
 
   position: absolute;
   top: 0;
@@ -3805,7 +3817,7 @@ hr{
 @media(min-width: 992px){
 .titles-wrapper{
     width: 50%;
-    height: auto;
+    height: 100vh;
 
     top: 50%;
     -webkit-transform: translateY(-50%);
@@ -3818,6 +3830,15 @@ hr{
 .titles-wrapper .titles{
     flex: 0 1 100%;
   }
+.titles-wrapper ul.field li{
+      background: #1E1E1E;
+      color: #EFEFEF;
+      color: #FFFFFF;
+      padding: .75em;
+      margin: .25em;
+      font-size: .75rem;
+      font-weight: 300;
+    }
 .carousel-wrapper{
   width: 100%;
   height: auto;
@@ -4002,6 +4023,7 @@ svg.circle-inner{
       top: 50%;
       -webkit-transform: translateY(-50%);
               transform: translateY(-50%);
+      transition: all 300ms cubic-bezier(.25, 0, .25, 0);
 
     }
 .video-wrapper.is__hiding{
@@ -4372,16 +4394,35 @@ section.presentation{
   background: #EFEFEF;
 }
 section.presentation .project-bulletpoints h4{
-      margin-bottom: .5rem;
+
       color: #20456D;
     }
 section.presentation .project-bulletpoints p{
       margin-top: .5rem;
     }
-section.presentation .project-detail p {
-      width: 50%;
-      margin: 0 auto;
+section.presentation .project-detail h2{
+      margin: 0 auto 1rem auto;
     }
+section.presentation .project-detail p {
+      width: 100%;
+      margin: 0 auto 2rem auto;
+      text-align: left;
+    }
+@media(min-width: 768px){
+section.presentation .project-detail p {
+        width:75%;
+        text-align: center
+    }
+  }
+.detail-module p{
+  padding-bottom: 1rem;
+}
+.project-detail__video{
+  display: block;
+  margin: 0 auto;
+  width: 100%;
+  max-width: 600px;
+}
 section.more-projects div[class^="more-projects__"]{
     flex: 0 1 50%;
   }

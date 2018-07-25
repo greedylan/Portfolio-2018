@@ -93,7 +93,6 @@ export function frameHide(){
     callback: function(e){
       // console.log(e.direction);
       scrollDownCount = scrollDownCount + 1;
-      // console.log(scrollDownCount);
 
       if(e.direction == 'down' && scrollDownCount == '1'){
         restoreFrame();

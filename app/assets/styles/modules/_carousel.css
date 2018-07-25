@@ -1,8 +1,10 @@
 @import "./_mixins";
 
 .main{
-  height: 100%;
+  width: 100vw;
+  height: 100vh;
   background: #D4D4D4;
+  position: fixed;
 
   &.is__hiding{
     opacity: 0;
@@ -13,19 +15,16 @@
   }
 }
 
-
-.home{
+.main-inner{
   height: 100%;
   overflow: hidden;
   position: relative;
   background: #DFDFDF;
 }
 
-
 .titles-wrapper{
   width: 100%;
   height: 50vh;
-
 
   position: absolute;
   top: 0;
@@ -41,7 +40,7 @@
 
   @mixin laptop-up{
     width: 50%;
-    height: auto;
+    height: 100vh;
 
     top: 50%;
     transform: translateY(-50%);
@@ -53,8 +52,19 @@
   & .titles{
     flex: 0 1 100%;
   }
-}
 
+  & ul.field{
+    li{
+      background: #1E1E1E;
+      color: #EFEFEF;
+      color: #FFFFFF;
+      padding: .75em;
+      margin: .25em;
+      font-size: .75rem;
+      font-weight: 300;
+    }
+  }
+}
 
 .carousel-wrapper{
   width: 100%;
@@ -170,7 +180,6 @@ svg.circle-inner{
   }
 }
 
-
 .centered svg.circle-inner{
 
   &.is__shrinkedCentering{
@@ -194,7 +203,6 @@ svg.circle-inner{
     opacity: 1;
   }
 }
-
 
 .centered .image-wrapper{
   /* ////////// */
@@ -249,10 +257,12 @@ svg.circle-inner{
     width: 100%;
     height: 100%;
 
+
     video{
       position: absolute;
       top: 50%;
       transform: translateY(-50%);
+      transition: all 300ms cubic-bezier(.25, 0, .25, 0);
 
     }
   }

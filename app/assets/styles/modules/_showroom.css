@@ -1,0 +1,300 @@
+.showroom-wrapper{
+  width: 100%;
+  position: relative;
+}
+
+.showroom{
+  width: 100%;
+  position: absolute;
+  top: 0;
+  right: 0;
+  left: 0;
+  background: #EFEFEF;
+  opacity: 0;
+
+  &.loaded{
+    opacity: 1;
+    transition: opacity 2000ms cubic-bezier(.25, 1, .25, 1);
+  }
+
+}
+
+section.hero{
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  background-attachment: fixed;
+  background-position: center center;
+  background-size: cover;
+  background-repeat: no-repeat;
+
+  .hero__container{
+    width: 100%;
+    position: absolute;
+    transition: 800ms cubic-bezier(.25, 1, .25, 1);
+    &.position--center{
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+    }
+    &.top{
+      top: 40px;
+      left: 0px;
+      transform: translate(0, 0);
+    }
+    &.top-left{
+      top: 40px;
+      left: 125px;
+      transform: translate(0, 0);
+    }
+    &.position--bottom{
+      right: 0;
+      bottom: 0;
+      left:0;
+    }
+    &.position--mouse{
+      left: 50%;
+      bottom: calc(120px + 20px);
+      transform: translate(-50%, -50%);
+
+      @mixin laptop-up{
+        bottom: calc(80px + 20px);
+      }
+      /* info-wrapper has 80px of height */
+    }
+  }
+
+  .hero__mouse-wrapper{
+    width: 20px;
+    height: 30px;
+    & .mouse{
+      width: 24px;
+      height: 36px;
+      background: transparent;
+      border: 2px solid #FFFFFF;
+      border-radius: 24px;
+
+      position: relative;
+
+      animation: mouseMove 2s infinite;
+    }
+    /* use pseudo class for wheel so it goes along with mouse animation */
+    & .mouse:before{
+      content: '';
+      display: block;
+      width: 2px;
+      height: 4px;
+      background: #FFFFFF;
+
+      position: absolute;
+      top: 8px;
+      left: 50%;
+      transform: translate(-50%, -50%);
+
+      animation: scrollDown 2s infinite;
+    }
+  }
+
+  .hero__title-wrapper{
+    width: 80%;
+    @mixin tablet-up{
+      width: 50%;
+    }
+    .projectAndDate{
+      line-height: 30px;
+      .rect{
+        display: inline-block;
+        margin: 0;
+        padding: 1rem;
+        color: #FFFFFF;
+
+        float: left;
+      }
+
+      .date{
+        display: inline-block;
+        margin: 0;
+        padding: 1rem;
+        color: #CFCFCF;
+
+        float: left;
+        font-family: 'Nothing You Could Do', cursive;
+        font-size: 1.5rem;
+        position: relative;
+      }
+      .date:before{
+        content: '';
+        display: block;
+        width: 1px;
+        height: 30px;
+        background: #BBBBBB;
+        background: #979797;
+
+        position: absolute;
+        left: 0;
+        top: 50%;
+        transform: translateY(-50%);
+      }
+    }
+  }
+
+  .titles{
+    position: relative;
+  }
+
+  .rect--grow{
+    font-size: 2rem;
+    padding: 1rem 2rem;
+    text-align: center
+  }
+
+  .frame{
+    position: relative;
+    padding: 3rem;
+    margin: 0;
+    opacity: 0;
+    transition: 1500ms cubic-bezier(.25, 1, .25, 1);
+  }
+  .frame:before{
+    display: block;
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    box-shadow: inset 0 0 0 16px #FFFFFF;
+  }
+  .frame-title__is-showing{
+    opacity: 1;
+  }
+  .frame__is-hiding:before{
+    opacity: 0;
+  }
+  .frame__is-animating:before{
+    animation: clip-frame 1500ms 1 reverse;
+  }
+  .frame__is-animatingReverse:before{
+    animation: clip-frame 750ms 1 normal;
+    transition: 1500ms cubic-bezier(.25, 1, .25, 1);
+  }
+  .frame__white-background{
+    background-color: rgba(255, 255, 255, .2)
+  }
+
+
+
+  .hero__info-wrapper{}
+  .project-tools{
+    background: rgba(32, 69, 109, .9);
+    padding: 1rem;
+  }
+  .list-app{
+    &.flex-cell{
+      flex: 0 0 100%;
+      max-width: 100%;
+      @mixin tablet-up{
+        flex: 0 0 auto;
+      }
+    }
+    img{
+      width: 45px;
+    }
+  }
+  .list-frontend{
+    &.flex-cell{
+
+      padding-top: .5rem;
+      flex: 0 0 100%;
+      max-width: 100%;
+      @mixin tablet-up{
+        flex: 0 0 auto;
+      }
+    }
+
+    ul{
+      font-size: .7rem;
+
+      @mixin tablet-up{
+        padding-left: 1rem;
+      }
+      li{
+        padding: 6px 12px;
+        margin: 0 2px;
+        border: 1px solid #DFDFDF;
+        border-radius: 12px;
+        color: #DFDFDF;
+        font-weight: 300;
+      }
+    }
+  }
+  .btn-cta{
+    display: none;
+    @mixin laptop-up{
+      display: block;
+    }
+  }
+}
+
+@keyframes mouseMove{
+  0%   { transform: translateY(0px);}
+  25%  { transform: translateY(5px);}
+  100% { transform: translateY(0px);}
+}
+@keyframes scrollDown{
+  0%   { transform: translate(-1px, 0px); opacity: 1;}
+  100% { transform: translate(-1px, 5px); opacity: 0;}
+
+}
+
+
+section.presentation{
+  background: #EFEFEF;
+  .project-bulletpoints{
+    h4{
+      display: inline-block;
+      padding: .5rem 1rem;
+      background: #000000;
+      color: #EFEFEF;
+      font-weight: 600;
+      font-size: .75rem;
+      border-radius: 4px;
+      /* text-align: center; */
+    }
+    p{
+      margin-top: .5rem;
+    }
+  }
+  .project-detail{
+    h2{
+      margin: 0 auto 1rem auto;
+    }
+    p {
+      width: 100%;
+      margin: 0 auto 2rem auto;
+      text-align: left;
+      @mixin tablet-up{
+        width:75%;
+        text-align: center;
+      }
+    }
+  }
+}
+
+
+.detail-module p{
+  padding-bottom: 1rem;
+}
+
+.project-detail__video{
+  display: block;
+  margin: 0 auto;
+  width: 100%;
+  max-width: 800px;
+}
+
+section.more-projects{
+  div[class^="more-projects__"]{
+    flex: 0 1 50%;
+  }
+}

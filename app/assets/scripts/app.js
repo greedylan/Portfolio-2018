@@ -1,37 +1,71 @@
+
 //import Javascript resources and modules
 var $ = require('jquery');
-import {centerMobileCarousel, unclickable} from './modules/initialize.js';
-import Project, {project1, project2, project3, project4, project5, project6, project7, projects} from './modules/project.js';
-import {transitionCircle} from './modules/circle.js';
-import {loadAll, loadLastProject, loadNextProject, executed} from './modules/loadCell.js';
-import MoveCell, {scrollMoveCell, scrollLoadCell, swipeMoveCell} from './modules/moveCell.js'
+var ScrollReveal = require('scrollreveal');
 
 
 
 
+import initialize from './modules/initialize.js';
+import {projects, apps, detail} from './modules/project.js';
+import {expandCircles, shrinkCircles} from './modules/animation-circle.js';
+import {loadPreview, loadPreviousProject, loadNextProject, loadDataIndex} from './modules/loadCell.js';
+import {scrollMoveCell, scrollLoadCell, swipeMoveCell} from './modules/moveCell.js';
+
+import {loadCenteredTitle, titleOut, titleIn} from './modules/title.js';
+import frameClipPath, {frameReveal, frameHide}  from './modules/animation-frame.js';
+import clickEvents from './modules/clickEvents.js';
+import {resizeSpear, spearIn, spearOut} from './modules/animation-letter.js';
+
+// lodash debouncing
+import './modules/lodash.custom.min.js';
+
+// cache global variables
+let projectCount = $('.carousel__cell').length;
 
 
 
-unclickable();
-centerMobileCarousel();
+$(function(){
+  // initialize.js
+  initialize();
+  resizeSpear();
+  loadCenteredTitle();
 
-scrollMoveCell();
-scrollLoadCell();
-swipeMoveCell();
+  // get scroll and swipe event ready
+  scrollMoveCell();
+  swipeMoveCell();
+  scrollLoadCell();
+  clickEvents();
+  window.scrollTo(0, 0);
 
-
-
-$('.carousel__content').click(function(){
-  transitionCircle($(this));
 });
 
 
 
-$(window).resize(function(){
-  unclickable();
-  centerMobileCarousel();
+// The following codes re-inject data in a debouncing manner when window resizes
+// lodash ignites reIntroduceData() only once after 300ms pause of not having continuous resize event
+
+function reIntroduceData(){
+  initialize();
+
   swipeMoveCell();
   scrollMoveCell();
 
+  resizeSpear();
+  spearOut();
+  spearIn();
 
-});
+  (function(){
+
+    $('.centered').click(function(){
+      expandCircles();
+    });
+
+  })();
+
+  // test
+  // console.log('hummmmmmmm');
+}
+
+var debouncedWindowResizing = _.debounce(reIntroduceData, 500);
+$(window).on('resize', debouncedWindowResizing);

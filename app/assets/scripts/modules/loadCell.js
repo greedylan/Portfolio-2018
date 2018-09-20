@@ -2,68 +2,124 @@ var $ = require('jquery');
 import {projects} from './project.js';
 
 
-
 var imageSource = $('.image-wrapper picture source'),
 content = $('.carousel__content'),
-circle1 = $('.expand-1st circle'),
-circle2 = $('.expand-2nd circle'),
+circle1 = $('.circle-outer').children('circle'),
+circle2 = $('.circle-inner'),
+video = $('.video'),
+cell = $('.carousel__cell'),
 scrollPosition = 0;
 
-
-export function loadAll(element){
+export function loadPreview(element){
   element.each(function(i){
-    var num = i + scrollPosition;
-    if(num >= projects.length){ num = i + scrollPosition - projects.length;}
-    var x = projects[num];
 
-    var url = x.url,
-    defaultColor = x.defaultColor,
+    var index = i + scrollPosition;
+    if(index >= projects.length){ index = i + scrollPosition - projects.length;}
+
+    var x = projects[index];
+    var previewImage = x.previewImage,
+    primaryColor = x.primaryColor,
     subColor= x.subColor;
 
     if(element == imageSource){
-      $(this).attr('srcset', url);
+      $(this).attr('srcset', previewImage);
     }else if(element == content){
-      $(this).css({'background' : '' + defaultColor + ''});
+      $(this).css({'background' : '' + primaryColor + ''});
     }else if(element == circle1){
-      $(this).css({'fill' : '' + defaultColor + ''});
+      $(this).css({'fill' : '' + primaryColor + ''});
     }else if(element == circle2){
       $(this).css({'fill' : '' + subColor + ''});
     }
-  });
+
+  }); // end of .each()
 }
+
+export function loadDataIndex(cell, array){
+  cell.each(function(i){
+    $(this).attr('data-project-index', array[i]);
+  });
+  // console.log(array);
+}
+
+export function videoWrapperBackground(){
+  var index = $('.centered').attr("data-project-index");
+  $('.centered .video-wrapper').css({'background-color' : `${projects[index].primaryColor}`});
+  $('.centered .image-wrapper img').attr('src', `${projects[index].previewImageMobile}`);
+}
+
+
+
+
+
+
+var projectIndex;
 
 
 export function loadNextProject(){
-  if(scrollPosition === projects.length){
-    scrollPosition = 0;
-  }
+  if(scrollPosition === projects.length){scrollPosition = 0;}
   scrollPosition = scrollPosition + 1;
 
-  loadAll(imageSource);
-  loadAll(content);
-  loadAll(circle1);
-  loadAll(circle2);
+  // store index values in an array corresponding to scroll event
+  var array = [];
+  for(var i=0; i<projects.length; i++){
+    var index = i + scrollPosition;
+    if(index >= projects.length){index = index - projects.length;}
+    array.push(index);
+  }
 
-  console.log(scrollPosition)
+
+  projectIndex = parseInt($('.centered').attr('data-project-index')) + 1;
+  if(projectIndex >= 7){projectIndex = 0;}
+  var previewVideoURL = projects[projectIndex].previewVideo;
+  $('.video').children('source').attr('src', previewVideoURL);
+  $('.video')[0].load();
+  $('.video')[0].play();
+
+
+  loadPreview(imageSource);
+  loadPreview(content);
+  loadPreview(circle1);
+  loadPreview(circle2);
+  loadDataIndex(cell, array);
+  videoWrapperBackground();
+
 }
 
-export function loadLastProject(){
-  if(scrollPosition === 0){
-    scrollPosition = projects.length;
-  }
+
+export function loadPreviousProject(){
+  if(scrollPosition === 0){scrollPosition = projects.length;}
   scrollPosition = scrollPosition - 1;
 
+  // store index values in an array corresponding to scroll event
+  var array = [];
+  for(var i=0; i<projects.length; i++){
+    var index = i + scrollPosition;
+    if(index >= projects.length){index = index - projects.length;}
+    if(index < 0 ){index = index + projets.length;}
+    array.push(index);
+  }
 
-  loadAll(imageSource);
-  loadAll(content);
-  loadAll(circle1);
-  loadAll(circle2);
 
-  console.log(scrollPosition)
+  projectIndex = parseInt($('.centered').attr('data-project-index')) - 1;
+  if(projectIndex < 0 ){projectIndex = 6;}
+  var previewVideoURL = projects[projectIndex].previewVideo;
+  $('.video').children('source').attr('src', previewVideoURL);
+  $('.video')[0].load();
+  $('.video')[0].play();
+
+
+  loadPreview (imageSource);
+  loadPreview (content);
+  loadPreview (circle1);
+  loadPreview (circle2);
+  loadDataIndex(cell, array);
+  videoWrapperBackground();
+  // console.log(scrollPosition)
 }
 
 
-loadAll(imageSource);
-loadAll(content);
-loadAll(circle1);
-loadAll(circle2);
+loadPreview (imageSource);
+loadPreview (content);
+loadPreview (circle1);
+loadPreview (circle2);
+videoWrapperBackground();

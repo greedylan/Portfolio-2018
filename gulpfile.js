@@ -7,8 +7,13 @@ nested = require('postcss-nested'),
 cssImport = require('postcss-import'),
 mixins = require('postcss-mixins'),
 browserSync = require('browser-sync'),
-webpack = require('webpack');
-
+webpack = require('webpack'),
+imagemin = require('gulp-imagemin'),
+del = require('del'),
+usemin = require('gulp-usemin'),
+rev = require('gulp-rev'),
+cssnano = require('gulp-cssnano'),
+uglify = require('gulp-uglify');
 
 gulp.task('watch', function(){
   browserSync.init({
@@ -64,3 +69,47 @@ gulp.task('scripts', function(callback){
 gulp.task('scriptsRefresh', ['scripts'], function(){
   browserSync.reload();
 });
+
+
+// build distributable folder automation
+
+
+//preview files in dist folder
+gulp.task('previewDist', function(){
+  browserSync.init({
+    open: false,
+    notify: false,
+    server: {
+      baseDir: "dist"
+    }
+  });
+});
+
+
+
+// IMAGES
+gulp.task('deletDistFolder', function(){
+  return del("./dist");
+});
+
+gulp.task('optimizeImages', ['deletDistFolder'], function(){
+  return gulp.src(["./app/images/**/*"])
+    .pipe(imagemin({
+      progressive: true,
+      interlaced: true,
+      multipass: true,
+    }))
+    .pipe(gulp.dest("./dist/images"));
+});
+
+// CSS & JS via HTML
+gulp.task('usemin', ['deletDistFolder', 'styles', 'scripts'], function(){
+  return gulp.src("./app/index.html")
+  .pipe(usemin({
+    css: [function() {return rev();}, function() {return cssnano();} ],
+    js: [function(){return rev();}, function(){return uglify();}]
+  }))
+  .pipe(gulp.dest("./dist"));
+});
+
+gulp.task('build', ['deletDistFolder', 'optimizeImages', 'usemin']);
